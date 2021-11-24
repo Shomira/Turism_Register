@@ -10,21 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Turism_Register">
         <activity
+            android:name=".Register"
+            android:exported="false" />
+        <activity
             android:name=".SplashActivity"
-            android:theme="@style/SplashTheme"
-            android:exported="true" >
+            android:exported="true"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
-            android:exported="false">
-
-        </activity>
+            android:exported="false"></activity>
     </application>
 
 </manifest>
