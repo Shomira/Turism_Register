@@ -18,4 +18,9 @@
             @drawable/splash_background
         </item>
     </style>
+    <style name="LoginTheme"  parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowBackground">
+            @drawable/login_background
+        </item>
+    </style>
 </resources>
