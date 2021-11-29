@@ -3,11 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/drawable/login_background.xml" value="0.1537037037037037" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/drawable/splash_background.xml" value="0.2203125" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/drawable/stroke_radius.xml" value="0.2203125" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/activity_login_user.xml" value="0.25" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/activity_main.xml" value="0.20199275362318841" />
-        <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/activity_register.xml" value="0.22" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/activity_register.xml" value="0.25" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/activity_register_user2.xml" value="0.17300724637681159" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/fragment_b.xml" value="0.17300724637681159" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/toolbar.xml" value="0.1" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/menu/bottom_navigation.xml" value="0.18425925925925926" />
         <entry key="..\:/Users/shomi/Documents/ASeptimoC/PlataformasMoviles/AndroidStudio/Turism_Register/app/src/main/res/drawable/ic_launcher_background.xml" value="0.12037037037037036" />
         <entry key="..\:/Users/shomi/Documents/ASeptimoC/PlataformasMoviles/AndroidStudio/Turism_Register/app/src/main/res/drawable/splash_background.xml" value="0.12037037037037036" />
         <entry key="..\:/Users/shomi/Documents/ASeptimoC/PlataformasMoviles/AndroidStudio/Turism_Register/app/src/main/res/layout/activity_main.xml" value="0.264" />

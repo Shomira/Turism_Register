@@ -4,28 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#494747"
-    tools:context=".LoginActivity">
+    android:background="@drawable/login"
+    tools:context=".LoginUserActivity">
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="112dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#7CA0D6"
+        android:text="LOGIN"
+        app:cornerRadius="100dp"
+        app:layout_constraintEnd_toEndOf="@+id/ip_contrasenia"
+        app:layout_constraintStart_toStartOf="@+id/ip_contrasenia"
+        app:layout_constraintTop_toBottomOf="@+id/ip_contrasenia" />
 
     <EditText
         android:id="@+id/ip_usuario"
-        android:layout_width="223dp"
+        android:layout_width="235dp"
         android:layout_height="40dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="30dp"
         android:background="#FFFFFF"
         android:drawableLeft="@drawable/user"
-
         android:ems="20"
         android:hint="  Usuario"
         android:inputType="textPersonName"
+        android:paddingLeft="5dp"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 
     <EditText
         android:id="@+id/ip_contrasenia"
-        android:layout_width="223dp"
+        android:layout_width="235dp"
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
         android:background="#FFFFFF"
@@ -33,6 +45,7 @@
         android:ems="10"
         android:hint="  Contraseña"
         android:inputType="textPersonName"
+        android:paddingLeft="5dp"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/ip_usuario"
         app:layout_constraintHorizontal_bias="0.0"
@@ -40,46 +53,28 @@
         app:layout_constraintTop_toBottomOf="@+id/ip_usuario" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="140dp"
-        android:layout_height="43dp"
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="233dp"
         android:text="Bienvenid@"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.209" />
-
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_width="136dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="56dp"
-        android:backgroundTint="#7CA0D6"
-        android:text="LOGIN"
-        android:textColorHint="#7CA0D6"
-        app:cornerRadius="200dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/ip_contrasenia"
-        app:layout_constraintHorizontal_bias="0.595"
-        app:layout_constraintStart_toStartOf="@+id/ip_contrasenia"
-        app:layout_constraintTop_toBottomOf="@+id/ip_contrasenia"
-        app:layout_constraintVertical_bias="0.0"
-        app:strokeColor="#588DDB" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tw_recupContrasenia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="10dp"
         android:text="Has olvidado la contraseña?"
         android:textColor="#3B73C6"
-        android:textSize="10sp"
+        android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/ip_contrasenia"
         app:layout_constraintHorizontal_bias="0.0"
@@ -90,24 +85,16 @@
         android:id="@+id/tw_registrarse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:text="Registrarse"
         android:textColor="#3B73C6"
-        android:textSize="10sp"
+        android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.092"
         app:layout_constraintStart_toEndOf="@+id/tw_recupContrasenia"
         app:layout_constraintTop_toBottomOf="@+id/ip_contrasenia" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="349dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="32dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
