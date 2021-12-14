@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navDrawer_profile"
+        android:title="Ver Perfil"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        />
+
+    <item
+        android:id="@+id/navDrawer_aboutUs"
+        android:title="Quienes Somos?"
+        android:icon="@drawable/ic_baseline_group_24"
+        />
+
+    <item
+        android:id="@+id/navDrawer_repository"
+        android:title="Repositorio"
+        android:icon="@drawable/ic_baseline_description_24"
+        />
+
+    <item tools:ignore="MenuTitle">
+        <menu>
+            <item
+                android:id="@+id/exitApp"
+                android:title="Cerrar Sesión"
+                android:icon="@drawable/ic_baseline_exit_to_app_24"
+            />
+        </menu>
+    </item>
+</menu>

@@ -10,9 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Turism_Register">
         <activity
+            android:name=".nav_header"
+            android:exported="false" />
+        <activity
             android:name=".LoginUserActivity"
-            android:exported="false"
-            />
+            android:exported="false" />
         <activity
             android:name=".RegisterActivity"
             android:exported="false" />
