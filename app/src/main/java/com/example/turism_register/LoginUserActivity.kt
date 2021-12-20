@@ -6,9 +6,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login_user.*
-enum class ProviderType{
-    BASIC
-}
+
 class LoginUserActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,8 +22,8 @@ class LoginUserActivity : AppCompatActivity() {
         title = "Autentication"
 
         btn_login.setOnClickListener(){
-            if (ip_usuario.text.isNotEmpty() && ip_contrasenia.text.isNotEmpty()){
-                FirebaseAuth.getInstance().signInWithEmailAndPassword(ip_usuario.text.toString(),
+            if (ip_email.text.isNotEmpty() && ip_contrasenia.text.isNotEmpty()){
+                FirebaseAuth.getInstance().signInWithEmailAndPassword(ip_email.text.toString(),
                     ip_contrasenia.text.toString()).addOnCompleteListener(){
                     if (it.isSuccessful){
                         showHome(it.result?.user?.email?:"", ProviderType.BASIC)

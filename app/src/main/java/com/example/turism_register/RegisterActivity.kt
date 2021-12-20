@@ -19,7 +19,6 @@ import java.util.regex.Pattern
 
 
 class RegisterActivity : AppCompatActivity() {
-    private lateinit var auth: FirebaseAuth
     private val db = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,8 +26,7 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_register)
         supportActionBar?.hide()
         val bundle: Bundle? = intent.extras
-        val provider: String? = bundle?.getString("provider")
-        auth = Firebase.auth
+        val provider:ProviderType = ProviderType.BASIC
 
         btn_registrar.setOnClickListener {
 
@@ -53,12 +51,13 @@ class RegisterActivity : AppCompatActivity() {
             } else {
                 db.collection("users").document(mEmail).set(
                     hashMapOf(
-                        "provider" to provider, "address" to ip_correo_r.text.toString(),
-                        "usuario" to ip_usuario_r.text.toString(),
+                        "provider" to provider,
+                        "address" to ip_correo_r.text.toString(),
+                        "apellidos" to ip_apellido_r.text.toString(),
                         "nombres" to ip_nombre_r.text.toString()
                     )
                 )
-                createAccount(mEmail, mPassword)
+                createAccount(mEmail, mPassword, provider)
             }
 
         }
@@ -67,35 +66,14 @@ class RegisterActivity : AppCompatActivity() {
     }
 
 
-    private fun createAccount(email: String, password: String) {
-        auth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    val intent = Intent(this, HomeFragment::class.java)
-                    this.startActivity(intent)
-                } else {
-                    Toast.makeText(this, "No se pudo crear la cuenta. Vuelva a intertarlo",
-                        Toast.LENGTH_SHORT).show()
+    private fun createAccount(email: String, password: String, provider: ProviderType) {
+        FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) {
+                val homeIntent: Intent = Intent(this, MainActivity::class.java).apply {
+                    putExtra("email", email)
+                    putExtra("provider", provider.name)
                 }
+                startActivity(homeIntent)
             }
-    }
-
-
-    private fun showHome(email:String, provider: ProviderType){
-        val homeIntent: Intent = Intent(this,MainActivity::class.java).apply {
-            putExtra("email", email)
-            putExtra("provider", provider.name)
-        }
-        startActivity(homeIntent)
-    }
-    private fun showAlert(){
-        val builder = AlertDialog.Builder(this)
-        builder.setTitle("Error")
-        builder.setMessage("Se ha producido un error de registro ")
-        builder.setPositiveButton("Aceptar",null)
-        val dialog: AlertDialog =builder.create()
-        dialog.show()
-
-
     }
 }

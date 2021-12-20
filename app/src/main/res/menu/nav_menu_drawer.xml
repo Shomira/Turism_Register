@@ -22,7 +22,7 @@
     <item tools:ignore="MenuTitle">
         <menu>
             <item
-                android:id="@+id/exitApp"
+                android:id="@+id/sign_out"
                 android:title="Cerrar Sesión"
                 android:icon="@drawable/ic_baseline_exit_to_app_24"
             />

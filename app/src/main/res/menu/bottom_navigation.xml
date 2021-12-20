@@ -17,6 +17,7 @@
         android:id="@+id/fragmentToReturn"
         android:icon="@drawable/toreturn"
         android:title="Regresar"
+        android:visible="true"
         />
 
 </menu>

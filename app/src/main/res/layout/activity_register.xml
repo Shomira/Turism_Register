@@ -49,13 +49,13 @@
         app:layout_constraintTop_toBottomOf="@+id/ip_correo_r" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/ip_usuario_r"
+        android:id="@+id/ip_apellido_r"
         android:layout_width="223dp"
         android:layout_height="32dp"
         android:layout_marginTop="12dp"
         android:background="#FFFFFF"
         android:drawableLeft="@drawable/user"
-        android:hint="  Usuario"
+        android:hint=" Apellidos"
         android:linksClickable="false"
         android:paddingLeft="5dp"
         android:textSize="14sp"
@@ -85,7 +85,7 @@
         android:layout_marginTop="17dp"
         android:background="#FFFFFF"
         android:drawableLeft="@drawable/user_name_ic"
-        android:hint="  Nombre"
+        android:hint="  Nombres"
         android:inputType="textPersonName"
         android:paddingLeft="5dp"
         android:textSize="14sp"
@@ -105,9 +105,9 @@
         android:inputType="textPersonName"
         android:paddingLeft="5dp"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/ip_usuario_r"
-        app:layout_constraintStart_toStartOf="@+id/ip_usuario_r"
-        app:layout_constraintTop_toBottomOf="@+id/ip_usuario_r" />
+        app:layout_constraintEnd_toEndOf="@+id/ip_apellido_r"
+        app:layout_constraintStart_toStartOf="@+id/ip_apellido_r"
+        app:layout_constraintTop_toBottomOf="@+id/ip_apellido_r" />
 
     <Button
         android:id="@+id/btn_registrar"

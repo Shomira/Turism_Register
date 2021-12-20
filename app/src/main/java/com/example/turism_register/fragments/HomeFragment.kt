@@ -1,16 +1,18 @@
 package com.example.turism_register.fragments
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isInvisible
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.example.turism_register.MainActivity
 import com.example.turism_register.R
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_home.*
+import java.util.zip.Inflater
 
 /**
  * A simple [Fragment] subclass.
@@ -31,26 +33,27 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        (activity as AppCompatActivity).bottom_navegation_view.menu.findItem(R.id.fragmentToReturn).isVisible = false
 
         imgBtn_addlugar.setOnClickListener {
-            (activity as AppCompatActivity).supportFragmentManager.beginTransaction().apply {
-                replace(R.id.fragment_container, addLugarFragment)
-                commit()
-            }
+            replaceFragment(addLugarFragment)
         }
 
         imgBtn_reportes.setOnClickListener {
-            (activity as AppCompatActivity).supportFragmentManager.beginTransaction().apply {
-                replace(R.id.fragment_container, reportesFragment)
-                commit()
-            }
+            replaceFragment(reportesFragment)
         }
 
         imgBtn_listLugares.setOnClickListener {
-            (activity as AppCompatActivity).supportFragmentManager.beginTransaction().apply {
-                replace(R.id.fragment_container, listLugaresFragment)
-                commit()
-            }
+            replaceFragment(listLugaresFragment)
+        }
+    }
+
+    private fun replaceFragment(fragment: Fragment) {
+        if (fragment != null) {
+            val transaction = (activity as AppCompatActivity).supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.fragment_container, fragment)
+            transaction.addToBackStack(null)
+            transaction.commit()
         }
     }
 
