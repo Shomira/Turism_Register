@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "563082511782",
+    "project_id": "pruebaturismo-38afa",
+    "storage_bucket": "pruebaturismo-38afa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563082511782:android:7ace9964c28d6a14b8fb67",
+        "android_client_info": {
+          "package_name": "com.example.turism_register"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "563082511782-212c8a167kdu2evh4i7882a844r2lclj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdGBPZyzp9bF1DFSTiBZ18XV5oqkq6XjM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "563082511782-212c8a167kdu2evh4i7882a844r2lclj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
