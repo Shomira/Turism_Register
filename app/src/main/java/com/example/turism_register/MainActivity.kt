@@ -6,13 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import androidx.appcompat.widget.SearchView
 import androidx.core.view.GravityCompat
 import androidx.core.view.get
 import androidx.fragment.app.Fragment
-import com.example.turism_register.fragments.AboutusFragment
-import com.example.turism_register.fragments.HomeFragment
-import com.example.turism_register.fragments.ProfileFragment
-import com.example.turism_register.fragments.RepositoryFragment
+import com.example.turism_register.fragments.*
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
@@ -71,7 +69,9 @@ class MainActivity : AppCompatActivity() {
             when(it.itemId) {
                 R.id.fragmentNavigationDrawer -> drawerLayout.openDrawer(navDrawerView)
                 R.id.fragmentHome -> replaceFragment(homeFragment)
-                R.id.fragmentToReturn -> onBackPressed()
+                R.id.fragmentToReturn -> {
+                    onBackPressed()
+                }
             }
 
             true

@@ -12,4 +12,6 @@
 
     <color name="yellowPrimary">#F9A826</color>
     <color name="navColorDrawer">#B0AA9D</color>
+    <color name="blueBajo">#BACBE5</color>
+    <color name="transparentColor">#00FFFFFF</color>
 </resources>
