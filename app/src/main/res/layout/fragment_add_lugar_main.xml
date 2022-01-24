@@ -1,0 +1,1330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.AddLugarMainFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/usuario_add_lugar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="8dp"
+            android:text="TextView" />
+
+        <Button
+            android:id="@+id/btn_guardarLugarMain"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="#00C853"
+            android:text="GUARDAR"
+            app:cornerRadius="100dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <ScrollView
+            android:id="@+id/scrollparte1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#EAEDF2"
+                android:orientation="vertical"
+                tools:context="com.example.turism_register.fragments.AddLugarFragment">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearH1p1"
+                    android:layout_width="400dp"
+                    android:layout_height="40dp"
+                    android:background="#F9A826"
+                    android:elevation="8dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:text="1. Datos generales"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgCollapse1p1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="9"
+                        android:src="@drawable/ic_up"
+                        android:visibility="visible" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgExpand1p1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="9"
+                        android:src="@drawable/ic_down"
+                        android:visibility="gone" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linear1p1"
+                    android:layout_width="match_parent"
+                    android:layout_height="370dp"
+                    android:layout_margin="0dp"
+                    android:background="#C4C4C4"
+                    android:orientation="vertical"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/ip_nombre_atr"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:hint="Ingrese el Nombre"
+                        android:theme="@style/CampoTexto" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/ip_descripcion_atr"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:hint="Descripción del atractivo" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <!--Provincia-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="1dp"
+                        android:layout_marginBottom="9dp"
+                        app:startIconDrawable="@drawable/ic_location">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/ip_categoria"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Categoria"
+                            android:inputType="none" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <!--Tipo-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="9dp"
+                        app:startIconDrawable="@drawable/ic_tipo">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/ip_tipo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Tipo"
+                            android:inputType="none" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <!--Provincia-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="9dp"
+                        app:startIconDrawable="@drawable/ic_subtipo">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/ip_subtipo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Subtipo"
+                            android:inputType="none" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="7dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/ip_espacio_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:hint="Agregar Foto" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@color/white" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearH2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:elevation="8dp"
+                    android:background="#FCE77A"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="6dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="8dp"
+                        android:text="2. Ubicación del Atractivo"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgCollapse2p1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="9"
+                        android:src="@drawable/ic_up"
+                        android:visibility="visible" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgExpand2p1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="9"
+                        android:src="@drawable/ic_down"
+                        android:visibility="gone" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linear2p1"
+                    android:layout_width="match_parent"
+                    android:layout_height="970dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+                    <!--Provincias-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        app:startIconDrawable="@drawable/ic_location">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/ip_provincia"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Provincias"
+                            android:inputType="none" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <!--Fin Provincias-->
+                    <!--Cantones-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        app:startIconDrawable="@drawable/ic_location">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/ip_canton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Cantones"
+                            android:inputType="none" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <!--Fin Cantones-->
+                    <!--Parroquias-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        app:startIconDrawable="@drawable/ic_location">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/ip_parroquias"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Parroquias"
+                            android:inputType="none" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <!--Fin Parroquias-->
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ip_calle_principal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:hint="Calle Principal"
+                        android:theme="@style/CampoTexto" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ip_calle_principal_numero"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:hint="Número"
+                        android:theme="@style/CampoTexto" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ip_calle_transversal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:hint="Transversal"
+                        android:theme="@style/CampoTexto" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ip_barrio_sector"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:hint="Barrio, Sector o Comuna"
+                        android:theme="@style/CampoTexto" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ip_sitio_poblado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:hint="Sitio poblado mas cercano"
+                        android:theme="@style/CampoTexto" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ip_latitud"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:hint="Latitud(grados decimales)"
+                        android:theme="@style/CampoTexto" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ip_longitug"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:hint="Longitud(grados decimales)"
+                        android:theme="@style/CampoTexto" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ip_altura_msnm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:hint="ALtura en msnm"
+                        android:theme="@style/CampoTexto" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/linearH2Informacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="2.1 Información del administrador"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ip_tipo_admin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Tipo Administrador"
+                        android:theme="@style/CampoTexto" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ip_nombre_inst"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nombre de la Institución "
+                        android:theme="@style/CampoTexto" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ip_nombre_admin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nombre del Administrador"
+                        android:theme="@style/CampoTexto" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ip_cargo_ocupa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Cargo que ocupa  "
+                        android:theme="@style/CampoTexto" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ip_telefono"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Teléfono / Celular "
+                        android:theme="@style/CampoTexto" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ip_correo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Correo Electrónico "
+                        android:theme="@style/CampoTexto" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="8dp">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/ip_observaciones_admin"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:hint=" Observaciones" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:id="@+id/llbotonesp1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btn_numpantallasp1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#3F3D56"
+                        android:inputType="text"
+                        android:text="1 de 6"
+                        android:textSize="16sp"
+                        app:cornerRadius="100dp" />
+
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </ScrollView>
+
+        <!--SCROLL Parte 2 =====================-->
+        <ScrollView
+            android:id="@+id/scrollparte2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#EAEDF2"
+                android:orientation="vertical"
+                tools:context="com.example.turism_register.fragments.AddLugarParte2Fragment">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearH1p2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#F9A826"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:text="3. Caracteristicas del atractivo"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgCollapsep2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="9"
+                        android:src="@drawable/ic_up"
+                        android:visibility="visible" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgExpandp2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="9"
+                        android:src="@drawable/ic_down"
+                        android:visibility="gone" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/cb_caract_clima_p2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3.1 Características climatológicad"
+                        android:textAlignment="textStart" />
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/linearH11p2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:background="#C4C4C4"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/clima"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint=" Clima" />
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/temperatura"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint=" Temperatura(C)" />
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/precipitacion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint=" Precipitación Pluviométrica(mm)" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                    <CheckBox
+                        android:id="@+id/linea_producto_p2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="3.2 Línea de producto al que pertenece el atractivo (U)"
+                        android:textAlignment="textStart" />
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/linearH22p2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFF"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/cultura"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:hint=" Cultura" />
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/naturaleza"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:hint=" Naturaleza" />
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/aventura"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:hint=" Aventura" />
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                    <CheckBox
+                        android:id="@+id/escenario_localiza_p2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="3.3 Escenario donde se localiza el atractivo turístico"
+                        android:textAlignment="textStart" />
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/linearH23p2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:background="#FFFF"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:visibility="visible">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/pristino"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:hint=" Prístino" />
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/primitivo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:hint=" Primitivo" />
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/rustico"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:hint=" Rústico Natural" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/rural"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:hint=" Rural " />
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/urbano"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:hint=" Urbano" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <CheckBox
+                        android:id="@+id/ingreso_atractivo_p2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="3.4 Ingreso al Atractivo (U)"
+                        android:textAlignment="textStart" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/linearH24p2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:background="#C4C4C4"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tipo de Ingreso"/>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/Libre"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:hint=" Libre" />
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/restringido"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:hint=" Restringido" />
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/pagado"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:hint=" Pagado" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Horario Atención"/>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/horario_ingreso_p2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:hint=" Horario de Ingreso"
+                                android:inputType="time" />
+
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/horario_salida_p2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:hint=" Horario de Salida"
+                                android:inputType="time" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" Atención"/>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atencion_todos_dias"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:hint=" Todos los días" />
+
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atencion_solo_dias"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:hint=" Solo días hábiles " />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atencion_fines_semana"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:hint=" Fines de semana y feriados" />
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/otro"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:hint=" Otro " />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" Forma de pago"/>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/form_pago_efectivo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:hint=" Efectivo" />
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/form_pago_dinero_elect"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:hint=" Dinero Electrónico" />
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/form_pago_deposito"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:hint=" Depósito Bancario " />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/form_pago_tarjeta_debito"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:hint=" Tarjeta de Débito " />
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/form_pago_tarjeta_credito"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:hint=" Tarjeta Crédito" />
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/form_pago_cheque"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:hint=" Cheque" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <com.google.android.material.checkbox.MaterialCheckBox
+                            android:id="@+id/atencion_sistema_reservas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:hint=" Maneja un sistema de reservas " />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Precio"/>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="8dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/precio_desde"
+                                android:layout_width="200dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="10dp"
+                                android:hint=" Desde" />
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/precio_hasta"
+                                android:layout_width="200dp"
+                                android:layout_height="match_parent"
+                                android:hint=" Hasta" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Meses recomendables de visita">
+                        </TextView>
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/meses_recomendables_visita"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:hint=" Meses recomendables de visita" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Observaciones"
+                            android:layout_marginBottom="4dp">
+                        </TextView>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/atencion_observaciones"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:hint=" Observaciones" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llbotonesp2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btn_numpantallasp2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#3F3D56"
+                        android:inputType="text"
+                        android:text="1 de 6"
+                        android:textSize="16sp"
+                        app:cornerRadius="100dp" />
+
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/scrollparte3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#EAEDF2"
+                android:orientation="vertical"
+                tools:context="com.example.turism_register.fragments.AddLugarFragment">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearH1p3"
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:background="#F9A826"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:text=" 4. Accesibilidad y conectividad al atractivo"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgCollapsep3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="9"
+                        android:src="@drawable/ic_up"
+                        android:visibility="visible" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgExpandp3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="9"
+                        android:src="@drawable/ic_down"
+                        android:visibility="gone" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearH11p3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:background="#C4C4C4"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="Poblado mas cercano con condiciones mínimas de servicios">
+
+                    </TextView>
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/nombre_ciudad_cercana"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:textSize="17dp"
+                        android:layout_marginBottom="8dp"
+                        android:hint="Nombre de la ciudad o poblado más cercano"
+                        android:theme="@style/CampoTexto" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="Distancia desde la ciudad o poblado más cercano">
+
+                    </TextView>
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/distancia_desde_hasta"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="4dp"
+                        android:hint=" Distancia desde la ciudad o poblado más cercano"
+                        android:textSize="17dp"
+                        android:theme="@style/CampoTexto" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="Tiempo estimado de desplazamiento en auto">
+
+                    </TextView>
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/tiempo_desplazamiento"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="4dp"
+                        android:hint="Tiempo estimado de desplazamiento en auto h/min"
+                        android:textSize="17dp"
+                        android:theme="@style/CampoTexto" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="Coordenadas(grados decimales)">
+
+                    </TextView>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/coordenadas_latitud"
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:hint="Latitud"
+                            android:textSize="17dp"
+                            android:theme="@style/CampoTexto" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/coordenadas_longitud"
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="4dp"
+                            android:hint="Longitud"
+                            android:textSize="17dp"
+                            android:theme="@style/CampoTexto" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="Observaciones"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/accesibilidad_observaciones"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:hint=" Observaciones" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <CheckBox
+                    android:id="@+id/cb_vias_acceso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Vías de acceso"
+                    android:textAlignment="textStart" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearH2p3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="a. Terrestre">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="Tipo de vía">
+
+                    </TextView>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.checkbox.MaterialCheckBox
+                            android:id="@+id/cb_acceso_primer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:hint=" Primer orden" />
+
+                        <com.google.android.material.checkbox.MaterialCheckBox
+                            android:id="@+id/cb_acceso_segundo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:hint=" Segundo orden" />
+
+                        <com.google.android.material.checkbox.MaterialCheckBox
+                            android:id="@+id/cb_acceso_tercero"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:hint=" Tercer orden" />
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="24dp"
+                            android:layout_marginBottom="8dp"
+                            android:text=" Coordenada de inicio" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginBottom="8dp"
+                            android:text=" Coordenada de fin" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/ip_coordenada_inicio"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="8dp"
+                            android:hint=" Coordenada de inicio"
+                            android:theme="@style/CampoTexto" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/ip_coordenada_fin"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginBottom="4dp"
+                            android:hint=" Coordenada de fin"
+                            android:textSize="17dp"
+                            android:theme="@style/CampoTexto" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+
+                            android:layout_marginBottom="8dp"
+                            android:text="Distancia(Km)"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="118dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="Tipo de material"/>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/ip_distanciakm"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="4dp"
+                            android:hint="Distancia(Km)"
+                            android:textSize="17dp"
+                            android:theme="@style/CampoTexto" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/ip_tipo_material"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="84dp"
+                            android:layout_marginBottom="4dp"
+                            android:hint="Tipo Material"
+                            android:textSize="17dp"
+                            android:theme="@style/CampoTexto" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="40dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="Estado"/>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/ip_estado_acceso"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="4dp"
+                        android:hint="Estado"
+                        android:textSize="17dp"
+                        android:theme="@style/CampoTexto" />
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/ip_observaciones_acceso"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:hint=" Observaciones" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@color/black" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/btn_anterior_add_lugar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/partSup"
+            android:text="Anterior"
+            app:cornerRadius="100dp" />
+
+        <Button
+            android:id="@+id/btn_siguiente_add_lugar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/partSup"
+            android:text="Siguiente"
+            app:cornerRadius="100dp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

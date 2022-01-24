@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        title = "TURISM REGISTER"
         // Agregar email al header del navigation drawer
         val header:View = navDrawerView.getHeaderView(0)
         var txtEmail:TextView = header.findViewById(R.id.tv_emailNavDrawer)

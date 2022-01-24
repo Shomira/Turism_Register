@@ -13,10 +13,10 @@ import kotlinx.android.synthetic.main.fragment_home.*
  */
 class HomeFragment : Fragment() {
 
-    private val addLugarFragment = AddLugarFragment()
+
     //private val listLugaresFragment = ListLugaresFragment()
     private val reportesFragment = ReportesFragment()
-
+    private var email = ""
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
@@ -30,7 +30,13 @@ class HomeFragment : Fragment() {
         (activity as AppCompatActivity).bottom_navegation_view.menu.findItem(R.id.fragmentToReturn).isVisible = false
 
         imgBtn_addlugar.setOnClickListener {
-            replaceFragment(addLugarFragment)
+            val objetoIntent =  (activity as AppCompatActivity).intent
+            email = objetoIntent.getStringExtra("email")!!
+            val addLugarMainFragment = AddLugarMainFragment()
+            var bundle:Bundle = Bundle()
+            bundle.putString("email", email)
+            addLugarMainFragment.arguments = bundle
+            replaceFragment(addLugarMainFragment)
         }
 
         imgBtn_reportes.setOnClickListener {

@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.Turism_Register" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_500</item>
+        <item name="colorPrimary">@color/partSup</item>
+        <item name="colorPrimaryVariant">@color/partSup</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -17,5 +17,12 @@
         <item name="android:windowBackground">
             @drawable/splash_background
         </item>
+    </style>
+    <style name="CampoTexto" parent="Theme.AppCompat.Light">
+        <item name= "android:layout_marginBottom">2dp</item>
+
+        <item name= "android:layout_marginTop">2dp</item>
+        <item name="colorControlActivated">#39008e</item>
+        <item name="android:padding">10dp</item>
     </style>
 </resources>

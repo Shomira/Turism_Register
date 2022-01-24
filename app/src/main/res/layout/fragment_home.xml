@@ -57,7 +57,7 @@
             app:layout_constraintStart_toStartOf="@+id/imgBtn_reportes"
             app:layout_constraintTop_toBottomOf="@+id/imgBtn_reportes" />
 
-        <ImageButton
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imgBtn_listLugares"
             android:layout_width="150dp"
             android:layout_height="150dp"
@@ -67,7 +67,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_reportes" />
 
-        <ImageButton
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imgBtn_addlugar"
             android:layout_width="150dp"
             android:layout_height="150dp"
@@ -77,15 +77,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageButton
-            android:id="@+id/imgBtn_reportes"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="30dp"
-            android:src="@drawable/reportes"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgBtn_reportes"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/reportes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
