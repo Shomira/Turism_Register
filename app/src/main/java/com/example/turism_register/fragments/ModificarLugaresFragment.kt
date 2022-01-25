@@ -12,13 +12,13 @@ import kotlinx.android.synthetic.main.activity_main.*
 /**
  * A simple [Fragment] subclass.
  */
-class RepositoryFragment : Fragment() {
+class ModificarLugaresFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_repository, container, false)
+        return inflater.inflate(R.layout.fragment_modificar_lugares, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

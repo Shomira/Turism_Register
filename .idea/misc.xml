@@ -4,10 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.21666666666666667" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.18229166666666666" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/drawable/ic_baseline_description_24.xml" value="0.21666666666666667" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.2169230769230769" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/drawable/ic_baseline_exit_to_app_24.xml" value="0.2203125" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/drawable/ic_baseline_group_24.xml" value="0.21666666666666667" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.2203125" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/drawable/login_background.xml" value="0.1537037037037037" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/drawable/splash_background.xml" value="0.2203125" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/drawable/stroke_radius.xml" value="0.2203125" />
@@ -20,18 +22,22 @@
         <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/activity_splash.xml" value="0.25" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/fragment_aboutus.xml" value="0.1526268115942029" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/fragment_add_lugar.xml" value="0.16" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/fragment_add_lugar_main.xml" value="0.2" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/fragment_b.xml" value="0.17300724637681159" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/fragment_dialog_add_reporte.xml" value="0.25" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/fragment_list_lugares.xml" value="0.25" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/fragment_modificar_lugares.xml" value="0.11911231884057971" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/fragment_prueba.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/fragment_reportes.xml" value="0.18795289855072464" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/fragment_reportes.xml" value="0.16" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/fragment_repository.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/list_item_categorias_drop_layout.xml" value="0.22" />
-        <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/list_item_lugar.xml" value="0.6506717850287908" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/list_item_lugar.xml" value="0.25" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/list_item_lugar_add_reporte.xml" value="0.25" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/nav_header.xml" value="0.33" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/popup_list_lugar.xml" value="0.25" />
-        <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/toolbar.xml" value="0.1" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/layout/toolbar.xml" value="0.18" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/menu/bottom_navigation.xml" value="0.18425925925925926" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/menu/buscador.xml" value="0.22" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Turism_Register/app/src/main/res/menu/nav_menu_drawer.xml" value="0.20416666666666666" />

@@ -15,7 +15,7 @@ class HomeFragment : Fragment() {
 
 
     //private val listLugaresFragment = ListLugaresFragment()
-    private val reportesFragment = ReportesFragment()
+    private val modificarLugaresFragment = ModificarLugaresFragment()
     private var email = ""
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,18 +29,16 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         (activity as AppCompatActivity).bottom_navegation_view.menu.findItem(R.id.fragmentToReturn).isVisible = false
 
+        val objetoIntent =  (activity as AppCompatActivity).intent
+        email = objetoIntent.getStringExtra("email")!!
+
         imgBtn_addlugar.setOnClickListener {
-            val objetoIntent =  (activity as AppCompatActivity).intent
-            email = objetoIntent.getStringExtra("email")!!
             val addLugarMainFragment = AddLugarMainFragment()
-            var bundle:Bundle = Bundle()
-            bundle.putString("email", email)
-            addLugarMainFragment.arguments = bundle
             replaceFragment(addLugarMainFragment)
         }
 
-        imgBtn_reportes.setOnClickListener {
-            replaceFragment(reportesFragment)
+        imgBtn_modificarLugares.setOnClickListener {
+            replaceFragment(modificarLugaresFragment)
         }
 
         imgBtn_listLugares.setOnClickListener {
@@ -50,6 +48,10 @@ class HomeFragment : Fragment() {
     }
 
     private fun replaceFragment(fragment: Fragment) {
+        var bundle:Bundle = Bundle()
+        bundle.putString("email", email)
+        fragment.arguments = bundle
+
         if (fragment != null) {
             val transaction = (activity as AppCompatActivity).supportFragmentManager.beginTransaction()
             transaction.replace(R.id.fragment_container, fragment)

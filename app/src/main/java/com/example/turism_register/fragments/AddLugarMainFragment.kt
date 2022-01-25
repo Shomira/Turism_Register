@@ -1,6 +1,12 @@
 package com.example.turism_register.fragments
 
+
+import android.app.Activity.RESULT_OK
+import android.app.ProgressDialog
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -14,9 +20,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import com.example.turism_register.R
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_add_lugar_main.*
 import kotlinx.android.synthetic.main.fragment_add_lugar_main.view.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener{
@@ -24,6 +35,7 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener{
     private lateinit var database: FirebaseFirestore
     private var contadorPantallas = 0
 
+    lateinit var ImageUri: Uri
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -35,7 +47,12 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener{
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        // Subir imagen del atractivo
+        btn_subir_imagen_atr.setOnClickListener{
+            selectImage()
+        }
 
+        // ===============FIN subir imagen
         (activity as AppCompatActivity).bottom_navegation_view.menu.findItem(R.id.fragmentToReturn).isVisible = false
 
         val objetoIntent = (activity as AppCompatActivity).intent
@@ -99,7 +116,6 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener{
                 "Correo Electrónico" to ip_correo.text.toString(),
                 "Observaciones" to ip_observaciones_admin.text.toString()
 
-
             ))
 
             Toast.makeText(context, "LUGAR AGREGADO", Toast.LENGTH_SHORT).show()
@@ -109,6 +125,52 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener{
         }
 
     }
+    // ========= Imagen
+
+
+    // Imagen
+    fun selectImage(){
+        val intent = Intent()
+        intent.type = "*/*"
+        intent.action = Intent.ACTION_GET_CONTENT
+        startActivityForResult(intent, 100)
+
+    }
+
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if(requestCode == 100 && resultCode == RESULT_OK){
+            ImageUri = data?.data!!
+            firebaseImage.setImageURI(ImageUri)
+            if(data == null || data.data == null){
+                return
+            }else{
+                val formatter = SimpleDateFormat("yyyy_MM_dd_HH_mm_ss", Locale.getDefault())
+                val now = Date()
+                val fileName = formatter.format(now)
+                val storageReference = FirebaseStorage.getInstance().getReference("pruebas/$fileName")
+
+                storageReference.putFile(ImageUri).addOnSuccessListener {
+
+                    Toast.makeText(context, "carga exitosa ....", Toast.LENGTH_LONG).show()
+                }.addOnFailureListener{
+
+                    Toast.makeText(context, "hola "+ ImageUri.toString(), Toast.LENGTH_LONG).show()
+                }
+            }
+
+
+
+        }
+
+    }
+
+
+
+
+
+
 
     fun addLugarParte1() {
         // DropDown de provincias
@@ -123,7 +185,6 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener{
 
         // DropDown de Tipo
         val tipos = resources.getStringArray(R.array.tp_atractivoNaturales)
-
 
         var adapter1 = activity?.let {
             ArrayAdapter<String>(it, R.layout.item_select, tipos)
@@ -166,7 +227,7 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener{
         cb_caract_clima_p2.setOnClickListener{
             linearH11p2.toggleVisibility()
         }
-       //  Imagen para Expandir y Contraer el contenido de las secciones a llenar
+        //  Imagen para Expandir y Contraer el contenido de las secciones a llenar
         imgCollapse1p1.setOnClickListener {
             linear1p1.toggleVisibility()
             imgExpand1p1.visibility = View.VISIBLE
@@ -205,7 +266,6 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener{
         }
 
     }
-
     fun partesFormulario(){
         if ( contadorPantallas == 1){
             val paramsScroll1 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
@@ -214,6 +274,7 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener{
             scrollparte2.layoutParams= paramsScroll2
             val paramsScroll3 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
             scrollparte3.layoutParams= paramsScroll3
+            btn_numpantallasp1.setText("2 DE 6")
         }else if(contadorPantallas ==2){
             val paramsScroll1 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
             scrollparte1.layoutParams= paramsScroll1
@@ -221,6 +282,7 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener{
             scrollparte2.layoutParams= paramsScroll2
             val paramsScroll3 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,0f )
             scrollparte3.layoutParams= paramsScroll3
+            btn_numpantallasp1.setText("3 DE 6")
         }
     }
 

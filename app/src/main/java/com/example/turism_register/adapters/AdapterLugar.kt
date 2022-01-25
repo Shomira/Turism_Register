@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.turism_register.R
 import com.example.turism_register.datas_class.Lugar
+import kotlinx.android.synthetic.main.fragment_profile.view.*
 import kotlinx.android.synthetic.main.list_item_lugar.view.*
 import java.lang.IllegalArgumentException
 
@@ -63,7 +64,6 @@ class AdapterLugar(
             Glide.with(activated).load(item.imagen).into(itemView.imgv_imageLugar)
             itemView.tv_nombreLugar.text = item.nombre
             itemView.tv_ubicacionLugar.text = item.provincia + ", " + item.canton + ", " + item.parroquia
-
         }
 
         /*

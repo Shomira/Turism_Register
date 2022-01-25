@@ -43,49 +43,49 @@
             app:layout_constraintTop_toBottomOf="@+id/imgBtn_addlugar" />
 
         <TextView
-            android:id="@+id/tv_reportes"
-            android:layout_width="150dp"
-            android:layout_height="30dp"
+            android:id="@+id/tv_modificarLugares"
+            android:layout_width="wrap_content"
+            android:layout_height="29dp"
             android:layout_marginTop="5dp"
-            android:text="Reportes"
+            android:text="Modificar Lugares"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="#000000"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/imgBtn_reportes"
-            app:layout_constraintStart_toStartOf="@+id/imgBtn_reportes"
-            app:layout_constraintTop_toBottomOf="@+id/imgBtn_reportes" />
+            app:layout_constraintEnd_toEndOf="@+id/imgBtn_modificarLugares"
+            app:layout_constraintStart_toStartOf="@+id/imgBtn_modificarLugares"
+            app:layout_constraintTop_toBottomOf="@+id/imgBtn_modificarLugares" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imgBtn_listLugares"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:src="@drawable/listadolugares"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_reportes" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_addLugar" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imgBtn_addlugar"
             android:layout_width="150dp"
             android:layout_height="150dp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="30dp"
-            android:layout_marginEnd="30dp"
             android:src="@drawable/addlugar"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/imgBtn_reportes"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
-        android:src="@drawable/reportes"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgBtn_modificarLugares"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/reportes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
