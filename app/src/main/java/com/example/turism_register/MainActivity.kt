@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
     private val homeFragment = HomeFragment()
     private val profileFragment = ProfileFragment()
     private val aboutusFragment = AboutusFragment()
-    private val reportesFragment = ReportesFragment()
     private var email = ""
     private var provider = ""
 
@@ -51,7 +50,6 @@ class MainActivity : AppCompatActivity() {
             when (it.itemId) {
                 R.id.navDrawer_profile -> replaceFragment(profileFragment)
                 R.id.navDrawer_aboutUs -> replaceFragment(aboutusFragment)
-                R.id.navDrawer_reportes -> replaceFragment(reportesFragment)
                 R.id.sign_out -> {
                     val verAuth: Intent = Intent(this, LoginUserActivity::class.java)
                     FirebaseAuth.getInstance().signOut()

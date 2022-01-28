@@ -7,11 +7,11 @@
         <deviceKey>
           <Key>
             <type value="VIRTUAL_DEVICE_PATH" />
-            <value value="C:\Users\shomi\.android\avd\3a_TallerAndroidStudio.avd" />
+            <value value="C:\Users\shomi\.android\avd\Turim_Register.avd" />
           </Key>
         </deviceKey>
       </Target>
     </targetSelectedWithDropDown>
-    <timeTargetWasSelectedWithDropDown value="2021-12-15T04:40:55.742192100Z" />
+    <timeTargetWasSelectedWithDropDown value="2022-01-28T18:13:28.990884800Z" />
   </component>
 </project>

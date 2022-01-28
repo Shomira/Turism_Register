@@ -19,10 +19,26 @@
         </item>
     </style>
     <style name="CampoTexto" parent="Theme.AppCompat.Light">
-        <item name= "android:layout_marginBottom">2dp</item>
+        <item name= "android:layout_marginBottom">4dp</item>
 
         <item name= "android:layout_marginTop">2dp</item>
         <item name="colorControlActivated">#39008e</item>
         <item name="android:padding">10dp</item>
+        <item name="android:textSize">14dp</item>
     </style>
+    <style name="Checkbox" parent="Theme.AppCompat.Light">
+        <item name= "android:layout_marginBottom">2dp</item>
+        <item name= "android:layout_marginTop">2dp</item>
+        <item name="colorControlActivated">#39008e</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="ProgressBarStyle">
+        <item name="colorAccent">@color/partSup</item>
+    </style>
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
 </resources>

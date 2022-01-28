@@ -2,6 +2,275 @@
     <string name="app_name">Turism_Register</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Dropdown de PARTE 2-->
+    <string-array name="linea_producto_p2">
+        <item>Cultura</item>
+        <item>Naturaleza</item>
+        <item>Aventura</item>
+    </string-array>
+    <string-array name="escenario_localiza_p2">
+        <item>Prístino</item>
+        <item>Primitivo</item>
+        <item>Rústico Natural</item>
+        <item>Rural</item>
+        <item>Urbano</item>
+    </string-array>
+    <string-array name="tipo_ingreso_p2">
+        <item>Libre</item>
+        <item>Restringido</item>
+        <item>Pagado</item>
+    </string-array>
+    <string-array name="atencion_p2">
+        <item>Todos los días</item>
+        <item>Fines de Semana y feriados</item>
+        <item>Solo días hábiles</item>
+        <item>Otro</item>
+    </string-array>
+
+    <string-array name="tipo_via_p3">
+        <item>Primer orden</item>
+        <item>Segundo orden</item>
+        <item>Tercer orden</item>
+    </string-array>
+    <string-array name="tipo_aereo_p3">
+        <item>Nacional</item>
+        <item>Internacional</item>
+    </string-array>
+    <string-array name="tipo_acuatico_p3">
+        <item>Marítimo</item>
+        <item>Lacustre</item>
+        <item>Fluvial</item>
+    </string-array>
+    <string-array name="frecuencia_transporte_p3">
+        <item>Diaria</item>
+        <item>Semanal</item>
+        <item>Mensual</item>
+        <item>Eventual</item>
+    </string-array>
+    <string-array name="estado_senializacion">
+        <item>Bueno</item>
+        <item>Regular</item>
+        <item>Malo</item>
+    </string-array>
+    <string-array name="alojamiento_planta_atr_poblado">
+        <item>Hotel</item>
+        <item>Hostal</item>
+        <item>Hostería</item>
+        <item>Hacienda Turística</item>
+        <item>Lodge</item>
+        <item>Resort</item>
+        <item>Refugio</item>
+        <item>Campamento Turístico</item>
+        <item>Casa de Huéspedes</item>
+    </string-array>
+    <string-array name="alimentos_bebidas">
+        <item>Restaurantes</item>
+        <item>Cafeterías</item>
+        <item>Bebidas</item>
+        <item>Fuentes de soda</item>
+    </string-array>
+    <string-array name="agencia_viajes">
+        <item>Mayoristas</item>
+        <item>Internacionales</item>
+        <item>Operadoras</item>
+    </string-array>
+
+    <!--FACILIDADES EN EL ENTORNO AL ATRACTIVO-->
+    <string-array name="facilidades_categoria">
+        <item>De apoyo a la gestión turística</item>
+        <item>De observación y vigilancia</item>
+        <item>De recorrido y descanso</item>
+        <item>De servicio</item>
+        <item>Otros</item>
+    </string-array>
+    <string-array name="tipo_apoyo">
+        <item>Punto de Información</item>
+        <item>I-Tur</item>
+        <item>Centro de interpretación</item>
+        <item>Centro de facilitación turística</item>
+        <item>Centro de recepción de visitantes</item>
+    </string-array>
+    <string-array name="tipo_observacion">
+        <item>Garitas de guardianía</item>
+        <item>Miradores</item>
+        <item>Torres de avistamiento de aves</item>
+        <item>Torres de vigilancia para salvavidas</item>
+    </string-array>
+    <string-array name="tipo_recorrido">
+        <item>Senderos</item>
+        <item>Estaciones de sombra y descanso</item>
+        <item>Áreas de acampar</item>
+        <item>Refugio de alta montaña</item>
+    </string-array>
+    <string-array name="tipo_servicio">
+        <item>Baterías sanitarias</item>
+        <item>Estacionamientos</item>
+    </string-array>
+    <string-array name="facilidades_estado">
+        <item>B</item>
+        <item>R</item>
+        <item>M</item>
+    </string-array>
+
+
+
+    <!-- FINN Dropdown de PARTE 2-->
+
+    <!--PARTE 5-->
+    <string-array name="conservacion">
+        <item>Conservado</item>
+        <item>Alterado</item>
+        <item>En proceso de deterioro</item>
+        <item>Deteriorado</item>
+    </string-array>
+    <string-array name="fatores_naturales">
+        <item>Erosión</item>
+        <item>Humedad</item>
+        <item>Desastres naturales</item>
+        <item>Flora/Funa</item>
+        <item>Clima</item>
+        <item>Otro</item>
+    </string-array>
+    <string-array name="fatores_antropicos">
+        <item>Actividades agrícolas y ganaderas</item>
+        <item>Actividades forestales</item>
+        <item>Actividades extractivas / minería</item>
+        <item>Actividades  industriales</item>
+        <item>Negligencia / abandono</item>
+        <item>Huaquearía</item>
+        <item>Conflicto de tenencia</item>
+        <item>Condiciones de uso y exposición</item>
+        <item> Falta de mantenimiento </item>
+        <item>Contaminación del ambiente</item>
+        <item>Generación de residuos</item>
+        <item>Conflicto político / social</item>
+        <item>Desarrollo industrial / comercial</item>
+        <item>Vandalismo</item>
+        <item>Expansión urbana</item>
+    </string-array>
+    <!-- FIN PARTE 5-->
+
+    <!-- PARTE 6-->
+    <string-array name="senialetica_ambiente">
+        <item>En áreas urbanas</item>
+        <item>En áreas naturales</item>
+        <item>Letreros informativos</item>
+        <item>Señalética interna de seguridad</item>
+    </string-array>
+
+    <string-array name="tipo_ambiente_areas_urbanas">
+        <item>Pictograma de atractivos naturales</item>
+        <item>Pictograma de atractivos culturales</item>
+        <item>Pictograma de actividades turísticas</item>
+        <item>Pictograma de servicios de apoyo</item>
+        <item>Pictogramas de restricción</item>
+        <item>Tótems de atractivos turísticos</item>
+        <item>Tótems de sitio</item>
+        <item>Tótems direccionales</item>
+    </string-array>
+    <string-array name="tipo_ambiente_areas_naturales">
+        <item>Pictograma de atractivos naturales</item>
+        <item>Pictograma de atractivos culturales</item>
+        <item>Pictograma de actividades turísticas</item>
+        <item>Pictograma de servicios de apoyo</item>
+        <item>Pictogramas de restricción</item>
+        <item>Señales turísticas de aproximación</item>
+        <item>Paneles de direccionamiento hacia atractivos</item>
+        <item>Panel informativo de atractivos</item>
+        <item>Panel informativo de direccionamiento hacia atractivos, servicios y actividades</item>
+        <item>Mesas interpretativas</item>
+        <item>Tótem de sitio</item>
+        <item>Tótem de direccionamiento</item>
+    </string-array>
+    <string-array name="letreros">
+        <item>De información botánica</item>
+        <item>Normativos de concienciación</item>
+    </string-array>
+    <string-array name="senialetica_interna">
+        <item>Protección de los elementos del atractivo</item>
+    </string-array>
+    <string-array name="materialidad">
+        <item>Madera</item>
+        <item>Aluminio</item>
+        <item>Otro</item>
+        <item>Especifique</item>
+    </string-array>
+    <string-array name="centro_salud">
+        <item>Hospital o Clínica</item>
+        <item>Puesto / Centro de salud</item>
+        <item>Dispensario médico</item>
+        <item>Botiquín de primeros auxilios</item>
+        <item>Otros</item>
+    </string-array>
+
+    <string-array name="higiene_seguridad">
+        <item>Privada</item>
+        <item>Policía nacional</item>
+        <item>Policía metropolitana / Municipal</item>
+        <item>Otros</item>
+    </string-array>
+    <string-array name="comunic_telefonia">
+        <item>Fija</item>
+        <item>Móvil</item>
+        <item>Satelital</item>
+    </string-array>
+    <string-array name="comunic_internet">
+        <item>Línea telefónica</item>
+        <item>Fibra óptica</item>
+        <item>Satélite</item>
+        <item>Redes inalámbricas</item>
+        <item>Telefonía móvil</item>
+    </string-array>
+    <string-array name="comunic_radio_portatil">
+        <item>De uso exclusivo para el visitante</item>
+        <item>De uso exclusivo para comunicación interna</item>
+        <item>De uso exclusivo en caso de emergencia</item>
+
+    </string-array>
+    <string-array name="multiamenazas">
+        <item>Deslaves</item>
+        <item>Sequía</item>
+        <item>Inundaciones</item>
+        <item>Erupciones volcánicas</item>
+        <item>Sismos</item>
+        <item>Erupciones volcánicas</item>
+        <item>Aguajes</item>
+        <item>Incendios forestales</item>
+        <item>Tsunami</item>
+    </string-array>
+    <string-array name="medio_promocional">
+        <item> Página WEB </item>
+        <item>Red Social </item>
+        <item>Revistas Especializadas</item>
+        <item>Material POP </item>
+        <item>Oficina de Información Turística </item>
+        <item>Medios de comunicación (radio, tv, prensa)</item>
+        <item>Asistencia a ferias turísticas</item>
+    </string-array>
+
+    <!-- SELECT SI _ NO-->
+    <string-array name="select_si_no">
+        <item>Si</item>
+        <item>No</item>
+    </string-array>
+    <string-array name="select_tipo">
+        <item>Digital</item>
+        <item>Papel</item>
+    </string-array>
+
+    <string-array name="frecuencia_visitas">
+        <item>Permanente</item>
+        <item>Estacional</item>
+        <item>Espóradica</item>
+        <item>Inexistente</item>
+    </string-array>
+
+    <!-- FIN PARTE 5-->
+
+
+
+
+
 
     <!-- DROPDOWN CATEGORIAS LIST LUGARES -->
     <string-array name="categorias_list_lugar_drop">

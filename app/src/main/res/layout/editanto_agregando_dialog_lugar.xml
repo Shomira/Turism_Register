@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view_dialog_modificar_agregar_lugar"
+    android:layout_width="300dp"
+    android:layout_height="150dp"
+    app:cardCornerRadius="15dp"
+    android:layout_gravity="center"
+    app:cardBackgroundColor="@color/green"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:paddingBottom="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_title_guardando_editando_lugar_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="GUARDANDO"
+            android:gravity="center"
+            android:textSize="27sp"
+            android:textColor="@color/black"
+            android:layout_marginVertical="10dp"
+            />
+
+        <ProgressBar
+            android:id="@+id/progressBar_guardando_editando_lugar_dialog"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:indeterminate="false"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/partSup"
+            android:indeterminateTintMode="src_in"
+            />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

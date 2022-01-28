@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_dialog_delete_lugar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:padding="20dp"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dialog_delete_lugar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_backgroung_delete_lugar"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <TextView
+            android:id="@+id/tv_title_dialog_delete_lugar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_title_background_delete_lugar"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="Eliminar Lugar"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/icon_dialog_delete_lugar"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="Custom Dialogs"
+            app:layout_constraintBottom_toBottomOf="@id/tv_title_dialog_delete_lugar"
+            android:tint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_title_dialog_delete_lugar"
+            tools:ignore="UseAppTint" />
+        <TextView
+            android:id="@+id/tv_message_dialog_delete_lugar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="40dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_dialog_delete_lugar"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/dialog_button_no_delete_lugar"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@color/neutral"
+        android:text="Cancelar"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:cornerRadius="100dp"
+        app:layout_constraintBottom_toBottomOf="@id/dialog_delete_lugar"
+        app:layout_constraintEnd_toStartOf="@+id/dialog_button_si_delete_lugar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialog_delete_lugar" />
+    <Button
+        android:id="@+id/dialog_button_si_delete_lugar"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="@color/yellow"
+        app:cornerRadius="100dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:text="Aceptar"
+        app:layout_constraintBottom_toBottomOf="@id/dialog_delete_lugar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dialog_button_no_delete_lugar"
+        app:layout_constraintTop_toBottomOf="@id/dialog_delete_lugar"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

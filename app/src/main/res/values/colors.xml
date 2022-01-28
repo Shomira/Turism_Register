@@ -14,4 +14,10 @@
     <color name="navColorDrawer">#B0AA9D</color>
     <color name="blueBajo">#BACBE5</color>
     <color name="transparentColor">#00FFFFFF</color>
+
+    <color name="red">#CC0000</color>
+    <color name="yellow">#FFCC00</color>
+    <color name="green">#8BC34A</color>
+    <color name="neutral">#434343</color>
+
 </resources>
