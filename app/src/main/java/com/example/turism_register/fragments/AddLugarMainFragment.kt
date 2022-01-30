@@ -399,7 +399,7 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener{
             "nombre_administrador" to ip_nombre_admin.text.toString(),
             "cargo_ocupa" to ip_cargo_ocupa.text.toString(),
             "telefono_celular" to ip_telefono.text.toString(),
-            "correo_electrónico" to ip_correo.text.toString(),
+            "correo_electronico" to ip_correo.text.toString(),
             "observaciones_admin" to ip_observaciones_admin.text.toString(),
             // Segunda pantalla
             "clima" to clima.text.toString(),
@@ -436,7 +436,7 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener{
             //============================
                 // - Vias Accesso Acuatico
 
-            "acuatico_tipo_via " to ip_tipo_via_p3.text.toString(),
+            "acuatico_tipo_via" to ip_tipo_via_p3.text.toString(),
             "acuatico_tipo_acceso" to ip_tipo_acuatico_p3.text.toString(),
             "muelle_partida" to ip_muelle_partida.text.toString(),
             "estado_muelle_partida" to ip_estado_muelle_partida.text.toString(),

@@ -141,33 +141,18 @@ class ListLugaresFragment : Fragment(), AdapterLugar.OnLugarClickListener,
             })
     }
 
-    override fun onItemClick(
-        nombre: String?,
-        descripcion: String?,
-        provincia: String?,
-        canton: String?,
-        parroquia: String?,
-        imagen: String?,
-        actividad: View
-    ) {
-        //Toast.makeText((activity as AppCompatActivity), "$nombre", Toast.LENGTH_SHORT).show()
-        val dialog: AlertDialog = AlertDialog.Builder(actividad.rootView.context).create()
-        val dialogView:View = LayoutInflater.from(actividad.rootView.context).inflate(R.layout.popup_list_lugar, null)
-        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+    override fun onItemClickView(id: String?) {
+        var viewItemLugarFragment = ViewItemLugarFragment()
+        var bundle:Bundle = Bundle()
+        bundle.putString("id", id)
+        viewItemLugarFragment.arguments = bundle
 
-        val popNombreLugar: TextView = dialogView.findViewById(R.id.pop_tv_titleLugar)
-        val popDescripLugar: TextView = dialogView.findViewById(R.id.pop_tv_descLugar)
-        val popUbicacionLugar: TextView = dialogView.findViewById(R.id.pop_tv_ubicLugar)
-        val popImgLugar: PhotoView = dialogView.findViewById(R.id.pop_imgv_lugar)
-
-        popNombreLugar.setText("$nombre")
-        popDescripLugar.setText("$descripcion")
-        popUbicacionLugar.setText("$provincia, $canton, $parroquia")
-        Glide.with(actividad).load(imagen).into(popImgLugar)
-
-        dialog.setView(dialogView)
-        dialog.setCancelable(true)
-        dialog.show()
+        if (viewItemLugarFragment != null) {
+            val transaction = (activity as AppCompatActivity).supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.fragment_container, viewItemLugarFragment)
+            transaction.addToBackStack(null)
+            transaction.commit()
+        }
     }
 
     fun dropDownCategorias() {
