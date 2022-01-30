@@ -70,8 +70,7 @@
                 app:boxCornerRadiusBottomStart="0dp"
                 app:boxCornerRadiusTopEnd="0dp"
                 app:boxCornerRadiusTopStart="0dp"
-                android:layout_weight="1"
-                >
+                android:layout_weight="1">
 
                 <AutoCompleteTextView
                     android:id="@+id/autocom_tv_categoria_list"

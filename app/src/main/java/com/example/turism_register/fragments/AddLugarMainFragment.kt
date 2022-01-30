@@ -49,7 +49,7 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener{
     // URL de la imagen del atractivo
     var ImageUri: Uri? = null
     val folder: StorageReference = FirebaseStorage.getInstance().getReference()
-    var urlImagen =  "https://bit.ly/3IJC7q5"
+    var urlImagen =  "https://firebasestorage.googleapis.com/v0/b/pruebaturismo-38afa.appspot.com/o/lugarTuritico_default.jpg?alt=media&token=e676058f-6327-4714-a1bd-4583335da6b8"
 
     // Barra de progreso
     private var arrayContar  = arrayOf<String>()
@@ -61,6 +61,19 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener{
     var formaPago_p2 = mutableListOf<String>()
     var transporte_p3 = mutableListOf<String>()
     var accesibilidad_discapacidad = mutableListOf<String>()
+    var complementos_atr = mutableListOf<String>()
+    var complementos_pbl = mutableListOf<String>()
+    var servicios_basicos = mutableListOf<String>()
+
+    // variables checked
+    var plan_contigencias: String = ""
+    //preguntas pantalla  8
+    var plan_desarrollo: String = ""
+    var doc_planificacion: String = ""
+    var aplicac_normativa: String = ""
+    var aplic_ordenanzas: String = " "
+    var promocion_cantonal_turistica: String = ""
+    var promocion_atractivo: String =""
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -92,10 +105,11 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener{
         is_editar = this.arguments?.getString("isEditar").toString()
         usuario_add_lugar.setText(email)
 
-        // Funciones a cada pantalla
+        // Funciones a las pantallas
         addLugarParte1()
         addLugarParte2()
         addLugarParte3()
+
         //Contro de edicion y creacion
         if (is_editar == "false"){
             id = ('A'..'Z').random() + (555..99999).random().toString() + ('A'..'Z').random() +
@@ -124,7 +138,7 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener{
 
             }
             partesFormulario()
-            if(contadorPantallas < 2){
+            if (contadorPantallas > 2){
                 btn_siguiente_add_lugar.isVisible = true
             }
         }
@@ -135,18 +149,18 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener{
                 contadorPantallas = 0
             }else{
                 contadorPantallas++
-            }
 
-            partesFormulario()
+            }
             if (contadorPantallas > 0){
                 btn_anterior_add_lugar.isVisible = true
             }
-            if(contadorPantallas ==3){
+            if (contadorPantallas > 0){
                 btn_siguiente_add_lugar.isVisible = true
             }
-            if(contadorPantallas ==4){
+            if(contadorPantallas ==10){
                 btn_siguiente_add_lugar.isVisible = false
             }
+            partesFormulario()
         }
         // Formas de Pago
 
@@ -177,11 +191,98 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener{
                 dialog.window?.setLayout(750, 500)
 
                 arrayContar = arrayOf(
-                    ip_nombre_atr.text.toString(),ip_descripcion_atr.text.toString(),
-                    ip_categoria.text.toString(),ip_tipo.text.toString(),
-                    ip_subtipo.text.toString(),ip_provincia.text.toString(),
-                    ip_canton.text.toString(),ip_parroquias.text.toString(),
-                    ip_calle_principal.text.toString(),
+                        ip_nombre_atr.text.toString(),ip_descripcion_atr.text.toString(),
+                        ip_categoria.text.toString(),ip_tipo.text.toString(),
+                        ip_subtipo.text.toString(),ip_provincia.text.toString(),
+                        ip_canton.text.toString(),ip_parroquias.text.toString(),
+                        ip_calle_principal.text.toString(),ip_calle_principal_numero.text.toString(),
+                        ip_calle_transversal.text.toString(),ip_barrio_sector.text.toString(),
+                        ip_sitio_poblado.text.toString(),ip_latitud.text.toString(),ip_longitug.text.toString(),
+                        ip_altura_msnm.text.toString(),ip_tipo_admin.text.toString(),ip_nombre_inst.text.toString(),
+                        ip_nombre_admin.text.toString(),ip_cargo_ocupa.text.toString(),ip_telefono.text.toString(),
+                        ip_correo.text.toString(),ip_observaciones_admin.text.toString(),clima.text.toString(),
+                        temperatura.text.toString(),precipitacion.text.toString(),
+                        ip_linea_producto_p2.text.toString(),ip_escenario_localiza_p2.text.toString(),
+                        ip_tipo_ingreso_p2.text.toString(),horario_ingreso_p2.text.toString(),
+                        horario_salida_p2.text.toString(),ip_atencion_p2.text.toString(),
+                        formaPago_p2.toString(),precio_desde.text.toString(),precio_hasta.text.toString(),
+                        meses_recomendables_visita.text.toString(),atencion_observaciones.text.toString(),
+                        nombre_ciudad_cercana.text.toString(),distancia_desde_hasta.text.toString(),
+                        tiempo_desplazamiento.text.toString(),ip_latitud.text.toString(),
+                        ip_longitug.text.toString(),accesibilidad_observaciones.text.toString(),
+                        ip_coordenada_inicio.text.toString(),ip_coordenada_fin.text.toString(),
+                        ip_distanciakm.text.toString(),ip_tipo_material.text.toString(),
+                        ip_estado_acceso.text.toString(),ip_observaciones_acceso.text.toString(),
+                        ip_tipo_via_p3.text.toString(),ip_tipo_acuatico_p3.text.toString(),
+                        ip_muelle_partida.text.toString(),ip_estado_muelle_partida.text.toString(),
+                        ip_muelle_llegada.text.toString(),ip_estado_muelle_llegada.text.toString(),
+                        ip_tipo_aereo_p3.text.toString(),transporte_p3.toString(),ip_observaciones_transporte.text.toString(),
+                        ip_nombre_cooperativa.text.toString(), ip_estacion_terminal.text.toString(),
+                        ip_frecuencia_transporte_p3.text.toString(),ip_transporte_detalle_traslado.text.toString(),
+                        accesibilidad_discapacidad.toString(),ip_observaciones_accesibilidad.text.toString(),
+                        ip_senializacion_estado_p3.text.toString(),ip_observaciones_senializacion.text.toString(),
+                        ip_planta_atr_p4.text.toString(), establecimientos_registrados.text.toString(),
+                        numero_habitaciones.text.toString(),numero_plazas.text.toString(),
+                        planta_turistica_observaciones.text.toString(),ip_planta_poblado_p4.text.toString(),
+                        est_registrados_poblado.text.toString(),numero_habitaciones_poblado.text.toString(),
+                        numero_plazas_poblado.text.toString(),planta_turistica_observaciones2.text.toString(),
+                        ip_alimentos_bebidas_p4.text.toString(),est_registrados_alimentos.text.toString(),
+                        numero_mesas_alimentos.text.toString(),numero_plazas_alimentos.text.toString(),
+                        alimentos_bebidas_p4.text.toString(),ip_agencia_viajes_p4.text.toString(),
+                        establecimientos_registrados_agencia.text.toString(),observaciones_agencias_viajes_p4.text.toString(),
+                        ip_categoria_facilidad_entorno.text.toString(),ip_tipo_facilidad_entorno.text.toString(),
+                        ip_estado_facilidad_entorno.text.toString(),facilidad_entorno_cantidad.text.toString(),
+                        facilidad_entorno_coordenadas.text.toString(),facilidad_entorno_administrador.text.toString(),
+                        complementos_atr.toString(),complementos_pbl.toString(),
+                        observaciones_complement_p4.text.toString(),observaciones_complement_pobl_p4.text.toString(),
+                        ip_conservacion_atr.text.toString(),observaciones_conservacion_atr_p5.text.toString(),
+                        ip_factores_naturales_atr.text.toString(),ip_factores_antropi_atr.text.toString(),
+                        factores_atr_p5.text.toString(),ip_conservacion_entorno.text.toString(),
+                        observaciones_entorno_p5.text.toString(),ip_factores_naturales_entorno.text.toString(),
+                        ip_factores_antropi_entorno.text.toString(),factores_entorno_p5.text.toString(),
+                        declaratoria_declarante.text.toString(),declaratoria_denominacion.text.toString(),
+                        declaratoria_fecha_creacion.text.toString(),declaratoria_alcance.text.toString(),
+                        observaciones_declaratoria_p5.text.toString(),servicios_basicos.toString(),
+                        observaciones_servicios_p6.text.toString(),observaciones_servicios_p6_2.text.toString(),
+                        ip_higiene_senialetica_ambientes.text.toString(),ip_higiene_senialetica_tipo.text.toString(),
+                        ip_higiene_materialidad.text.toString(),ip_higiene_estado.text.toString(),
+                        ip_higiene_salud_atr.text.toString(),ip_observaciones_salud_atr.text.toString(),
+                        ip_higiene_salud_pbl.text.toString(),ip_observaciones_higiene.text.toString(),
+                        ip_seguridad.text.toString(),ip_observaciones_seguridad.text.toString(),
+                        ip_comunic_telefonia_atr.text.toString(),ip_comunic_internet_atr.text.toString(),
+                        ip_comunic_radio_atr.text.toString(),ip_observaciones_comunic_atr.text.toString(),
+                        ip_comunic_telefonia_pbl.text.toString(),ip_comunic_internet_pbl.text.toString(),
+                        ip_comunic_radio_pbl.text.toString(),ip_observaciones_comunic_pbl.text.toString(),
+                        ip_multiamenazas.text.toString(),plan_contigencias,
+                        ip_institucion_elaboro_doc.text.toString(),ip_nom_documento.text.toString(),
+                        ip_anio_elaboracion_doc.text.toString(),ip_observaciones_multiamenazas.text.toString(),
+                        plan_desarrollo,doc_planificacion,aplicac_normativa,aplic_ordenanzas,observaciones_politicas.text.toString(),
+                        promocion_cantonal_turistica,promocion_atractivo,ip_observaciones_promocion.text.toString(),
+                        ip_medio_promocional.text.toString(),ip_direccion_nombre.text.toString(),ip_periodicidad_promocion.text.toString(),
+                        select_si_no_2p11.text.toString(),select_tipo_p11.text.toString(),
+                        ip_anios_registro_viistante.text.toString(),select_si_no_p11.text.toString(),
+                        ip_frecuencia_reportes.text.toString(),ip_temp_visitas_espe.text.toString(),
+                        ip_temp_visitas_num.text.toString(),ip_temp_visitas_b_espe.text.toString(),
+                        ip_temp_visitas_b_num.text.toString(),ip_ciudad_origen.text.toString(),
+                        ip_llegada_mensual.text.toString(),ip_total_anual.text.toString(),
+                        ip_observaciones_llegada_turist.text.toString(),ip_ciudad_origen_extr.text.toString(),
+                        ip_llegada_mensual_ex.text.toString(),ip_total_anual_ex.text.toString(),
+                        ip_observaciones_llegda_turist.text.toString(),ip_nombre_informate.text.toString(),
+                        ip_contactos.text.toString(),ip_demanda_dias_l_v.text.toString(),ip_demanda_dias_f_s.text.toString(),
+                        ip_demanda_dias_fer.text.toString(),ip_frecuencia_visitas.text.toString(),
+                        ip_observaciones_registro.text.toString(),ip_num_personas.text.toString(),
+                        ip_num_personas_nivel_primaria.text.toString(),ip_num_personas_nivel_secundaria.text.toString(),
+                        ip_num_personas_nivel_tercern.text.toString(),ip_num_personas_nivel_cuarton.text.toString(),
+                        ip_num_personas_nivel_otro.text.toString(),ip_num_personas_primeroa_aux.text.toString(),
+                        ip_num_personas_atención_cliente.text.toString(),ip_num_personas_hospitalidad.text.toString(),
+                        ip_num_personas_guianza.text.toString(),ip_num_personas_sensibilizacion.text.toString(),
+                        ip_num_personas_otro.text.toString(),ip_observaciones_recurso_humano.text.toString(),
+                        ip_num_personas_aleman.text.toString(),ip_num_personas_ingles.text.toString(),
+                        ip_num_personas_frances.text.toString(),ip_num_personas_italiano.text.toString(),
+                        ip_num_personas_chino.text.toString(),ip_num_personas_otro_idioma.text.toString(),
+                        ip_observaciones_idiomas.text.toString()
+
+
                 )
                 realizandoConteoEncuesta()
 
@@ -218,6 +319,56 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener{
     fun cargandoDatosFirebase() {
         selectFormaPago()
         servicioTransporte()
+        accesibilidadDiscapacidad()
+        complementosPbl()
+        complementosAtr()
+        serviciosBasicos()
+
+        if (cb_plan_contingencias.isChecked){
+            plan_contigencias  =  "si"
+        }else {
+            plan_contigencias  = "no"
+        }
+
+        // Si y no pantalla 7 apartado 8
+        if(cb_planificacion_turistica_si.isChecked){
+            plan_desarrollo = "si"
+        }
+        if(cb_politicas_regulaciones_no.isChecked){
+            plan_desarrollo = "no"
+        }
+        if(cb_planificacion_turistica_si.isChecked){
+            doc_planificacion = "si"
+        }
+        if(cb_planificacion_turistica_no.isChecked){
+            doc_planificacion = "no"
+        }
+        if(cb_normativas_si.isChecked){
+            aplicac_normativa = "si"
+        }
+        if(cb_normativas_no.isChecked){
+            aplicac_normativa = "no"
+        }
+        if(cb_ordenanzas_si.isChecked){
+            aplic_ordenanzas = "si"
+        }
+        if(cb_ordenanzas_no.isChecked){
+            aplic_ordenanzas = "no"
+        }
+        if (cb_promocion_si.isChecked){
+            promocion_cantonal_turistica = "si"
+        }
+        if(!cb_promocion_no.isChecked){
+            promocion_cantonal_turistica = "no"
+        }
+        if (cb_plan_promocion_si.isChecked){
+            promocion_atractivo = "si"
+        }
+        if(!cb_plan_promocion_no.isChecked){
+            promocion_atractivo = "no"
+        }
+
+
         //Toast.makeText(context, urlImagen, Toast.LENGTH_LONG).show()
         database = FirebaseFirestore.getInstance()
 
@@ -241,63 +392,213 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener{
             "barrio_sector" to ip_barrio_sector.text.toString(),
             "poblado_cercano" to ip_sitio_poblado.text.toString(),
             "latitud" to ip_latitud.text.toString(),
-            "Longitud" to ip_longitug.text.toString(),
-            "Altura" to ip_altura_msnm.text.toString(),
-            "Tipo Administrador" to ip_tipo_admin.text.toString(),
-            "Nombre Institución" to ip_nombre_inst.text.toString(),
-            "Nombre Administrador" to ip_nombre_admin.text.toString(),
-            "Cargo que Ocupa" to ip_cargo_ocupa.text.toString(),
-            "Teléfono Celular" to ip_telefono.text.toString(),
-            "Correo Electrónico" to ip_correo.text.toString(),
-            "Observaciones" to ip_observaciones_admin.text.toString(),
+            "longitud" to ip_longitug.text.toString(),
+            "altura" to ip_altura_msnm.text.toString(),
+            "tipo_administrador" to ip_tipo_admin.text.toString(),
+            "nombre_institución" to ip_nombre_inst.text.toString(),
+            "nombre_administrador" to ip_nombre_admin.text.toString(),
+            "cargo_ocupa" to ip_cargo_ocupa.text.toString(),
+            "telefono_celular" to ip_telefono.text.toString(),
+            "correo_electrónico" to ip_correo.text.toString(),
+            "observaciones_admin" to ip_observaciones_admin.text.toString(),
             // Segunda pantalla
-            "Clima" to clima.text.toString(),
-            "Temperatura" to temperatura.text.toString(),
-            "Precipitación" to precipitacion.text.toString(),
-            "Línea Producto" to ip_linea_producto_p2.text.toString(),
-            "Escenario localización" to ip_escenario_localiza_p2.text.toString(),
-            "Tipo de Ingreso" to ip_tipo_ingreso_p2.text.toString(),
-            "Horario de Ingreso" to horario_ingreso_p2.text.toString(),
-            "Horario de Salida" to horario_salida_p2.text.toString(),
-            "Atencion" to ip_atencion_p2.text.toString(),
-            "Forma de Pago" to formaPago_p2,
-            "Precio Desde" to precio_desde.text.toString(),
-            "Precio hasta" to precio_hasta.text.toString(),
-            "Meses recomendables de visita" to meses_recomendables_visita.text.toString(),
-            "Observaciones " to atencion_observaciones.text.toString(),
+            "clima" to clima.text.toString(),
+            "temperatura" to temperatura.text.toString(),
+            "precipitacion" to precipitacion.text.toString(),
+
+            "linea_producto" to ip_linea_producto_p2.text.toString(), // select
+            "escenario_localización" to ip_escenario_localiza_p2.text.toString(), // select
+            "tipo_ingreso" to ip_tipo_ingreso_p2.text.toString(), // select
+            "horario_ingreso" to horario_ingreso_p2.text.toString(),
+            "horario_salida" to horario_salida_p2.text.toString(),
+            "atencion" to ip_atencion_p2.text.toString(), // select
+            "forma_de_pago" to formaPago_p2,
+            "precio_desde" to precio_desde.text.toString(),
+            "precio_hasta" to precio_hasta.text.toString(),
+            "meses_recomendables_visita" to meses_recomendables_visita.text.toString(),
+            "observaciones_ingreso_atractivo " to atencion_observaciones.text.toString(),
             // Tercera Pantalla
-            "Nombre ciudad/poblado cercano" to nombre_ciudad_cercana.text.toString(),
-            "Distancia desde la ciudad/poblado cercano" to distancia_desde_hasta.text.toString(),
-            "Tiempo de desplazamiento en auto" to tiempo_desplazamiento.text.toString(),
-            "Codenada Latitud(grados decimales)" to ip_latitud.text.toString(),
-            "Codenada Longitud(grados decimales)" to ip_longitug.text.toString(),
-            "Observaciones Accesibilidad" to accesibilidad_observaciones.text.toString(),
+            "nombre_poblado_cercano" to nombre_ciudad_cercana.text.toString(),
+            "distancia_desde_poblado_cercano" to distancia_desde_hasta.text.toString(),
+            "tiempo_desplazamiento_auto" to tiempo_desplazamiento.text.toString(),
+            "coordenada_latitud" to ip_latitud.text.toString(),
+            "coordenada_longitud" to ip_longitug.text.toString(),
+            "observaciones_accesibilidad" to accesibilidad_observaciones.text.toString(),
                 // - Vias Accesso tererestre
-            "Via Acceso terrestre" to hashMapOf(
-                "Coordenada Inicio" to ip_coordenada_inicio.text.toString(),
-                "Coordenada Fin" to ip_coordenada_fin.text.toString(),
-                "Distancia(Km)" to ip_distanciakm.text.toString(),
-                "Tipo Material" to ip_tipo_material.text.toString(),
-                "Estado" to ip_estado_acceso.text.toString(),
-                "Observaciones" to ip_observaciones_acceso.text.toString()
-            ),
+
+            "acceso_terrestre_coordenada_inicio" to ip_coordenada_inicio.text.toString(),
+            "acceso_terrestre_coordenada_fin" to ip_coordenada_fin.text.toString(),
+            "acceso_terrestre_distancia_km" to ip_distanciakm.text.toString(),
+            "acceso_terrestre_tipo_material" to ip_tipo_material.text.toString(),
+            "acceso_terrestre_estado" to ip_estado_acceso.text.toString(),
+            "acceso_terrestre_observaciones" to ip_observaciones_acceso.text.toString(),
             //============================
             //============================
-                // - Vias Accesso tererestre
-            "Via Acceso Acuatico" to hashMapOf(
-                "Tipo de vía " to ip_tipo_via_p3.text.toString(),
-                "Tipo de acceso" to ip_tipo_acuatico_p3.text.toString(),
-                "Muelle de Partida" to ip_muelle_partida.text.toString(),
-                "Estado Muelle partida" to ip_estado_muelle_partida.text.toString(),
-                "Muelle de llegada" to ip_muelle_llegada.text.toString(),
-                "Estado Muelle de Llegada" to ip_estado_muelle_llegada.text.toString()
-            ),
-            "Vía Acceso Áereo" to ip_tipo_aereo_p3.text.toString(),
-            "Servicio de Transporte" to transporte_p3,
-            "Accesibilidad Discapacidad" to hashMapOf(
-                "Accesible" to accesibilidad_discapacidad,
-                "Observaciones" to ip_observaciones_accesibilidad.text.toString()
-            )
+                // - Vias Accesso Acuatico
+
+            "acuatico_tipo_via " to ip_tipo_via_p3.text.toString(),
+            "acuatico_tipo_acceso" to ip_tipo_acuatico_p3.text.toString(),
+            "muelle_partida" to ip_muelle_partida.text.toString(),
+            "estado_muelle_partida" to ip_estado_muelle_partida.text.toString(),
+            "muelle_llegada" to ip_muelle_llegada.text.toString(),
+            "estado_muelle_llegada" to ip_estado_muelle_llegada.text.toString(),
+
+            "tipo_via_acceso_aereo" to ip_tipo_aereo_p3.text.toString(),
+            "servicio_transporte" to transporte_p3,
+            "observaciones_transporte" to ip_observaciones_transporte.text.toString(),
+            "nombre_cooperativa" to ip_nombre_cooperativa.text.toString(),
+            "estacion_terminal" to ip_estacion_terminal.text.toString(),
+            "frecuencia_transporte" to ip_frecuencia_transporte_p3.text.toString(),
+            "transporte_detalle_traslado" to ip_transporte_detalle_traslado.text.toString(),
+
+            "accesible_discapacidad" to accesibilidad_discapacidad,
+            "observaciones_discapacidad" to ip_observaciones_accesibilidad.text.toString(),
+            "senializacion_estado" to ip_senializacion_estado_p3.text.toString(), // select
+            "observaciones_senializacion" to ip_observaciones_senializacion.text.toString(),
+            // pantalla 4
+            "alojamiento_atr" to ip_planta_atr_p4.text.toString(), // ---select
+            "establecimientos_registrados" to establecimientos_registrados.text.toString(),
+            "numero_habitaciones" to numero_habitaciones.text.toString(),
+            "numero_plazas" to numero_plazas.text.toString(),
+            "planta_turistica_observaciones" to planta_turistica_observaciones.text.toString(),
+            "alojamiento_poblado" to ip_planta_poblado_p4.text.toString(), // --select
+            "est_registrados_poblado" to est_registrados_poblado.text.toString(),
+            "numero_habitaciones_poblado" to numero_habitaciones_poblado.text.toString(),
+            "numero_plazas_poblado" to numero_plazas_poblado.text.toString(),
+            "planta_turistica_observaciones2" to planta_turistica_observaciones2.text.toString(),
+            "alimentos_bebidas" to ip_alimentos_bebidas_p4.text.toString(), // select
+            "est_registrados_alimentos" to est_registrados_alimentos.text.toString(),
+            "numero_mesas_alimentos" to numero_mesas_alimentos.text.toString(),
+            "numero_plazas_alimentos" to numero_plazas_alimentos.text.toString(),
+            "alimentos_bebidas_observaciones" to alimentos_bebidas_p4.text.toString(),
+            "agencia_viajes" to ip_agencia_viajes_p4.text.toString(), //select
+            "establecimientos_registrados_agencia" to establecimientos_registrados_agencia.text.toString(),
+            "observaciones_agencias_viajes" to observaciones_agencias_viajes_p4.text.toString(),
+            "categoria_facilidad_entorno" to ip_categoria_facilidad_entorno.text.toString(), // select
+            "tipo_facilidad_entorno" to ip_tipo_facilidad_entorno.text.toString(), // select
+            "estado_facilidad_entorno" to ip_estado_facilidad_entorno.text.toString(),// select
+            "facilidad_entorno_cantidad" to facilidad_entorno_cantidad.text.toString(),
+            "facilidad_entorno_coordenadas" to facilidad_entorno_coordenadas.text.toString(),
+            "facilidad_entorno_administrador" to facilidad_entorno_administrador.text.toString(),
+            // problema en conteo
+            "cb_facilidad_accesibilidad_entorno" to cb_facilidad_accesibilidad_entorno.hint,
+            "complementos_atr" to complementos_atr,
+            "complementos_pbl" to complementos_pbl,
+            "observaciones_complement_atr" to observaciones_complement_p4.text.toString(),
+            "observaciones_complement_pobl" to observaciones_complement_pobl_p4.text.toString(),
+            // Pantalla 5
+            "conservacion_atr" to ip_conservacion_atr.text.toString(), // select
+            "observaciones_conservacion_atr" to observaciones_conservacion_atr_p5.text.toString(),
+            "factores_naturales_atr" to ip_factores_naturales_atr.text.toString(), // select
+            "factores_antropi_atr" to ip_factores_antropi_atr.text.toString(), // select
+            "observaciones_factores_atr" to factores_atr_p5.text.toString(),
+            "entorno" to ip_conservacion_entorno.text.toString(), // select
+            "observaciones_entorno" to observaciones_entorno_p5.text.toString(),
+            "factores_naturales_entorno" to ip_factores_naturales_entorno.text.toString(), // select
+            "factores_antropi_entorno" to ip_factores_antropi_entorno.text.toString(), // select
+            "observaciones_factores_entorno" to factores_entorno_p5.text.toString(),
+            "declaratoria_declarante" to declaratoria_declarante.text.toString(),
+            "declaratoria_denominacion" to declaratoria_denominacion.text.toString(),
+            "declaratoria_fecha_creacion" to declaratoria_fecha_creacion.text.toString(),
+            "declaratoria_alcance" to declaratoria_alcance.text.toString(),
+            "observaciones_declaratoria" to observaciones_declaratoria_p5.text.toString(),
+            // Pantalla 6
+            "servicios_basicos" to servicios_basicos,
+            "observaciones_servicios" to observaciones_servicios_p6.text.toString(),
+            "observaciones_servicios_p2" to observaciones_servicios_p6_2.text.toString(),
+            "higiene_senialetica_ambientes" to ip_higiene_senialetica_ambientes.text.toString(), // select
+            "higiene_senialetica_tipo" to ip_higiene_senialetica_tipo.text.toString(), // select
+            "higiene_materialidad" to ip_higiene_materialidad.text.toString(), // select
+            "higiene_estado" to ip_higiene_estado.text.toString(), // select
+            "higiene_salud_atr" to ip_higiene_salud_atr.text.toString(), // select
+            "observaciones_salud_atr" to ip_observaciones_salud_atr.text.toString(),
+            "higiene_salud_pbl" to ip_higiene_salud_pbl.text.toString(), //select
+            "observaciones_higiene" to ip_observaciones_higiene.text.toString(),
+            "seguridad" to ip_seguridad.text.toString(),  // select
+            "observaciones_seguridad" to ip_observaciones_seguridad.text.toString(),
+            "comunic_telefonia_atr" to ip_comunic_telefonia_atr.text.toString(), // select a
+            "comunic_internet_atr" to ip_comunic_internet_atr.text.toString(), // select a
+            "comunic_radio_atr" to ip_comunic_radio_atr.text.toString(), // select a
+            "observaciones_comunic_atr" to ip_observaciones_comunic_atr.text.toString(),
+            "comunic_telefonia_pbl" to ip_comunic_telefonia_pbl.text.toString(),// select a
+            "comunic_internet_pbl" to ip_comunic_internet_pbl.text.toString(), // select a
+            "comunic_radio_pbl" to ip_comunic_radio_pbl.text.toString(), // select a
+            "observaciones_comunic_pbl" to ip_observaciones_comunic_pbl.text.toString(),
+            "multiamenazas" to ip_multiamenazas.text.toString(), //select
+            "tiene_plan_contingencia" to plan_contigencias,
+
+            "institucion_elaboro_doc" to ip_institucion_elaboro_doc.text.toString(),
+            "nom_documento" to ip_nom_documento.text.toString(),
+            "anio_elaboracion_doc" to ip_anio_elaboracion_doc.text.toString(),
+            "observaciones_multiamenazas" to ip_observaciones_multiamenazas.text.toString(),
+
+            // Pantalla 7
+
+            "plan_desarrollo" to plan_desarrollo,
+            "documento_planificacion" to doc_planificacion,
+            "aplica_normativa" to aplicac_normativa,
+            "aplic_ordenanzas" to aplic_ordenanzas,
+            "observaciones_politicas" to observaciones_politicas.text.toString(),
+
+            // Pantalla 8 Checkboxs partado 9
+
+            // Pantalla 9 apratado 10
+
+            "promocion_cantonal_turistica" to promocion_cantonal_turistica,
+            "promocion_atractivo" to promocion_atractivo,
+            "observaciones_promocion" to ip_observaciones_promocion.text.toString(),
+            "medio_promocional" to ip_medio_promocional.text.toString(),
+            "direccion_nombre" to ip_direccion_nombre.text.toString(),
+            "periodicidad_promocion" to ip_periodicidad_promocion.text.toString(),
+
+            // Pantalla 10 apartado 11
+            "tiene_registros" to  select_si_no_2p11.text.toString(),
+            "tipo_material_reporte" to select_tipo_p11.text.toString(),
+            "anios_registro_viistante" to ip_anios_registro_viistante.text.toString(),
+            "reportes_estadisticos " to select_si_no_p11.text.toString(),
+            "frecuencia_reportes" to ip_frecuencia_reportes.text.toString(),
+            "temp_alta_especificacion" to ip_temp_visitas_espe.text.toString(),
+            "temp_alta_visitas_num" to ip_temp_visitas_num.text.toString(),
+            "temp_baja_especificacion" to ip_temp_visitas_b_espe.text.toString(),
+            "temp_baja_visitas_num" to ip_temp_visitas_b_num.text.toString(),
+            "turista_nacional_ciudad_origen" to ip_ciudad_origen.text.toString(),
+            "turista_nacional_llegada" to ip_llegada_mensual.text.toString(),
+            "turista_nacional_total_anual" to ip_total_anual.text.toString(),
+            "observaciones_llegada_turist" to ip_observaciones_llegada_turist.text.toString(),
+            "ciudad_origen_extr" to ip_ciudad_origen_extr.text.toString(),
+            "llegada_mensual_ex" to ip_llegada_mensual_ex.text.toString(),
+            "total_anual_ex" to ip_total_anual_ex.text.toString(),
+            "observaciones_llegada_turist_ex" to ip_observaciones_llegda_turist.text.toString(),
+             "nombre_informate" to ip_nombre_informate.text.toString(),
+            "contacto_informante" to ip_contactos.text.toString(),
+            "demanda_dias_l_v"  to ip_demanda_dias_l_v.text.toString(),
+            "demanda_dias_f_s" to ip_demanda_dias_f_s.text.toString(),
+            "demanda_dias_fer" to ip_demanda_dias_fer.text.toString(),
+            "demanda_frecuencia_visitas" to ip_frecuencia_visitas.text.toString(), //select
+            "observaciones_registro" to ip_observaciones_registro.text.toString(),
+
+            // Pantalla 11 apartado 12
+            "num_per_admin" to ip_num_personas.text.toString(),
+            "num_per_primaria" to ip_num_personas_nivel_primaria.text.toString(),
+            "num_per_secundaria" to ip_num_personas_nivel_secundaria.text.toString(),
+            "num_per_tercer_nivel" to ip_num_personas_nivel_tercern.text.toString(),
+            "num_per_cuarto_nivel" to ip_num_personas_nivel_cuarton.text.toString(),
+            "num_per_otro_viel" to ip_num_personas_nivel_otro.text.toString(),
+            "num_personas_primeroa_aux" to ip_num_personas_primeroa_aux.text.toString(),
+            "num_personas_atención_cliente" to ip_num_personas_atención_cliente.text.toString(),
+            "num_personas_hospitalidad" to ip_num_personas_hospitalidad.text.toString(),
+            "num_personas_guianza" to ip_num_personas_guianza.text.toString(),
+            "num_personas_sensibilizacion" to ip_num_personas_sensibilizacion.text.toString(),
+            "num_personas_otro" to ip_num_personas_otro.text.toString(),
+            "observaciones_recurso_humano" to ip_observaciones_recurso_humano.text.toString(),
+            "num_personas_aleman" to ip_num_personas_aleman.text.toString(),
+            "num_personas_ingles" to ip_num_personas_ingles.text.toString(),
+            "num_personas_frances" to ip_num_personas_frances.text.toString(),
+            "num_personas_italiano" to ip_num_personas_italiano.text.toString(),
+             "num_personas_chino" to ip_num_personas_chino.text.toString(),
+            "num_personas_otro_idioma" to ip_num_personas_otro_idioma.text.toString(),
+            "observaciones_idiomas" to ip_observaciones_idiomas.text.toString()
+
 
 
         ))
@@ -307,19 +608,348 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener{
         // funcionalidades de actividad
         (activity as AppCompatActivity).onBackPressed()
     }
+    // Funcion para recuperar losd datos de un lugar turiatico
     fun isEditarLlenandoCampos(){
+        (activity as AppCompatActivity).bottom_navegation_view.menu.findItem(R.id.fragmentToReturn).isVisible = true
+        var adapterProv = activity?.let { ArrayAdapter<String>(it, R.layout.item_select,
+            resources.getStringArray(R.array.provincias)) }
+        val adapterCat = activity?.let { ArrayAdapter<String>(it, R.layout.item_select,
+            resources.getStringArray(R.array.categorias)) }
+        var adapterLineaProduct = activity?.let { ArrayAdapter<String>(it,R.layout.item_select,
+            resources.getStringArray(R.array.linea_producto_p2))}
+        var adapterEscenario = activity?.let { ArrayAdapter<String>(it,R.layout.item_select,
+            resources.getStringArray(R.array.escenario_localiza_p2))
+        }
+        var adapterTipoIngreso = activity?.let { ArrayAdapter<String>(it, R.layout.item_select,
+            resources.getStringArray(R.array.tipo_ingreso_p2))
+        }
+        var adapterAtencion = activity?.let { ArrayAdapter<String>(it,R.layout.item_select,
+            resources.getStringArray(R.array.atencion_p2))
+        }
+        var adapterTipoVia = activity?.let { ArrayAdapter<String>(it, R.layout.item_select,
+            resources.getStringArray(R.array.tipo_ingreso_p2))
+        }
+        var adapterTipoAceso = activity?.let { ArrayAdapter<String>(it, R.layout.item_select,
+            resources.getStringArray(R.array.tipo_acuatico_p3))
+        }
+        var adapterTipoAereo = activity?.let { ArrayAdapter<String>(it, R.layout.item_select,
+            resources.getStringArray(R.array.tipo_aereo_p3))
+        }
+        var adapterFrecuenciaTransporte = activity?.let { ArrayAdapter<String>(it,R.layout.item_select,
+            resources.getStringArray(R.array.frecuencia_transporte_p3))
+        }
+        var adapterSenializacion = activity?.let { ArrayAdapter<String>(it, R.layout.item_select,
+            resources.getStringArray(R.array.estado_senializacion))
+        }
+
         database.collection("lugares").document(id).get().addOnSuccessListener {
+            // pantalla 1
             ip_nombre_atr.setText(it.get("nombre") as String)
             ip_descripcion_atr.setText(it.get("descripcion") as String)
             ip_categoria.setText(it.get("categoria") as String)
+            with(ip_categoria) { setAdapter(adapterCat)
+                onItemClickListener = this@AddLugarMainFragment
+            }
             ip_tipo.setText(it.get("tipo") as String)
             ip_subtipo.setText(it.get("subtipo") as String)
             ip_provincia.setText(it.get("provincia") as String)
-            ip_canton.setText(it.get("canton") as String)
-            ip_parroquias.setText(it.get("parroquia") as String)
-            ip_calle_principal.setText(it.get("calle_principal") as String)
+            with(ip_provincia) { setAdapter(adapterProv)
+                onItemClickListener = this@AddLugarMainFragment
+            }
+            ip_canton.setText(it.get("canton") as String?)
+            ip_parroquias.setText(it.get("parroquia") as String?)
+            ip_calle_principal.setText(it.get("calle_principal") as String?)
+            ip_calle_principal_numero.setText(it.get("calle_principal_numero") as String?)
             Glide.with(contextF).load(it.get("imagen")).into(firebaseImage)
             urlImagen = it.get("imagen").toString()
+
+            ip_calle_transversal.setText(it.get("transversal") as String?)
+            ip_barrio_sector.setText(it.get("barrio_sector") as String?)
+            ip_sitio_poblado.setText(it.get("poblado_cercano") as String?)
+            ip_latitud.setText(it.get("latitud") as String?)
+            ip_longitug.setText(it.get("ip_longitug") as String?)
+            ip_altura_msnm.setText(it.get("altura") as String?)
+            ip_tipo_admin.setText(it.get("tipo_administrador") as String?)
+            ip_nombre_inst.setText(it.get("nombre_institución") as String?)
+            ip_nombre_admin.setText(it.get("nombre_administrador") as String?)
+            ip_cargo_ocupa.setText(it.get("cargo_ocupa") as String?)
+            ip_telefono.setText(it.get("telefono_celular") as String?)
+            ip_correo.setText(it.get("correo_electrónico") as String?)
+            ip_observaciones_admin.setText(it.get("observaciones_admin") as String?)
+
+            // pantlla 2
+            clima.setText(it.get("clima") as String?)
+            temperatura.setText(it.get("temperatura") as String?)
+            precipitacion.setText(it.get("precipitacion") as String?)
+            ip_linea_producto_p2.setText(it.get("linea_producto") as String?)
+            with(ip_linea_producto_p2){ setAdapter(adapterLineaProduct)
+                onItemClickListener = this@AddLugarMainFragment
+            }
+
+            ip_escenario_localiza_p2.setText(it.get("escenario_localización") as String?)
+            with(ip_escenario_localiza_p2) {setAdapter(adapterEscenario)
+                onItemClickListener = this@AddLugarMainFragment
+            }
+
+            ip_tipo_ingreso_p2.setText(it.get("tipo_ingreso") as String?)
+            with(ip_tipo_ingreso_p2) {
+                setAdapter(adapterTipoIngreso)
+                onItemClickListener = this@AddLugarMainFragment
+            }
+            horario_ingreso_p2.setText(it.get("horario_ingreso") as String?)
+            horario_salida_p2.setText(it.get("horario_salida") as String?)
+            ip_atencion_p2.setText(it.get("atencion") as String?)
+            with(ip_atencion_p2) { setAdapter(adapterAtencion)
+                onItemClickListener = this@AddLugarMainFragment
+            }
+            // Formas de pago
+            if(form_pago_tarjeta_debito.hint in it.get("forma_de_pago") as List<*>){
+                form_pago_tarjeta_debito.isChecked = true
+            }
+            if(form_pago_efectivo.hint in it.get("forma_de_pago") as  List<*>){
+                form_pago_efectivo.isChecked = true
+            }
+            if(form_pago_deposito.hint in it.get("forma_de_pago") as  List<*>){
+                form_pago_deposito.isChecked = true
+            }
+            if(form_pago_tarjeta_credito.hint in it.get("forma_de_pago") as  List<*>){
+                form_pago_tarjeta_credito.isChecked = true
+            }
+            if(form_pago_cheque.hint in it.get("forma_de_pago") as  List<*>){
+                form_pago_cheque.isChecked = true
+            }
+            if(form_pago_dinero_elect.hint in it.get("forma_de_pago") as List<*>){
+                form_pago_dinero_elect.isChecked = true
+            }
+            precio_desde.setText(it.get("precio_desde") as String?)
+            precio_hasta.setText(it.get("precio_hasta") as String?)
+            meses_recomendables_visita.setText(it.get("meses_recomendables_visita") as String?)
+            atencion_observaciones.setText(it.get("observaciones_ingreso_atractivo") as String?)
+            // Tercera pantalla
+            nombre_ciudad_cercana.setText(it.get("nombre_poblado_cercano") as String?)
+            distancia_desde_hasta.setText(it.get("distancia_desde_poblado_cercano") as String?)
+            tiempo_desplazamiento.setText(it.get("tiempo_desplazamiento_auto") as String?)
+            ip_latitud.setText(it.get("coordenada_latitud") as String?)
+            ip_longitug.setText(it.get("coordenada_longitud") as String?)
+            accesibilidad_observaciones.setText(it.get("observaciones_accesibilidad") as String?)
+            // -----Acceso terrestre
+            ip_coordenada_inicio.setText(it.get("acceso_terrestre_coordenada_inicio") as String?)
+            ip_coordenada_fin.setText(it.get("acceso_terrestre_coordenada_fin") as String?)
+            ip_distanciakm.setText(it.get("acceso_terrestre_distancia_km") as String?)
+            ip_tipo_material.setText(it.get("acceso_terrestre_tipo_material") as String?)
+            ip_estado_acceso.setText(it.get("acceso_terrestre_estado") as String?)
+            ip_observaciones_acceso.setText(it.get("acceso_terrestre_observaciones") as String?)
+            // ---- Acceso Acuatico
+
+            ip_tipo_via_p3.setText(it.get("acuatico_tipo_via") as String?)
+            with(ip_tipo_via_p3) {
+                setAdapter(adapterTipoVia)
+                onItemClickListener = this@AddLugarMainFragment
+            }
+
+            ip_tipo_acuatico_p3.setText(it.get("acuatico_tipo_acceso ") as String?)
+            with(ip_tipo_acuatico_p3) { setAdapter(adapterTipoAceso)
+                onItemClickListener = this@AddLugarMainFragment
+            }
+            ip_muelle_partida.setText(it.get("muelle_partida") as String?)
+            ip_estado_muelle_partida.setText(it.get("estado_muelle_partida") as String?)
+            ip_muelle_llegada.setText(it.get("muelle_llegada") as String?)
+            ip_estado_muelle_llegada.setText(it.get("estado_muelle_llegada") as String?)
+            ip_tipo_aereo_p3.setText(it.get("tipo_via_acceso_aereo") as String?)
+            with(ip_tipo_aereo_p3) { setAdapter(adapterTipoAereo)
+                onItemClickListener = this@AddLugarMainFragment
+            }
+            // Servicio de Transporte
+
+
+
+            ip_observaciones_transporte.setText(it.get("observaciones_transporte") as String?)
+            ip_nombre_cooperativa.setText(it.get("nombre_cooperativa") as String?)
+            ip_estacion_terminal.setText(it.get("estacion_terminal") as String?)
+            ip_frecuencia_transporte_p3.setText(it.get("frecuencia_transporte") as String?)
+            with(ip_frecuencia_transporte_p3) { setAdapter(adapterFrecuenciaTransporte)
+                onItemClickListener = this@AddLugarMainFragment
+            }
+            ip_transporte_detalle_traslado.setText(it.get("transporte_detalle_traslado") as String?)
+            // Accesibilidad del atractivo apra discapacidad
+
+            ip_observaciones_accesibilidad.setText(it.get("observaciones_discapacidad") as String?)
+
+            ip_senializacion_estado_p3.setText(it.get("senializacion_estado") as String?)
+            with(ip_senializacion_estado_p3) { setAdapter(adapterSenializacion)
+                onItemClickListener = this@AddLugarMainFragment
+            }
+            ip_observaciones_senializacion.setText(it.get("observaciones_senializacion") as String?)
+            // Pantalla 4
+
+            ip_planta_atr_p4.setText(it.get("alojamiento_atr") as String?)
+            establecimientos_registrados.setText(it.get("establecimientos_registrados") as String?)
+            numero_habitaciones.setText(it.get("numero_habitaciones") as String?)
+            numero_plazas.setText(it.get("numero_plazas") as String?)
+            planta_turistica_observaciones.setText(it.get("planta_turistica_observaciones") as String?)
+            ip_planta_poblado_p4.setText(it.get("alojamiento_poblado") as String?)
+            est_registrados_poblado.setText(it.get("est_registrados_poblado") as String?)
+            numero_habitaciones_poblado.setText(it.get("numero_habitaciones_poblado") as String?)
+            numero_plazas_poblado.setText(it.get("numero_plazas_poblado") as String?)
+            planta_turistica_observaciones2.setText(it.get("planta_turistica_observaciones2") as String?)
+            ip_alimentos_bebidas_p4.setText(it.get("alimentos_bebidas") as String?)
+            est_registrados_alimentos.setText(it.get("est_registrados_alimentos") as String?)
+            numero_mesas_alimentos.setText(it.get("numero_mesas_alimentos") as String?)
+            numero_plazas_alimentos.setText(it.get("numero_plazas_alimentos") as String?)
+            alimentos_bebidas_p4.setText(it.get("alimentos_bebidas_observaciones") as String?)
+            ip_agencia_viajes_p4.setText(it.get("agencia_viajes") as String?)
+            establecimientos_registrados_agencia.setText(it.get("establecimientos_registrados_agencia") as String?)
+            observaciones_agencias_viajes_p4.setText(it.get("observaciones_agencias_viajes") as String?)
+            ip_categoria_facilidad_entorno.setText(it.get("categoria_facilidad_entorno") as String?)
+            ip_tipo_facilidad_entorno.setText(it.get("tipo_facilidad_entorno") as String?)
+            ip_estado_facilidad_entorno.setText(it.get("estado_facilidad_entorno") as String?)
+            facilidad_entorno_cantidad.setText(it.get("facilidad_entorno_cantidad") as String?)
+            facilidad_entorno_coordenadas.setText(it.get("facilidad_entorno_coordenadas") as String?)
+            facilidad_entorno_administrador.setText(it.get("facilidad_entorno_administrador") as String?)
+            cb_facilidad_accesibilidad_entorno.setText(it.get("cb_facilidad_accesibilidad_entorno") as String?)
+
+            if(complementarios_atr_alquiler.hint in it.get("complementos_atr") as List<*>){
+                complementarios_atr_alquiler.isChecked = true
+            }
+            if(complementarios_atr_artesanias.hint in it.get("complementos_atr") as  List<*>){
+                complementarios_atr_artesanias.isChecked = true
+            }
+            if(complement_atr_casa_cambio.hint in it.get("complementos_atr") as List<*>){
+                complement_atr_casa_cambio.isChecked = true
+            }
+            if(complement_atr_cajero.hint in it.get("complementos_atr") as  List<*>){
+                complement_atr_cajero.isChecked = true
+            }
+            if(complement_atr_otro.hint in it.get("complementos_atr") as  List<*>){
+                complement_atr_otro.isChecked = true
+            }
+            if(complementarios_pobl_alquiler.hint in it.get("complementos_pbl") as List<*>){
+                complementarios_pobl_alquiler.isChecked = true
+            }
+            if(complementarios_pobl_artesanias.hint in it.get("complementos_pbl") as  List<*>){
+                complementarios_pobl_artesanias.isChecked = true
+            }
+            if(complement_pobl_casa_cambio.hint in it.get("complementos_pbl") as List<*>){
+                complement_pobl_casa_cambio.isChecked = true
+            }
+            if(complement_pobl_cajero.hint in it.get("complementos_pbl") as  List<*>){
+                complement_pobl_cajero.isChecked = true
+            }
+            if(complement_pobl_otro.hint in it.get("complementos_pbl") as  List<*>){
+                complement_pobl_otro.isChecked = true
+            }
+            observaciones_complement_p4.setText(it.get("observaciones_complement_atr") as String?)
+            observaciones_complement_pobl_p4.setText(it.get("observaciones_complement_pobl") as String?)
+
+
+                    // PANTALLA 5
+            ip_conservacion_atr.setText(it.get("conservacion_atr") as String?)
+            observaciones_conservacion_atr_p5.setText(it.get("observaciones_conservacion_atr") as String?)
+            ip_factores_naturales_atr.setText(it.get("factores_naturales_atr") as String?)
+            ip_factores_antropi_atr.setText(it.get("factores_antropi_atr") as String?)
+            factores_atr_p5.setText(it.get("observaciones_factores_atr") as String?)
+            ip_conservacion_entorno.setText(it.get("entorno") as String?)
+            observaciones_entorno_p5.setText(it.get("observaciones_entorno") as String?)
+            ip_factores_naturales_entorno.setText(it.get("factores_naturales_entorno") as String?)
+            ip_factores_antropi_entorno.setText(it.get("factores_antropi_entorno") as String?)
+            factores_entorno_p5.setText(it.get("observaciones_factores_entorno") as String?)
+            declaratoria_declarante.setText(it.get("declaratoria_declarante") as String?)
+            declaratoria_denominacion.setText(it.get("declaratoria_denominacion") as String?)
+            declaratoria_fecha_creacion.setText(it.get("declaratoria_fecha_creacion") as String?)
+            declaratoria_alcance.setText(it.get("declaratoria_alcance") as String?)
+            observaciones_declaratoria_p5.setText(it.get("observaciones_declaratoria") as String?)
+                    // Pantall 6
+            /*
+            if(higiene_energia.hint in it.get("servicios_basicos") as List<*>){
+                higiene_energia.isChecked = true
+            }
+            if(higiene_desechos.hint in it.get("servicios_basicos") as  List<*>){
+                higiene_desechos.isChecked = true
+            }
+*/
+            observaciones_servicios_p6.setText(it.get("observaciones_servicios") as String?)
+            observaciones_servicios_p6_2.setText(it.get("observaciones_servicios_p2") as String?)
+            ip_higiene_senialetica_ambientes.setText(it.get("higiene_senialetica_ambientes") as String?)
+            ip_higiene_senialetica_tipo.setText(it.get("higiene_senialetica_tipo") as String?)
+            ip_higiene_materialidad.setText(it.get("higiene_materialidad") as String?)
+            ip_higiene_estado.setText(it.get("higiene_estado") as String?)
+            ip_higiene_salud_atr.setText(it.get("higiene_salud_atr") as String?)
+            ip_observaciones_salud_atr.setText(it.get("observaciones_salud_atr") as String?)
+            ip_higiene_salud_pbl.setText(it.get("higiene_salud_pbl") as String?)
+            ip_observaciones_higiene.setText(it.get("observaciones_higiene") as String?)
+            ip_seguridad.setText(it.get("seguridad") as String?)
+            ip_observaciones_seguridad.setText(it.get("observaciones_seguridad") as String?)
+            ip_comunic_telefonia_atr.setText(it.get("comunic_telefonia_atr") as String?)
+            ip_comunic_internet_atr.setText(it.get("comunic_internet_atr") as String?)
+            ip_comunic_radio_atr.setText(it.get("comunic_radio_atr") as String?)
+            ip_observaciones_comunic_atr.setText(it.get("observaciones_comunic_atr") as String?)
+            ip_comunic_telefonia_pbl.setText(it.get("comunic_telefonia_pbl") as String?)
+            ip_comunic_internet_pbl.setText(it.get("comunic_internet_pbl") as String?)
+            ip_comunic_radio_pbl.setText(it.get("comunic_radio_pbl") as String?)
+            ip_observaciones_comunic_pbl.setText(it.get("observaciones_comunic_pbl") as String?)
+            ip_multiamenazas.setText(it.get("multiamenazas") as String?)
+            if((it.get("plan_contigencias") as String?) == "si"){
+                cb_plan_contingencias.isChecked = true
+            }else if((it.get("plan_contigencias") as String?) == "no"){
+                cb_plan_contingencias.isChecked = false
+            }
+
+            ip_institucion_elaboro_doc.setText(it.get("institucion_elaboro_doc") as String?)
+            ip_nom_documento.setText(it.get("nom_documento") as String?)
+            ip_anio_elaboracion_doc.setText(it.get("anio_elaboracion_doc") as String?)
+            ip_observaciones_multiamenazas.setText(it.get("observaciones_multiamenazas") as String?)
+            // Pantalla 7
+                // COndicionales
+            // Pantalla 8 Checbox
+
+            // Pantalla 10 aprartao 11
+            select_si_no_2p11.setText(it.get("tiene_registros") as String?)
+            select_tipo_p11.setText(it.get("tipo_material_reporte") as String?)
+            ip_anios_registro_viistante.setText(it.get("anios_registro_viistante") as String?)
+            select_si_no_p11.setText(it.get("reportes_estadisticos") as String?)
+            ip_frecuencia_reportes.setText(it.get("frecuencia_reportes") as String?)
+            ip_temp_visitas_espe.setText(it.get("temp_alta_especificacion") as String?)
+            ip_temp_visitas_num.setText(it.get("temp_alta_visitas_num") as String?)
+            ip_temp_visitas_b_espe.setText(it.get("temp_baja_especificacion") as String?)
+            ip_temp_visitas_b_num.setText(it.get("temp_baja_visitas_num") as String?)
+            ip_ciudad_origen.setText(it.get("turista_nacional_ciudad_origen") as String?)
+            ip_llegada_mensual.setText(it.get("turista_nacional_llegada") as String?)
+            ip_total_anual.setText(it.get("turista_nacional_total_anual") as String?)
+            ip_observaciones_llegada_turist.setText(it.get("observaciones_llegada_turist") as String?)
+            ip_ciudad_origen_extr.setText(it.get("ciudad_origen_extr") as String?)
+            ip_llegada_mensual_ex.setText(it.get("llegada_mensual_ex") as String?)
+            ip_total_anual_ex.setText(it.get("total_anual_ex") as String?)
+            ip_observaciones_llegda_turist.setText(it.get("observaciones_llegada_turist_ex") as String?)
+            ip_nombre_informate.setText(it.get("nombre_informate") as String?)
+            ip_contactos.setText(it.get("contacto_informante") as String?)
+            ip_demanda_dias_l_v.setText(it.get("demanda_dias_l_v") as String?)
+            ip_demanda_dias_f_s.setText(it.get("demanda_dias_f_s") as String?)
+            ip_demanda_dias_fer.setText(it.get("demanda_dias_fer") as String?)
+            ip_frecuencia_visitas.setText(it.get("demanda_frecuencia_visitas") as String?)
+            ip_observaciones_registro.setText(it.get("observaciones_registro") as String?)
+                    
+            // pantalla 11 apartado 12
+
+            ip_num_personas.setText(it.get("num_per_admin") as String?)
+            ip_num_personas_nivel_primaria.setText(it.get("num_per_primaria") as String?)
+            ip_num_personas_nivel_secundaria.setText(it.get("num_per_secundaria") as String?)
+            ip_num_personas_nivel_tercern.setText(it.get("num_per_tercer_nivel") as String?)
+            ip_num_personas_nivel_cuarton.setText(it.get("num_per_cuarto_nivel") as String?)
+            ip_num_personas_nivel_otro.setText(it.get("num_per_otro_viel") as String?)
+            ip_num_personas_primeroa_aux.setText(it.get("num_personas_primeroa_aux") as String?)
+            ip_num_personas_atención_cliente.setText(it.get("num_personas_atención_cliente") as String?)
+            ip_num_personas_hospitalidad.setText(it.get("num_personas_hospitalidad") as String?)
+            ip_num_personas_guianza.setText(it.get("num_personas_guianza") as String?)
+            ip_num_personas_sensibilizacion.setText(it.get("num_personas_sensibilizacion") as String?)
+            ip_num_personas_otro.setText(it.get("num_personas_otro") as String?)
+            ip_observaciones_recurso_humano.setText(it.get("observaciones_recurso_humano") as String?)
+            ip_num_personas_aleman.setText(it.get("num_personas_aleman") as String?)
+            ip_num_personas_ingles.setText(it.get("num_personas_ingles") as String?)
+            ip_num_personas_frances.setText(it.get("num_personas_frances") as String?)
+            ip_num_personas_italiano.setText(it.get("num_personas_italiano") as String?)
+            ip_num_personas_chino.setText(it.get("num_personas_chino") as String?)
+            ip_num_personas_otro_idioma.setText(it.get("num_personas_otro_idioma") as String?)
+            ip_observaciones_idiomas.setText(it.get("observaciones_idiomas") as String?)
 
         }
     }
@@ -344,6 +974,55 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener{
 
     }
     // Array Checkbox
+
+    fun serviciosBasicos(){
+        if(higiene_energia.isChecked){
+            servicios_basicos.add((higiene_energia.hint).toString())
+        }
+        if(higiene_desechos.isChecked){
+            servicios_basicos.add((higiene_desechos.hint).toString())
+        }
+        if(higiene_saneamiento.isChecked){
+            servicios_basicos.add((higiene_saneamiento.hint).toString())
+        }
+        if(higiene_agua.isChecked){
+            servicios_basicos.add((higiene_agua.hint).toString())
+        }
+    }
+    fun complementosPbl(){
+        if(complementarios_pobl_alquiler.isChecked){
+            complementos_pbl.add((complementarios_pobl_alquiler.hint).toString())
+        }
+        if(complementarios_pobl_artesanias.isChecked){
+            complementos_pbl.add((complementarios_pobl_artesanias.hint).toString())
+        }
+        if(complement_pobl_casa_cambio.isChecked){
+            complementos_pbl.add((complement_pobl_casa_cambio.hint).toString())
+        }
+        if(complement_pobl_cajero.isChecked){
+            complementos_pbl.add((complement_pobl_cajero.hint).toString())
+        }
+        if(complement_pobl_otro.isChecked){
+            complementos_pbl.add((complement_pobl_otro.hint).toString())
+        }
+    }
+    fun complementosAtr(){
+        if(complementarios_atr_alquiler.isChecked){
+            complementos_atr.add((complementarios_atr_alquiler.hint).toString())
+        }
+        if(complementarios_atr_artesanias.isChecked){
+            complementos_atr.add((complementarios_atr_artesanias.hint).toString())
+        }
+        if(complement_atr_casa_cambio.isChecked){
+            complementos_atr.add((complement_atr_casa_cambio.hint).toString())
+        }
+        if(complement_atr_cajero.isChecked){
+            complementos_atr.add((complement_atr_cajero.hint).toString())
+        }
+        if(complement_atr_otro.isChecked){
+            complementos_atr.add((complement_atr_otro.hint).toString())
+        }
+    }
     fun selectFormaPago(){
         if(form_pago_dinero_elect.isChecked){
             formaPago_p2.add((form_pago_dinero_elect.hint).toString())
@@ -363,26 +1042,55 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener{
         if(form_pago_cheque.isChecked){
             formaPago_p2.add((form_pago_cheque.hint).toString())
         }
+        if(atencion_sistema_reservas.isChecked){
+            formaPago_p2.add((atencion_sistema_reservas.hint).toString())
+        }
+
+
+
     }
     fun servicioTransporte(){
-        if(trasnsporte_bus.isChecked){
-            transporte_p3.add((trasnsporte_bus.hint).toString())
+        if(transporte_bus.isChecked){
+            transporte_p3.add((transporte_bus.hint).toString())
         }
-        if(trasnsporte_buseta.isChecked){
-            transporte_p3.add((trasnsporte_buseta.hint).toString())
+        if(transporte_buseta.isChecked){
+            transporte_p3.add((transporte_buseta.hint).toString())
         }
         if(transporte_lancha.isChecked){
             transporte_p3.add((transporte_lancha.hint).toString())
         }
-        if(trasnsporte_bote.isChecked){
-            transporte_p3.add((trasnsporte_bote.hint).toString())
+        if(transporte_bote.isChecked){
+            transporte_p3.add((transporte_bote.hint).toString())
         }
         if(transporte_barco.isChecked){
             transporte_p3.add((transporte_barco.hint).toString())
         }
-        if(trasnsporte_mototaxi.isChecked){
-            transporte_p3.add((trasnsporte_mototaxi.hint).toString())
+        if(transporte_mototaxi.isChecked){
+            transporte_p3.add((transporte_mototaxi.hint).toString())
         }
+        if(transporte_canoa.isChecked){
+            transporte_p3.add((transporte_canoa.hint).toString())
+        }
+        if(transporte_avioneta.isChecked){
+            transporte_p3.add((transporte_avioneta.hint).toString())
+        }
+        if(transporte_teleferico.isChecked){
+            transporte_p3.add((transporte_teleferico.hint).toString())
+        }
+        if(transporte_helicoptero.isChecked){
+            transporte_p3.add((transporte_helicoptero.hint).toString())
+        }
+        if(transporte_otro.isChecked){
+            transporte_p3.add((transporte_otro.hint).toString())
+        }
+        if(transporte_taxi.isChecked){
+            transporte_p3.add((transporte_taxi.hint).toString())
+        }
+        if(transporte_avion.isChecked){
+            transporte_p3.add((transporte_avion.hint).toString())
+        }
+
+
     }
 
     fun accesibilidadDiscapacidad(){
@@ -958,29 +1666,6 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener{
         }
 
         // array forma de pago
-
-        when {
-            form_pago_efectivo.isChecked -> {
-
-                formaPago_p2.add(form_pago_efectivo.hint.toString())
-
-            }
-            form_pago_deposito.isChecked -> {
-                formaPago_p2.add(form_pago_deposito.hint.toString())
-
-            }
-            form_pago_tarjeta_credito.isChecked -> {
-                formaPago_p2.add(form_pago_tarjeta_credito.hint.toString())
-            }
-            form_pago_tarjeta_debito.isChecked -> {
-                formaPago_p2.add(form_pago_tarjeta_debito.hint.toString())
-
-            }
-            form_pago_cheque.isChecked -> {
-                formaPago_p2.add(form_pago_cheque.hint.toString())
-            }
-        }
-
     }
 
     fun addLugarParte3(){
@@ -1071,7 +1756,7 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener{
             linearV5p6.toggleVisibility()
         }
         cb_multiamenazas.setOnClickListener {
-            cb_multiamenazas.toggleVisibility()
+            linearV6p6.toggleVisibility()
         }
         // Apartado 8  de politicas y regulaciones
         cb_politicas_regulaciones_si.setOnClickListener {
@@ -1158,11 +1843,8 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener{
             scrollparte1.layoutParams= paramsScroll1
             val paramsScroll2 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,0f )
             scrollparte2.layoutParams= paramsScroll2
-            val paramsScroll3 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
-            scrollparte3.layoutParams= paramsScroll3
-            val paramsScroll4 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
-            scrollparte4.layoutParams= paramsScroll4
-            btn_numpantallasp1.setText("2 DE 6")
+
+            btn_numpantallasp1.setText("2 DE 11")
         }else if(contadorPantallas ==2){
             val paramsScroll1 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
             scrollparte1.layoutParams= paramsScroll1
@@ -1170,9 +1852,9 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener{
             scrollparte2.layoutParams= paramsScroll2
             val paramsScroll3 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,0f )
             scrollparte3.layoutParams= paramsScroll3
-            val paramsScroll4 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
-            scrollparte4.layoutParams= paramsScroll4
-            btn_numpantallasp1.setText("3 DE 6")
+
+
+            btn_numpantallasp1.setText("3 DE 11")
         }
         else if(contadorPantallas ==3){
             val paramsScroll1 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
@@ -1183,9 +1865,10 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener{
             scrollparte3.layoutParams= paramsScroll3
             val paramsScroll4 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,0f )
             scrollparte4.layoutParams= paramsScroll4
-            btn_numpantallasp1.setText("4 DE 6")
+
+            btn_numpantallasp1.setText("4 DE 11")
         }
-        else if(contadorPantallas ==5){
+        else if(contadorPantallas ==4){
             val paramsScroll1 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
             scrollparte1.layoutParams= paramsScroll1
             val paramsScroll2 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
@@ -1196,7 +1879,127 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener{
             scrollparte4.layoutParams= paramsScroll4
             val paramsScroll5 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,0f )
             scrollparte5.layoutParams= paramsScroll5
-            btn_numpantallasp1.setText("5 DE 6")
+
+            btn_numpantallasp1.setText("5 DE 11")
+        }
+        else if(contadorPantallas ==5){
+            val paramsScroll1 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte1.layoutParams= paramsScroll1
+            val paramsScroll2 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte2.layoutParams= paramsScroll2
+            val paramsScroll3 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte3.layoutParams= paramsScroll3
+            val paramsScroll4 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte4.layoutParams= paramsScroll4
+            val paramsScroll5 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte5.layoutParams= paramsScroll5
+            val paramsScroll6 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,0f )
+            scrollparte6.layoutParams= paramsScroll6
+
+            btn_numpantallasp1.setText("6 DE 11")
+        }
+        else if(contadorPantallas ==6){
+            val paramsScroll1 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte1.layoutParams= paramsScroll1
+            val paramsScroll2 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte2.layoutParams= paramsScroll2
+            val paramsScroll3 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte3.layoutParams= paramsScroll3
+            val paramsScroll4 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte4.layoutParams= paramsScroll4
+            val paramsScroll5 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte5.layoutParams= paramsScroll5
+            val paramsScroll6 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte6.layoutParams= paramsScroll6
+            val paramsScroll7 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,0f )
+            scrollparte7.layoutParams= paramsScroll7
+
+            btn_numpantallasp1.setText("7 DE 11")
+        }else if(contadorPantallas ==7){
+            val paramsScroll1 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte1.layoutParams= paramsScroll1
+            val paramsScroll2 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte2.layoutParams= paramsScroll2
+            val paramsScroll3 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte3.layoutParams= paramsScroll3
+            val paramsScroll4 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte4.layoutParams= paramsScroll4
+            val paramsScroll5 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte5.layoutParams= paramsScroll5
+            val paramsScroll6 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte6.layoutParams= paramsScroll6
+            val paramsScroll7 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte7.layoutParams= paramsScroll7
+            val paramsScroll8 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,0f )
+            scrollparte8.layoutParams= paramsScroll8
+
+            btn_numpantallasp1.setText("8 DE 11")
+        }else if(contadorPantallas ==8){
+            val paramsScroll1 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte1.layoutParams= paramsScroll1
+            val paramsScroll2 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte2.layoutParams= paramsScroll2
+            val paramsScroll3 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte3.layoutParams= paramsScroll3
+            val paramsScroll4 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte4.layoutParams= paramsScroll4
+            val paramsScroll5 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte5.layoutParams= paramsScroll5
+            val paramsScroll6 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte6.layoutParams= paramsScroll6
+            val paramsScroll7 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte7.layoutParams= paramsScroll7
+            val paramsScroll8 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte8.layoutParams= paramsScroll8
+            val paramsScroll9 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,0f )
+            scrollparte9.layoutParams= paramsScroll9
+            btn_numpantallasp1.setText("9 DE 11")
+        }else if(contadorPantallas ==9){
+            val paramsScroll1 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte1.layoutParams= paramsScroll1
+            val paramsScroll2 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte2.layoutParams= paramsScroll2
+            val paramsScroll3 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte3.layoutParams= paramsScroll3
+            val paramsScroll4 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte4.layoutParams= paramsScroll4
+            val paramsScroll5 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte5.layoutParams= paramsScroll5
+            val paramsScroll6 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte6.layoutParams= paramsScroll6
+            val paramsScroll7 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte7.layoutParams= paramsScroll7
+            val paramsScroll8 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte8.layoutParams= paramsScroll8
+            val paramsScroll9 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte9.layoutParams= paramsScroll9
+            val paramsScroll10 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,0f )
+            scrollparte10.layoutParams= paramsScroll10
+            btn_numpantallasp1.setText("10 DE 11")
+        }else if(contadorPantallas == 10){
+            val paramsScroll1 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte1.layoutParams= paramsScroll1
+            val paramsScroll2 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte2.layoutParams= paramsScroll2
+            val paramsScroll3 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte3.layoutParams= paramsScroll3
+            val paramsScroll4 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte4.layoutParams= paramsScroll4
+            val paramsScroll5 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte5.layoutParams= paramsScroll5
+            val paramsScroll6 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte6.layoutParams= paramsScroll6
+            val paramsScroll7 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte7.layoutParams= paramsScroll7
+            val paramsScroll8 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte8.layoutParams= paramsScroll8
+            val paramsScroll9 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte9.layoutParams= paramsScroll9
+            val paramsScroll10 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,1f )
+            scrollparte10.layoutParams= paramsScroll10
+            val paramsScroll11 = LinearLayout.LayoutParams( MATCH_PARENT, MATCH_PARENT,0f )
+            scrollparte11.layoutParams= paramsScroll11
+            btn_numpantallasp1.setText("11 DE 11")
         }
     }
 

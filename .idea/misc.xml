@@ -61,13 +61,16 @@
         <entry key="..\:/Users/shomi/Documents/ASeptimoC/PlataformasMoviles/Proyecto/Turism_Register/app/src/main/res/layout/activity_register.xml" value="0.264" />
         <entry key="..\:/Users/shomi/Documents/ASeptimoC/PlataformasMoviles/Proyecto/Turism_Register/app/src/main/res/layout/activity_splash.xml" value="0.13229166666666667" />
         <entry key="..\:/Users/shomi/Documents/ASeptimoC/PlataformasMoviles/Proyecto/Turism_Register/app/src/main/res/layout/add_lugar_parte2.xml" value="0.20833333333333334" />
-        <entry key="..\:/Users/shomi/Documents/ASeptimoC/PlataformasMoviles/Proyecto/Turism_Register/app/src/main/res/layout/dialog_delete_lugar.xml" value="0.1609375" />
+        <entry key="..\:/Users/shomi/Documents/ASeptimoC/PlataformasMoviles/Proyecto/Turism_Register/app/src/main/res/layout/dialog_delete_lugar.xml" value="0.4" />
         <entry key="..\:/Users/shomi/Documents/ASeptimoC/PlataformasMoviles/Proyecto/Turism_Register/app/src/main/res/layout/editanto_agregando_dialog_lugar.xml" value="0.1609375" />
         <entry key="..\:/Users/shomi/Documents/ASeptimoC/PlataformasMoviles/Proyecto/Turism_Register/app/src/main/res/layout/fragment_aboutus.xml" value="0.16510416666666666" />
         <entry key="..\:/Users/shomi/Documents/ASeptimoC/PlataformasMoviles/Proyecto/Turism_Register/app/src/main/res/layout/fragment_add_lugar_main.xml" value="0.264" />
         <entry key="..\:/Users/shomi/Documents/ASeptimoC/PlataformasMoviles/Proyecto/Turism_Register/app/src/main/res/layout/fragment_home.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/shomi/Documents/ASeptimoC/PlataformasMoviles/Proyecto/Turism_Register/app/src/main/res/layout/fragment_list_lugares.xml" value="0.2391304347826087" />
         <entry key="..\:/Users/shomi/Documents/ASeptimoC/PlataformasMoviles/Proyecto/Turism_Register/app/src/main/res/layout/fragment_modificar_lugares.xml" value="0.1609375" />
+        <entry key="..\:/Users/shomi/Documents/ASeptimoC/PlataformasMoviles/Proyecto/Turism_Register/app/src/main/res/layout/list_item_categorias_drop_layout.xml" value="0.24635416666666668" />
         <entry key="..\:/Users/shomi/Documents/ASeptimoC/PlataformasMoviles/Proyecto/Turism_Register/app/src/main/res/layout/list_item_modificar_lugar_view.xml" value="0.1609375" />
+        <entry key="..\:/Users/shomi/Documents/ASeptimoC/PlataformasMoviles/Proyecto/Turism_Register/app/src/main/res/layout/popup_list_lugar.xml" value="0.24635416666666668" />
         <entry key="..\:/Users/shomi/Documents/ASeptimoC/PlataformasMoviles/Proyecto/Turism_Register/app/src/main/res/layout/tool.xml" value="0.25052083333333336" />
         <entry key="..\:/Users/shomi/Documents/ASeptimoC/PlataformasMoviles/Proyecto/Turism_Register/app/src/main/res/layout/toolbar.xml" value="0.2" />
         <entry key="..\:/Users/shomi/Documents/ASeptimoC/PlataformasMoviles/Proyecto/Turism_Register/app/src/main/res/menu/nav_menu_drawer.xml" value="0.2" />
