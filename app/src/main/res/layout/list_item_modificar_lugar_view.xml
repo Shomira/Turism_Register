@@ -109,7 +109,8 @@
                     android:layout_height="match_parent"
                     android:src="@drawable/ic_baseline_edit_24"
                     android:background="@color/blueBajo"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    app:tint="#818181" />
 
                 <ImageButton
                     android:id="@+id/btn_item_delete_lugar"
@@ -117,7 +118,8 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@color/red"
-                    android:src="@drawable/ic_baseline_delete_24" />
+                    android:src="@drawable/ic_baseline_delete_24"
+                    app:tint="#9E9B9B" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

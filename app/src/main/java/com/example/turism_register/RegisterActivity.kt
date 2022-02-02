@@ -27,7 +27,10 @@ class RegisterActivity : AppCompatActivity() {
         supportActionBar?.hide()
         val bundle: Bundle? = intent.extras
         val provider:ProviderType = ProviderType.BASIC
-
+        btn_close_register.setOnClickListener {
+            val loginIntent: Intent = Intent(this, LoginUserActivity::class.java)
+            startActivity(loginIntent)
+        }
         btn_registrar.setOnClickListener {
 
             val mEmail = ip_correo_r.text.toString()

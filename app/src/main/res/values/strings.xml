@@ -269,9 +269,6 @@
 
 
 
-
-
-
     <!-- DROPDOWN CATEGORIAS LIST LUGARES -->
     <string-array name="categorias_list_lugar_drop">
         <item>Todas</item>
@@ -572,7 +569,7 @@
         <item>San Miguel de Urcuquí</item>
     </string-array>
     <string-array name="cantones_loja">
-        <item>Loja</item>
+        <item>Loja.</item>
         <item>Calvas</item>
         <item>Catamayo</item>
         <item>Celica</item>
@@ -713,7 +710,7 @@
     <string-array name="cantones_santaelena">
         <item>Santa Elena</item>
         <item>La Libertad</item>
-        <item>Salina</item>
+        <item>Salinas</item>
     </string-array>
     <!--FIN ITEM CANTONES-->
     <!--===================================================================-->
@@ -1355,9 +1352,1285 @@
         <item>Viche</item>
         <item>La Unión</item>
     </string-array>
+    <string-array name="parroquias_san_lorenzo">
+        <item>San Lorenzo</item>
+        <item>Alto Tambo</item>
+        <item>Ancón</item>
+        <item>Calderón</item>
+        <item>Carondelet</item>
+        <item>5 de Junio</item>
+        <item>Concepción</item>
+        <item>Mataje</item>
+        <item>San Javier de Cachaví</item>
+        <item>Santa Rita</item>
+        <item>Tambillo</item>
+        <item>Tululbí</item>
+        <item>Urbina</item>
+    </string-array>
+    <string-array name="parroquias_atacames">
+        <item>Atacames</item>
+        <item>La Unión</item>
+        <item>Súa</item>
+        <item>Tonchigue</item>
+        <item>Tonsupa</item>
+    </string-array>
+    <string-array name="parroquias_rioverde">
+        <item>Rioverde</item>
+        <item>Chontaduro</item>
+        <item>Chumundé</item>
+        <item>Lagarto</item>
+        <item>Montalvo</item>
+        <item>Rocafuerte</item>
+    </string-array>
+    <string-array name="parroquias_concordia">
+        <item>La Concordia</item>
+        <item>Monterrey</item>
+        <item>La Villegas</item>
+        <item>Plan Piloto</item>
+    </string-array>
 
     <!--Fin Item Parroquias de los cantones de la provincia de Esmeraldas-->
 
+
+    <!--Item Parroquias de los cantones de la provincia de Guayas-->
+
+    <string-array name="parroquias_guayaquil">
+        <item>Ayacucho</item>
+        <item>Bolívar</item>
+        <item>Carbo</item>
+        <item>Febres</item>
+        <item>García Moreno</item>
+        <item>Letamendi</item>
+        <item>Nueve de Octubre</item>
+        <item>Olmedo</item>
+        <item>Roca</item>
+        <item>Rocafuerte</item>
+        <item>Sucre</item>
+        <item>Tarqui</item>
+        <item>Urdaneta</item>
+        <item>Ximena</item>
+        <item>Pascuales</item>
+        <item>Guayaquil</item>
+        <item>Chongón</item>
+        <item>Juan Gómez Rendón</item>
+        <item>Morro</item>
+        <item>Pascuales</item>
+        <item>Playas</item>
+        <item>Posorja</item>
+        <item>Puná</item>
+        <item>Tenguel</item>
+    </string-array>
+    <string-array name="parroquias_baquerizo_moreno">
+        <item>Alfredo Baquerizo Moreno</item>
+    </string-array>
+    <string-array name="parroquias_balao">
+        <item>Balao</item>
+    </string-array>
+    <string-array name="parroquias_balzar">
+        <item>Balzar</item>
+    </string-array>
+    <string-array name="parroquias_colimes">
+        <item>Colimes</item>
+        <item>San Jacinto</item>
+    </string-array>
+    <string-array name="parroquias_daule">
+        <item>Daule</item>
+        <item>La Aurora</item>
+        <item>Banife</item>
+        <item>Emiliano Caicedo Marcos</item>
+        <item>Magro</item>
+        <item>Padre Juan Bautista Aguirre</item>
+        <item>Santa Clara</item>
+        <item>Vicente Piedrahita</item>
+        <item>Daule</item>
+        <item>Isidro Ayora</item>
+        <item>Juan Bautista Aguirre</item>
+        <item>Laurel</item>
+        <item>Limonal</item>
+        <item>Lomas de Sargenillo</item>
+        <item>Los Lojas</item>
+        <item>Piedrahita</item>
+    </string-array>
+    <string-array name="parroquias_duran">
+        <item>Eloy Alfaro</item>
+        <item>El Recreo</item>
+    </string-array>
+    <string-array name="parroquias_empalme">
+        <item>Velasco Ibarra</item>
+        <item>Guayas</item>
+        <item>El Rosario</item>
+    </string-array>
+    <string-array name="parroquias_triunfo">
+        <item>El Triunfo</item>
+    </string-array>
+
+    <string-array name="parroquias_milagro">
+        <item>Milagro</item>
+        <item>Chobo</item>
+        <item>General Elizalde</item>
+        <item>Mariscal Sucre</item>
+        <item>Roberto Astudillo</item>
+    </string-array>
+    <string-array name="parroquias_naranjal">
+        <item>Naranjal</item>
+        <item>Jesús María</item>
+        <item>San Carlos</item>
+        <item>Santa Rosa de Flandes</item>
+        <item>Taura</item>
+    </string-array>
+    <string-array name="parroquias_naranjito">
+        <item>Naranjito</item>
+    </string-array>
+    <string-array name="parroquias_palestina">
+        <item>Palestina</item>
+    </string-array>
+    <string-array name="parroquias_pedro_carbo">
+        <item>	Pedro Carbo</item>
+        <item>Valle de la Virgen</item>
+        <item>Sabanilla</item>
+    </string-array>
+
+    <string-array name="parroquias_samborondon">
+        <item>Samborondón</item>
+        <item>La Puntilla</item>
+        <item>Tarifa</item>
+    </string-array>
+
+    <string-array name="parroquias_santa_lucia">
+        <item>Santa Lucia</item>
+    </string-array>
+
+    <string-array name="parroquias_salitre">
+        <item>Bocana</item>
+        <item>Candilejos</item>
+        <item>Central</item>
+        <item>Paraíso</item>
+        <item>San Mateo</item>
+        <item>el salitre</item>
+        <item>Gral. Vernaza</item>
+        <item>La Victoria</item>
+        <item>Junquillal</item>
+    </string-array>
+
+    <string-array name="parroquias_jacinto_yaguachi">
+        <item>San Jacinto de Yaguachi</item>
+        <item>Crnel. Lorenzo de Garaicoa</item>
+        <item>Crnel. Marcelino Maridueña</item>
+        <item>Gral. Pedro j. Montero</item>
+        <item>Simón Bolívar</item>
+        <item>Yaguachi Viejo</item>
+        <item>Virgen de Fátima</item>
+    </string-array>
+
+    <string-array name="parroquias_playas">
+        <item>General Villamil</item>
+    </string-array>
+
+    <string-array name="parroquias_simon_bolivar">
+        <item>Simón Bolívar</item>
+        <item>Crnel. Lorenzo de Garaicoa</item>
+    </string-array>
+    <string-array name="parroquias_marcelino_mariduenia">
+        <item>Crnel. Marcelino Maridueña</item>
+    </string-array>
+
+    <string-array name="parroquias_lomas_sargentillo">
+        <item>Lomas de Sargentillo</item>
+        <item>Isidro Ayora</item>
+    </string-array>
+
+    <string-array name="parroquias_nobol">
+        <item>Narcisa de Jesús</item>
+    </string-array>
+
+    <string-array name="parroquias_antonio_elizalde">
+        <item>Gral. Antonio Elizalde</item>
+    </string-array>
+
+    <string-array name="parroquias_isidro_ayora">
+        <item>Isidro Ayora</item>
+    </string-array>
+
+    <!--Item Parroquias de los cantones de la provincia de Imbabura-->
+    <string-array name="parroquias_ibarra">
+        <item>Caranqui</item>
+        <item>Guayaquil de alpachaca</item>
+        <item>Sagrario</item>
+        <item>San francisco</item>
+        <item>La dolorosa del prioritario</item>
+        <item>San miguel de ibarra</item>
+        <item>Ambuquí</item>
+        <item>Angochaca</item>
+        <item>Carolina</item>
+        <item>La Esperanza</item>
+        <item>Lita</item>
+        <item>Salinas</item>
+        <item>San Antonio</item>
+    </string-array>
+
+    <string-array name="parroquias_antonio_ante">
+        <item>Andrade Marín</item>
+        <item>Atuntaqui</item>
+        <item>Imbaya</item>
+        <item>San Francisco de Natabuela</item>
+        <item>San José de Chaltura</item>
+        <item>San Roque</item>
+    </string-array>
+
+    <string-array name="parroquias_cotacachi">
+        <item>Sagrario</item>
+        <item>San Francisco</item>
+        <item>Cotacachi</item>
+        <item>Apuela</item>
+        <item>García Moreno</item>
+        <item>Imantag</item>
+        <item>Peñaherrera</item>
+        <item>Plaza Gutiérrez</item>
+        <item>Quiroga</item>
+        <item>6 de Julio de Cuellaje</item>
+        <item>Vacas Galindo</item>
+        <item>Salinas</item>
+        <item>San Antonio</item>
+    </string-array>
+
+    <string-array name="parroquias_otavalo">
+        <item>Jordán</item>
+        <item>San Luis</item>
+        <item>Otavalo</item>
+        <item>Dr. Miguel Egas Cabezas</item>
+        <item>Eugenio Espejo</item>
+        <item>Gonzáles Suárez</item>
+        <item>Pataquí</item>
+        <item>San José de Quichinche</item>
+        <item>San Juan de Ilumán</item>
+        <item>San Pablo</item>
+        <item>San Rafael</item>
+        <item>Selva Alegre</item>
+    </string-array>
+    <string-array name="parroquias_pimampiro">
+        <item>Pimampiro</item>
+        <item>Chugá</item>
+        <item>Mariano Acosta</item>
+        <item>San Francisco de Sigsipamba</item>
+    </string-array>
+    <string-array name="parroquias_miguel_urcuqui">
+        <item>Urcuquí Cabecera Cantonal</item>
+        <item>Cahuasquí</item>
+        <item>La Merced de Buenos Aires</item>
+        <item>Pablo Arenas</item>
+        <item>San Blas</item>
+        <item>Tumbabiro</item>
+    </string-array>
+
+    <!--Fin Item Parroquias de los cantones de la provincia de Imbabura-->
+    <!--Item Parroquias de los cantones de la provincia de Loja-->
+    <string-array name="parroquias_loja">
+        <item>El Sagrario</item>
+        <item>San Sebastián</item>
+        <item>Sucre</item>
+        <item>Valle</item>
+        <item>Loja</item>
+        <item>Chantaco</item>
+        <item>Chuquiribamba</item>
+        <item>El Cisne</item>
+        <item>Gualel</item>
+        <item>Jimbilla</item>
+        <item>Malacatos</item>
+        <item>San Lucas</item>
+        <item>San Pedro de Vilcabamba</item>
+        <item>Santiago</item>
+        <item>Taquil</item>
+        <item>Vilcabamba</item>
+        <item>Yangana</item>
+        <item>Quinara</item>
+    </string-array>
+    <string-array name="parroquias_calvas">
+        <item>Cariamanga</item>
+        <item>Chile</item>
+        <item>San Vicente</item>
+        <item>Colaisaca</item>
+        <item>El Lucero</item>
+        <item>Utuana</item>
+        <item>Sanguillín</item>
+    </string-array>
+    <string-array name="parroquias_catamayo">
+        <item>Catamayo</item>
+        <item>San José</item>
+        <item>El Tambo</item>
+        <item>Guayquichuma</item>
+        <item>San Pedro de la Bendita</item>
+        <item>Zambi</item>
+    </string-array>
+    <string-array name="parroquias_celica">
+        <item>Celica</item>
+        <item>Cruzpamba</item>
+        <item>chaquinal</item>
+        <item>12 de diciembre</item>
+        <item>Pindal</item>
+        <item>Pozul</item>
+        <item>Sabanilla</item>
+        <item>Tnte. Maximiliano Rodriguez Loaiza</item>
+    </string-array>
+    <string-array name="parroquias_chaguarpamba">
+        <item>Chaguarpamba</item>
+        <item>Buenavista</item>
+        <item>El Rosario</item>
+        <item>Santa Rufina</item>
+        <item>Amarillos</item>
+    </string-array>
+    <string-array name="parroquias_espindola">
+        <item>Amaluza</item>
+        <item>Bellavista</item>
+        <item>Jimbura</item>
+        <item>Santa Teresita</item>
+        <item>27 de abril</item>
+        <item>El Ingenio</item>
+        <item>El Airo</item>
+    </string-array>
+    <string-array name="parroquias_gonzanama">
+        <item>Gonzanamá</item>
+        <item>Changaimina</item>
+        <item>Nambacola</item>
+        <item>Purunuma</item>
+        <item>Sacapalca</item>
+    </string-array>
+    <string-array name="parroquias_macara">
+        <item>General Eloy Alfaro</item>
+        <item>Macará</item>
+        <item>Larama</item>
+        <item>La Victoria</item>
+        <item>Sabiango</item>
+    </string-array>
+    <string-array name="parroquias_paltas">
+        <item>Catacocha</item>
+        <item>Lourdes</item>
+        <item>Cangonamá</item>
+        <item>Guachanamá</item>
+        <item>La Tingue</item>
+        <item>Lauro Guerrero</item>
+        <item>Olmedo</item>
+        <item>Orianga</item>
+        <item>San Antonio</item>
+        <item>Casanga</item>
+        <item>Yamana</item>
+    </string-array>
+    <string-array name="parroquias_puyango">
+        <item>Alamor</item>
+        <item>Ciano</item>
+        <item>El Arenal</item>
+        <item>El Limo</item>
+        <item>Mercadillo</item>
+        <item>Vicentino</item>
+    </string-array>
+    <string-array name="parroquias_saraguro">
+        <item>Saraguro</item>
+        <item>El paríso de Celén</item>
+        <item>El Tablón</item>
+        <item>Lluzhapa</item>
+        <item>Manú</item>
+        <item>San Antonio de Qumbe</item>
+        <item>San Pablo de Tenta</item>
+        <item>San Sebastián de Yúluc</item>
+        <item>Selva Alegre</item>
+        <item>Urdaneta</item>
+        <item>Sumaypamba</item>
+    </string-array>
+    <string-array name="parroquias_sozoranga">
+        <item>Sozoranga</item>
+        <item>Nueva Fátima</item>
+        <item>Tacamoros</item>
+    </string-array>
+    <string-array name="parroquias_zapotillo">
+        <item>Zapotillo</item>
+        <item>Mangahurco</item>
+        <item>Garzareal</item>
+        <item>Limones</item>
+        <item>Paletillas</item>
+        <item>Bolaspamba</item>
+    </string-array>
+    <string-array name="parroquias_pindal">
+        <item>Pindal</item>
+        <item>Chaquinal</item>
+        <item>12 de diciembre</item>
+        <item>Milagros</item>
+    </string-array>
+    <string-array name="parroquias_quilanga">
+        <item>Quilanga</item>
+        <item>Fundochamba</item>
+        <item>San Antonio de la Aradas</item>
+        <item>Olmedo</item>
+        <item>La Tingue</item>
+    </string-array>
+
+    <!--Fin Item Parroquias de los cantones de la provincia de Loja-->
+
+    <!--Item Parroquias de los cantones de la provincia de Los Rios-->
+    <string-array name="parroquias_babahoyo">
+        <item>Clemente Baquerizo</item>
+        <item>Dr. Camilo Ponce</item>
+        <item>Barreiro</item>
+        <item>El Salto</item>
+        <item>Babahoyo</item>
+        <item>Barreiro</item>
+        <item>Caracol</item>
+        <item>Febres cordero</item>
+        <item>Pimocha</item>
+        <item>La Unión</item>
+    </string-array>
+    <string-array name="parroquias_baba">
+        <item>Baba</item>
+        <item>Guare</item>
+        <item>Isla de Bejucal</item>
+    </string-array>
+    <string-array name="parroquias_montalvo">
+        <item>Montalvo</item>
+    </string-array>
+    <string-array name ="parroquias_puebloviejo">
+        <item>Puebloviejo</item>
+        <item>Puerto Pechiche</item>
+        <item>San Juan</item>
+    </string-array>
+    <string-array name="parroquias_quevedo">
+        <item>Quevedo</item>
+        <item>San Camilo</item>
+        <item>Guayacán</item>
+        <item>Nicolás Infante Días</item>
+        <item>San Cristóbal</item>
+        <item>Siete de Octubre</item>
+        <item>24 de Mayo</item>
+        <item>Venus del río quevedo</item>
+        <item>Viva Alfaro</item>
+        <item>Buena Fé</item>
+        <item>Mocache</item>
+        <item>San Carlos</item>
+        <item>Valencia</item>
+        <item>La Esperanza</item>
+    </string-array>
+    <string-array name="parroquias_urdaneta">
+        <item>Catarama</item>
+        <item>Ricaurte</item>]
+    </string-array>
+    <string-array name="parroquias_ventanas">
+        <item>10 de Noviembre</item>
+        <item>Ventanas</item>
+        <item>Quinsaloma</item>
+        <item>Zapotal</item>
+        <item>Chacarita</item>
+        <item>Los Ángeles</item>
+    </string-array>
+    <string-array name="parroquias_vinces">
+        <item>Vinces</item>
+        <item>Antonio Sotomayor</item>
+        <item>Palenque</item>
+    </string-array>
+    <string-array name="parroquias_palenque">
+        <item>Palenque</item>
+    </string-array>
+    <string-array name="parroquias_buena_fe">
+        <item>San Jacinto de Buena Fé</item>
+        <item>7 de Agosto</item>
+        <item>11 de Octubre</item>
+        <item>Patricia Pilar</item>
+    </string-array>
+    <string-array name="parroquias_valencia">
+        <item>Valencia</item>
+    </string-array>
+    <string-array name="parroquias_mocache">
+        <item>Mocache</item>
+    </string-array>
+    <string-array name="parroquias_quinsaloma">
+        <item>Quinsaloma</item>
+    </string-array>
+    <!--Fin Item Parroquias de los cantones de la provincia de Los RIOS-->
+    <!-- Item Parroquias de los cantones de la provincia de Manabi-->
+
+    <string-array name="parroquias_portoviejo">
+        <item>Portoviejo</item>
+        <item>12 de marzo</item>
+        <item>Colón</item>
+        <item>Picoazá</item>
+        <item>San Pablo</item>
+        <item>Andrés Vera</item>
+        <item>Francisco Pacheco</item>
+        <item>18 de octubre</item>
+        <item>Simón Bolívar</item>
+        <item>Abdón Calderón</item>
+        <item>Alhajuela</item>
+        <item>Crucita</item>
+        <item>Pueblo Nuevo</item>
+        <item>Riochico</item>
+        <item>San Plácido</item>
+        <item>Chirijos</item>
+    </string-array>
+    <string-array name= "parroquias_bolivar_manabi">
+        <item>Calceta</item>
+        <item>Membrillo</item>
+        <item>Quiroga</item>
+    </string-array>
+    <string-array name="parroquias_chone">
+        <item>Chone</item>
+        <item>Santa Rita</item>
+        <item>Boyacá</item>
+        <item>Canuto</item>
+        <item>Convento</item>
+        <item>Chibunga</item>
+        <item>Eloy Alfaro</item>
+        <item>Ricaurte</item>
+        <item>San Antonio</item>
+    </string-array>
+    <string-array name="parroquias_carmen">
+        <item>El Carmen</item>
+        <item>4 de diciembre</item>
+        <item>Wilfrido Loor Moreira</item>
+        <item>San Pedro de Suma</item>
+    </string-array>
+    <string-array name="parroquias_flavio_alfaro">
+        <item>Flavio Alfaro</item>
+        <item>San Francisco de Novillo</item>
+        <item>Zapallo</item>
+    </string-array>
+    <string-array name="parroquias_jipijapa">
+        <item>Dr. Miguel Morán Lucio</item>
+        <item>Manuel Inocencio Parrales y Guales</item>
+        <item>San Lorenzo de Jipijapa</item>
+        <item>Jipijapa</item>
+        <item>América</item>
+        <item>El Anegado</item>
+        <item>Julcuy</item>
+        <item>La Unión</item>
+        <item>Machalilla</item>
+        <item>Membrillal</item>
+        <item>Pedro Pablo Gómez</item>
+        <item>Puerto de Cayo</item>
+        <item>Puerto López</item>
+    </string-array>
+    <string-array name="parroquias_junin">
+        <item>Junín</item>
+    </string-array>
+    <string-array name="parroquias_manta">
+        <item>Los Esteros</item>
+        <item>Manta</item>
+        <item>San Mateo</item>
+        <item>Tarqui</item>
+        <item>Eloy Alfaro</item>
+        <item>San Lorenzo</item>
+        <item>Santa Marianita</item>
+    </string-array>
+    <string-array name="parroquias_montecristi">
+        <item>Anibal San Andrés</item>
+        <item>Montecristi</item>
+        <item>El Colorado</item>
+        <item>Generalr Eloy Alfaro</item>
+        <item>Leonidas Proaño</item>
+        <item>Jaramijó</item>
+        <item>La Pila</item>
+    </string-array>
+    <string-array name="parroquias_pajan">
+        <item>Paján</item>
+        <item>Campozano</item>
+        <item>Cascol</item>
+        <item>Guale</item>
+        <item>Lascano</item>
+    </string-array>
+    <string-array name="parroquias_pichincha">
+        <item>Pichincha</item>
+        <item>Barraganete</item>
+        <item>San Sebastián</item>
+    </string-array>
+    <string-array name="parroquias_rocafuerte">
+        <item>Rocafuerte</item>
+    </string-array>
+
+    <string-array name="parroquias_santa_ana">
+        <item>Santa Ana</item>
+        <item>Lodana</item>
+        <item>Santa Ana de Vuelta Larga</item>
+        <item>Ayacucho</item>
+        <item>Honorato Vásquez</item>
+        <item>La Unión</item>
+        <item>Olmedo</item>
+        <item>San Pablo</item>
+    </string-array>
+    <string-array name="parroquias_sucre">
+        <item>Bahía de Caráquez</item>
+        <item>Leonidaz Plaza Guiérrez</item>
+        <item>Canoa</item>
+        <item>Cojimíes</item>
+        <item>Charapotó</item>
+        <item>10 de agosto</item>
+        <item>Jama</item>
+        <item>Pedernales</item>
+        <item>San Isidro</item>
+        <item>San Vicente</item>
+    </string-array>
+    <string-array name="parroquias_tosahua">
+        <item>Tosahua</item>
+        <item>Bachillero</item>
+        <item>Angel Pedro Giler</item>
+    </string-array>
+    <string-array name="parroquias_24_mayo">
+        <item>Sucre</item>
+        <item>Bellavista</item>
+        <item>Noboa</item>
+        <item>Arq. Sixto Durán Ballén</item>
+    </string-array>
+    <string-array name="parroquias_pedernales">
+        <item>Pedernales</item>
+        <item>Cojimíes</item>
+        <item>10 de agosto</item>
+        <item>Atahualpa</item>
+    </string-array>
+    <string-array name="parroquias_olmedo">
+        <item>Olmedo</item>
+        <item>La Tingue</item>
+    </string-array>
+    <string-array name="parroquias_puerto_lopez">
+        <item>Puerto López</item>
+        <item>Machalilla</item>
+        <item>Salango</item>
+    </string-array>
+    <string-array name="parroquias_jama">
+        <item>Jama</item>
+    </string-array>
+    <string-array name="parroquias_jaramijo">
+        <item>Jaramijó</item>
+    </string-array>
+    <string-array name="parroquias_san_vicente">
+        <item>San Vicente</item>
+        <item>Canoa</item>
+    </string-array>
+    <!-- FIN Item Parroquias de los cantones de la provincia de Los MANABI-->
+
+    <!-- Item Parroquias de los cantones de la provincia de Los Morona Santiago-->
+    <string-array name="parroquias_morona">
+        <item>Macas</item>
+        <item>Alshi</item>
+        <item>Chiguaza</item>
+        <item>General Proaño</item>
+        <item>Huasaga</item>
+        <item>Macuma</item>
+        <item>San Isidro</item>
+        <item>Sevilla Don Bosco</item>
+        <item>Sinaí</item>
+        <item>Taisha</item>
+        <item>Zuña</item>
+        <item>Tuutinentza</item>
+        <item>Cuchaentza</item>
+        <item>San Jose de Morona</item>
+        <item>Río Blanco</item>
+    </string-array>
+    <string-array name="parroquias_gualaquiza">
+        <item>Gualaquiza</item>
+        <item>Mercedes Molina</item>
+        <item>Amazonas</item>
+        <item>Bermejos</item>
+        <item>Bomboiza</item>
+        <item>Chiguinda</item>
+        <item>El Rosario</item>
+        <item>Nueva Tarqui</item>
+        <item>San Miguel de Cuyes</item>
+        <item>El Ideal</item>
+    </string-array>
+    <string-array name="parroquias_limon">
+        <item>General. Leonidas Plaza Gutiérrez</item>
+        <item>Indanza</item>
+        <item>Pan de Azúcar</item>
+        <item>San Antonio</item>
+        <item>San Carlos de Limón</item>
+        <item>San Juan Bosco</item>
+        <item>San Miguel de Conchay</item>
+        <item>Santa Susana de Chiviaza</item>
+        <item>Yunganza</item>
+    </string-array>
+    <string-array name="parroquias_palora">
+        <item>Palora</item>
+        <item>Arapicos</item>
+        <item>Cumandá</item>
+        <item>Huamboya</item>
+        <item>Sangay</item>
+    </string-array>
+    <string-array name="parroquias_morona_santiago">
+        <item>Santiago Méndez</item>
+        <item>Copal</item>
+        <item>Chupianza</item>
+        <item>Patuca</item>
+        <item>San Luis de el Acho</item>
+        <item>Santiago</item>
+        <item>Tayuza</item>
+        <item>San Francisco de Chinimbimi</item>
+    </string-array>
+    <string-array name="parroquias_morona_sucua">
+        <item>Sucúa</item>
+        <item>Asunción</item>
+        <item>Huambi</item>
+        <item>Logroño</item>
+        <item>Yaupi</item>
+        <item>Santa Marianita de Jesús</item>
+    </string-array>
+    <string-array name="parroquias_morona_huamboya">
+        <item>Huamboya</item>
+        <item>Chiguaza</item>
+        <item>Pablo Sexto</item>
+    </string-array>
+    <string-array name="parroquias_juan_bosco">
+        <item>San Juan Bosco</item>
+        <item>Pan de Azúcar</item>
+        <item>San Carlos de Limón</item>
+        <item>San Jacinto de Wakambeis</item>
+        <item>Santiago de Pananza</item>
+    </string-array>
+    <string-array name="parroquias_morona_taisha">
+        <item>Taisha</item>
+        <item>Huasaga</item>
+        <item>Macuma</item>
+        <item>Tuutinentza</item>
+        <item>Pumpuentsa</item>
+    </string-array>
+    <string-array name="parroquias_logronio">
+        <item>Logroño</item>
+        <item>Yaupi</item>
+        <item>Shimpis</item>
+    </string-array>
+    <string-array name="parroquias_pablo_sexto">
+        <item>Pablo Sexto</item>
+    </string-array>
+    <string-array name="parroquias_tiwintza">
+        <item>Santiago</item>
+        <item>San José de Morona</item>
+    </string-array>
+
+    <!-- FIN Item Parroquias de los cantones de la provincia de Los Morona Santiago-->
+
+    <!-- Item Parroquias de los cantones de la provincia de Napo-->
+    <string-array name="parroquias_tena">
+        <item>Tena</item>
+        <item>Ahuano</item>
+        <item>Carlos Julio Arosemena Tola</item>
+        <item>Chontapunta</item>
+        <item>Pano</item>
+        <item>Puerto Misahualli</item>
+        <item>Puerto Napo</item>
+        <item>Tálag</item>
+        <item>San Juan de Muyuna</item>
+    </string-array>
+    <string-array name="parroquias_archidona">
+        <item>Archidona</item>
+        <item>Avila</item>
+        <item>Cotundo</item>
+        <item>Loreto</item>
+        <item>San Pablo de Ushpayacu</item>
+        <item>Puerto Murialdo</item>
+    </string-array>
+    <string-array name="parroquias_chaco">
+        <item>El Chaco</item>
+        <item>Gonzalo Días de Pineda</item>
+        <item>Linares</item>
+        <item>Oyacachi</item>
+        <item>Santa Rosa</item>
+        <item>Sardinas</item>
+    </string-array>
+    <string-array name="parroquias_quijos">
+        <item>Baeza</item>
+        <item>Cosanga</item>
+        <item>Cuyaja</item>
+        <item>Papallacta</item>
+        <item>San Francisco de Borja</item>
+        <item>San José del Payamino</item>
+        <item>Sumaco</item>
+    </string-array>
+    <string-array name="parroquias_carlos_julio">
+        <item>Carlos Julio Arosemena Tola</item>
+    </string-array>
+
+    <!-- FIN Item Parroquias de los cantones de la provincia de Napo-->
+
+
+    <!-- Item Parroquias de los cantones de la provincia de Pastaza-->
+    <string-array name="parroquias_pastaza">
+        <item>Puyo</item>
+        <item>Arajuno</item>
+        <item>Canelos</item>
+        <item>Curaray</item>
+        <item>Diez de Agosto</item>
+        <item>Fátima</item>
+        <item>Montalvo</item>
+        <item>Pomona</item>
+        <item>Río Corrientes</item>
+        <item>Río Tigre</item>
+        <item>Santa Clara</item>
+        <item>Saracay</item>
+        <item>Simón Bolívar</item>
+        <item>Tarqui</item>
+        <item>Teniente Hugo Ortiz</item>
+        <item>Veracruz</item>
+        <item>El Triunfo</item>
+    </string-array>
+    <string-array name="parroquias_mera">
+        <item>Mera</item>
+        <item>Madre Tierrra</item>
+        <item>Shell</item>
+    </string-array>
+    <string-array name="parroquias_santa_clara">
+        <item>Santa Clara</item>
+        <item>San José</item>
+    </string-array>
+    <string-array name="parroquias_arajuno">
+        <item>Arajuno</item>
+        <item>Curaray</item>
+    </string-array>
+
+    <!-- FIN Item Parroquias de los cantones de la provincia de Pastaza-->
+
+
+    <!-- Item Parroquias de los cantones de la provincia de Pichincha-->
+    <string-array name="parroquias_quito">
+        <item>Belisario Quevedo</item>
+        <item>Carcelén</item>
+        <item>Centro Histórico</item>
+        <item>Cochapamba</item>
+        <item>Comité del Pueblo</item>
+        <item>Cotocollao</item>
+        <item>Chilibulo</item>
+        <item>Chillogallo</item>
+        <item>Chimbacalle</item>
+        <item>El Condado</item>
+        <item>Guamaní</item>
+        <item>Iñaquito</item>
+        <item>Itchimbía</item>
+        <item>Jipijapa</item>
+        <item>Kennedey</item>
+        <item>La Argelia</item>
+        <item>La Concepción</item>
+        <item>La Ecuatoriana</item>
+        <item>La Ferroviaria</item>
+        <item>La Libertad</item>
+        <item>La Magdalena</item>
+        <item>La Mena</item>
+        <item>Mariscal Sucre</item>
+        <item>Ponceano</item>
+        <item>Puengasí</item>
+        <item>Quitumbe</item>
+        <item>Rumipamba</item>
+        <item>San Bartolo</item>
+        <item>San Isidro del Inca</item>
+        <item>San Juan</item>
+        <item>Solanda</item>
+        <item>Turubamba</item>
+        <item>Quito Distrito Metropolitano</item>
+        <item>Alangasí</item>
+        <item>Amaguaña</item>
+        <item>Atahualpa</item>
+        <item>Calacalí</item>
+        <item>Calderón</item>
+        <item>Conocoto</item>
+        <item>Cumbayá</item>
+        <item>Chavezpamba</item>
+        <item>Checa</item>
+        <item>El Quinche</item>
+        <item>Gualea</item>
+        <item>Guangopolo</item>
+        <item>Guayllabamba</item>
+        <item>La Merced</item>
+        <item>Llano Chico</item>
+        <item>Lloa</item>
+        <item>Mindo</item>
+        <item>Nanegal</item>
+        <item>Nanegalito</item>
+        <item>Nayón</item>
+        <item>Nono</item>
+        <item>Pacto</item>
+        <item>Pedro Vicente Maldonado</item>
+        <item>Perucho</item>
+        <item>Pifo</item>
+        <item>Píntag</item>
+        <item>Pomasqui</item>
+        <item>Puéllaro</item>
+        <item>Puembo</item>
+        <item>San Antonio</item>
+        <item>San José de Minas</item>
+        <item>San Miguel de los Bancos</item>
+        <item>Tababela</item>
+        <item>Tumbaco</item>
+        <item>Yaruqui</item>
+        <item>Zambiza</item>
+        <item>Puerto Quito</item>
+    </string-array>
+    <string-array name="parroquias_cayambe">
+        <item>Ayora</item>
+        <item>Cayambe</item>
+        <item>Juan Montalvo</item>
+        <item>Ascázubi</item>
+        <item>Cangahua</item>
+        <item>Olmedo</item>
+        <item>Otón</item>
+        <item>Santa Rosa de Cuzubamba</item>
+    </string-array>
+    <string-array name="parroquias_mejia">
+        <item>Machachi</item>
+        <item>Alóag</item>
+        <item>Aloasí</item>
+        <item>Cutuglahua</item>
+        <item>El Chaupi</item>
+        <item>Manuel Cornejo Astorga</item>
+        <item>Tambillo</item>
+        <item>Uyumbicho</item>
+    </string-array>
+    <string-array name="parroquias_moncayo">
+        <item>Tabacundo</item>
+        <item>La Esperanza</item>
+        <item>Malchingui</item>
+        <item>Tocachi</item>
+        <item>Tupigachi</item>
+    </string-array>
+    <string-array name="parroquias_ruminiahui">
+        <item>Sangolquí</item>
+        <item>San Pedro de Taboada</item>
+        <item>San Rafael</item>
+        <item>Cotogchoa</item>
+        <item>Rumipamba</item>
+    </string-array>
+    <string-array name="parroquias_miguel_bancos">
+        <item>San Miguel de los Bancos</item>
+        <item>Mindo</item>
+        <item>Pedro Vicente Maldonado</item>
+        <item>Puerto Quito</item>
+        <item>Rumipamba</item>
+    </string-array>
+    <string-array name="parroquias_puerto_quito">
+        <item>Puerto Quito</item>
+    </string-array>
+    <string-array name="parroquias_vicente_maldonado">
+        <item>Pedro Vicente Maldonado</item>
+    </string-array>
+
+    <!-- FIN Item Parroquias de los cantones de la provincia de Pichincha-->
+
+
+    <!-- Item Parroquias de los cantones de la provincia de Tungurahua-->
+    <string-array name="parroquias_ambato">
+        <item>Atocha-Ficoa</item>
+        <item>Celiano Monge</item>
+        <item>Huachi Chico</item>
+        <item>La Merced</item>
+        <item>La Península</item>
+        <item>Matriz</item>
+        <item>Pishilata</item>
+        <item>San Francisco</item>
+        <item>Ambato</item>
+        <item>Ambatillo</item>
+        <item>Atahualpa</item>
+        <item>Augusto N. Martinez</item>
+        <item>Constantino Fernández</item>
+        <item>Huachi Grande</item>
+        <item>Izamba</item>
+        <item>Juan Beigno Vela</item>
+        <item>Montalvo</item>
+        <item>Pasa</item>
+        <item>Picaigua</item>
+        <item>Pilaguin</item>
+        <item>Quisapincha</item>
+        <item>San Bartolomé de Pinollog</item>
+        <item>San Fernando</item>
+        <item>Santa Rosa</item>
+        <item>Totoras</item>
+        <item>Cunchibamba</item>
+        <item>Unamucho</item>
+    </string-array>
+    <string-array name="parroquias_banios_agua">
+        <item>Baños de Agua Santa</item>
+        <item>Lligua</item>
+        <item>Río Negro</item>
+        <item>Río Verde</item>
+        <item>Ulba</item>
+    </string-array>
+    <string-array name="parroquias_cevallos">
+        <item>Cevallos</item>
+    </string-array>
+    <string-array name="parroquias_mocha">
+        <item>Mocha</item>
+        <item>Pinguilí</item>
+    </string-array>
+    <string-array name="parroquias_patate">
+        <item>Patate</item>
+        <item>El Triunfo</item>
+        <item>Los Andes</item>
+        <item>Sucre</item>
+    </string-array>
+    <string-array name="parroquias_quero">
+        <item>Quero</item>
+        <item>Rumipamba</item>
+        <item>Yanayacu</item>
+    </string-array>
+    <string-array name="parroquias_pedro_pelileo">
+        <item>Pelileo</item>
+        <item>Pelileo Grande</item>
+        <item>Benítez</item>
+        <item>Bolívar</item>
+        <item>Cataló</item>
+        <item>Chiquicha</item>
+        <item>El Rosario</item>
+        <item>García Moreno</item>
+        <item>Guambaló</item>
+        <item>Salasca</item>
+        <item>Ciudad Nueva</item>
+    </string-array>
+    <string-array name="parroquias_santiago_pillaro">
+        <item>Píllaro</item>
+        <item>Baquerizo Moreno</item>
+        <item>Emilio María Terán</item>
+        <item>Marcos Espinel</item>
+        <item>Presidente Urbina</item>
+        <item>San Andrés</item>
+        <item>San José Poaló</item>
+        <item>San Miguelito</item>
+    </string-array>
+    <string-array name="parroquias_tisaleo">
+        <item>Tisaleo</item>
+        <item>Quinchicoto</item>
+    </string-array>
+
+    <!-- FIN Item Parroquias de los cantones de la provincia de Tungurahua-->
+
+    <!-- Item Parroquias de los cantones de la provincia de Zamora Chinchipe-->
+
+    <string-array name="parroquias_zamora">
+        <item>El Limón</item>
+        <item>Zamora</item>
+        <item>Cumbaratza</item>
+        <item>Guadalupe</item>
+        <item>Imbana</item>
+        <item>Paquisha</item>
+        <item>Sabanilla</item>
+        <item>Timbara</item>
+        <item>Zumbi</item>
+        <item>San carlos de las minas</item>
+    </string-array>
+    <string-array name="parroquias_chinchipe">
+        <item>Zumba</item>
+        <item>Chito</item>
+        <item>El Chorro</item>
+        <item>El Porvenir del Carmen</item>
+        <item>La Chonta</item>
+        <item>Palanda</item>
+        <item>Pucapamba</item>
+        <item>San Francisco del Vergel</item>
+        <item>Valladolid</item>
+        <item>San Andrés</item>
+    </string-array>
+    <string-array name="parroquias_nangaritza">
+        <item>Guaysimi</item>
+        <item>Zurmi</item>
+        <item>Nuevo Paraíso</item>
+    </string-array>
+    <string-array name="parroquias_yacuambi">
+        <item>28 de mayo</item>
+        <item>La Paz</item>
+        <item>Tutupali</item>
+    </string-array>
+    <string-array name="parroquias_yantzaza">
+        <item>Yantzaza</item>
+        <item>Chicaña</item>
+        <item>El Pangui</item>
+        <item>Los Encuentros</item>
+    </string-array>
+    <string-array name="parroquias_pangui">
+        <item>El Pangui</item>
+        <item>El Guisme</item>
+        <item>Pachicutza</item>
+        <item>Tundayme</item>
+    </string-array>
+    <string-array name="parroquias_centinela_condor">
+        <item>Zumbi</item>
+        <item>Paquisha</item>
+        <item>Triunfo-dorado</item>
+        <item>Panguintza</item>
+    </string-array>
+    <string-array name="parroquias_palanda">
+        <item>Palanda</item>
+        <item>El Porvenir del Carmen</item>
+        <item>San Francisco del Vergel</item>
+        <item>Valladolid</item>
+        <item>La Canela</item>
+    </string-array>
+    <string-array name="parroquias_paquisha">
+        <item>Paquisha</item>
+        <item>Bellavista</item>
+        <item>Nuevo Quito</item>
+    </string-array>
+
+    <!-- FIN Item Parroquias de los cantones de la provincia de Zamora Chinchipe-->
+
+
+    <!-- Item Parroquias de los cantones de la provincia de Galapagos-->
+    <string-array name="parroquias_san_cristobal">
+        <item>Puerto Baquerizo Moreno</item>
+        <item>El Progreso</item>
+        <item>Santa María</item>
+    </string-array>
+    <string-array name="parroquias_isabela">
+        <item>Puerto Villamil</item>
+        <item>Tomás de Berlanda</item>
+    </string-array>
+    <string-array name="parroquias_santa_cruz">
+        <item>Puerto Ayora</item>
+        <item>Bellavista</item>
+        <item>Santa Rosa</item>
+    </string-array>
+
+    <!-- FIN Item Parroquias de los cantones de la provincia de Galapagos-->
+
+
+    <!-- Item Parroquias de los cantones de la provincia de Sucumbios-->
+    <string-array name="parroquias_lago_agrio">
+        <item>Nueva Loja</item>
+        <item>Cuyabeno</item>
+        <item>Dureno</item>
+        <item>General. Farfán</item>
+        <item>Tarapoa</item>
+        <item>El Eno</item>
+        <item>Pacayacu</item>
+        <item>Jambelí</item>
+        <item>Santa Cecilia</item>
+        <item>Aguas Negras</item>
+    </string-array>
+    <string-array name="parroquias_pizarro">
+        <item>El Dorado de Cascales</item>
+        <item>El Reventador</item>
+        <item>Gonzalo Pizarro</item>
+        <item>Lumbaquí</item>
+        <item>Puerto Libre</item>
+        <item>Santa Rosa de Sucumbíos</item>
+    </string-array>
+    <string-array name="parroquias_putumayo">
+        <item>Puerto del Carmen de Putumayo</item>
+        <item>Palma Roja</item>
+        <item>Puerto Bolívar</item>
+        <item>Puerto Rodríguez</item>
+        <item>Santa Elena</item>
+    </string-array>
+    <string-array name="parroquias_shushufindi">
+        <item>Shushufindi</item>
+        <item>Lomoncocha</item>
+        <item>Pañacocha</item>
+        <item>San Roque</item>
+        <item>San Pedro de los Cofanes</item>
+        <item>Siete de Julio</item>
+    </string-array>
+    <string-array name="parroquias_sucumbios">
+        <item>La Bonita</item>
+        <item>El Playón de San Francisco</item>
+        <item>La Sofía</item>
+        <item>Rosa Florida</item>
+        <item>Santa Bárvara</item>
+    </string-array>
+    <string-array name="parroquias_cascales">
+        <item>El Dorado de Cascales</item>
+        <item>Santa Rosa de Sucumbíos</item>
+        <item>Sevilla</item>
+    </string-array>
+
+    <string-array name="parroquias_cuyabeno">
+        <item>Tarapoa</item>
+        <item>Cuyabeno</item>
+        <item>Aguas Negras</item>
+    </string-array>
+
+    <!-- FIN Item Parroquias de los cantones de la provincia de Sucumbios-->
+
+
+    <!-- Item Parroquias de los cantones de la provincia de Orellana-->
+    <string-array name="parroquias_orellana">
+        <item>Puerto Francisco de Orellana</item>
+        <item>Dayuma</item>
+        <item>Taracoa</item>
+        <item>Alejandro Labaka</item>
+        <item>El Dorado</item>
+        <item>El Edén</item>
+        <item>García Moreno</item>
+        <item>Inés Arango</item>
+        <item>La Belleza</item>
+        <item>Nuevo Paraíso</item>
+        <item>San José de Guayusa</item>
+        <item>San Luis de Armenia</item>
+    </string-array>
+    <string-array name="parroquias_aguarico">
+        <item>Tipitini</item>
+        <item>Nuevo Rocafuerte</item>
+        <item>Capitán Augusto Rivadeneyra</item>
+        <item>Cononaco</item>
+        <item>Santa María de Huiririma</item>
+        <item>Tiputini</item>
+        <item>Yasuní</item>
+    </string-array>
+    <string-array name="parroquias_joya_sachas">
+        <item>La Joya de los Sachas</item>
+        <item>Enokandi</item>
+        <item>Pompeya</item>
+        <item>San Carlos</item>
+        <item>San Sebastián del Coca</item>
+        <item>Lago San Pedro</item>
+        <item>Rumipamba</item>
+        <item>Tres de noviembre</item>
+        <item>Unión Milagreña</item>
+    </string-array>
+    <string-array name="parroquias_loreto">
+        <item>Loreto</item>
+        <item>Avila</item>
+        <item>Puerto Murialdo</item>
+        <item>San José de Payamino</item>
+        <item>San José de Dahuano</item>
+        <item>San Vicente de Huaticocha</item>
+    </string-array>
+
+
+    <!-- FIN Item Parroquias de los cantones de la provincia de Orellana-->
+
+
+    <!-- Item Parroquias de los cantones de la provincia de Santo Domingo de los Tsachilas-->
+    <string-array name="parroquias_santo_domingo">
+        <item>Abraham Calazacón</item>
+        <item>Bombolí</item>
+        <item>Chiguilpe</item>
+        <item>Río Toachi</item>
+        <item>Río Verde</item>
+        <item>Santo Domingo de los Colorados</item>
+        <item>Zaracay</item>
+        <item>Alluriquín</item>
+        <item>Puerto Limón</item>
+        <item>Luz de América</item>
+        <item>San Jacinto del Búa</item>
+        <item>Valle Hermoso</item>
+        <item>El Esfuerzo</item>
+        <item>Santa Maria del Toachi</item>
+    </string-array>
+
+    <!-- FIN Item Parroquias de los cantones de la provincia de Santo Domingo de los Tsachilas-->
+
+    <!-- Item Parroquias de los cantones de la provincia de Santo Elena-->
+    <string-array name="parroquias_santa_elena">
+        <item>Ballenita</item>
+        <item>Santa Elena</item>
+        <item>Atahualpa</item>
+        <item>Colonche</item>
+        <item>Chanduy</item>
+        <item>Manglaralto</item>
+        <item>Simón Bolívar</item>
+        <item>San José de Ancón</item>
+    </string-array>
+    <string-array name="parroquias_libertad">
+        <item>La Libertad</item>
+    </string-array>
+    <string-array name="parroquias_salinas">
+        <item>Carlos Espinoza Larrea</item>
+        <item>General Alberto Enríquez Gallo</item>
+        <item>Vicente Rocafuerte</item>
+        <item>Santa Rosa</item>
+        <item>Salinas</item>
+        <item>Anconcito</item>
+        <item>José Luis Tamayo</item>
+    </string-array>
+
+    <!-- FIN Item Parroquias de los cantones de la provincia de Santo Elena-->
 
     <!--ITEM PARROQUIAS-->
 

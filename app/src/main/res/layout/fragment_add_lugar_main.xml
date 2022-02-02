@@ -50,7 +50,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0">
-
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -860,8 +859,6 @@
 
             </androidx.appcompat.widget.LinearLayoutCompat>
         </ScrollView>
-
-
 
         <!--SCROLL Parte 3 =====================-->
         <ScrollView
@@ -3468,12 +3465,12 @@
             android:id="@+id/scrollparte7"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#EAEDF2"
             android:layout_weight="1">
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#FFFF"
                 android:orientation="vertical"
                 tools:context="com.example.turism_register.fragments.AddLugarMainFragment">
 
@@ -3497,70 +3494,205 @@
 
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text=" ¿El GAD cuenta con el Plan de Desarrollo Turístico Territorial?">
-
-                </TextView>
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
-                    <CheckBox
-                        android:id="@+id/cb_politicas_regulaciones_si"
-                        android:theme="@style/CheckboxOpciones"
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:elevation="8dp"
-                        android:text=" SI "
-                        android:textAlignment="textStart" />
-                    <CheckBox
-                        android:id="@+id/cb_politicas_regulaciones_no"
-                        android:theme="@style/CheckboxOpciones"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:elevation="8dp"
-                        android:text=" NO "
-                        android:visibility="visible"
-                        android:textAlignment="textStart" />
-                    <androidx.appcompat.widget.AppCompatEditText
-                        android:id="@+id/ip_politicas_anio_elaboracion"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFFF"
+                    android:padding="10dp">
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginLeft="5dp"
-                        android:hint="Año Elaboración: "
-                        android:visibility="gone"
-                        android:theme="@style/CampoTexto" />
-                </androidx.appcompat.widget.LinearLayoutCompat>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text=" ¿El atractivo se encuentra dentro de la planificación turística territorial (GAD´S)?">
+                        android:layout_height="match_parent"
+                        android:background="#EAEDF2"
+                        android:padding="8dp"
+                        android:textSize="17dp"
+                        android:text=" ¿El GAD cuenta con el Plan de Desarrollo Turístico Territorial?">
 
-                </TextView>
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-                    <CheckBox
-                        android:id="@+id/cb_planificacion_turistica_si"
-                        android:theme="@style/CheckboxOpciones"
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:elevation="8dp"
-                        android:text=" SI "
-                        android:textAlignment="textStart" />
-                    <CheckBox
-                        android:id="@+id/cb_planificacion_turistica_no"
-                        android:theme="@style/CheckboxOpciones"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:elevation="8dp"
-                        android:text=" NO "
-                        android:visibility="visible"
-                        android:textAlignment="textStart" />
+                    </TextView>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/partSup" />
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+                        <CheckBox
+                            android:id="@+id/cb_politicas_regulaciones_si"
+                            android:theme="@style/CheckboxOpciones"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" SI "
+                            android:textAlignment="textStart" />
+                        <CheckBox
+                            android:id="@+id/cb_politicas_regulaciones_no"
+                            android:theme="@style/CheckboxOpciones"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" NO "
+                            android:visibility="visible"
+                            android:textAlignment="textStart" />
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/ip_politicas_anio_elaboracion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:hint="Año Elaboración "
+                            android:visibility="gone"
+                            android:theme="@style/CampoTexto" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2dp"
+                        android:padding="8dp"
+                        android:textSize="17dp"
+                        android:background="#EAEDF2"
+                        android:text=" ¿El atractivo se encuentra dentro de la planificación turística territorial (GAD´S)?">
+
+                    </TextView>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/partSup" />
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+                        <CheckBox
+                            android:id="@+id/cb_planificacion_turistica_si"
+                            android:theme="@style/CheckboxOpciones"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" SI "
+                            android:textAlignment="textStart" />
+                        <CheckBox
+                            android:id="@+id/cb_planificacion_turistica_no"
+                            android:theme="@style/CheckboxOpciones"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" NO "
+                            android:visibility="visible"
+                            android:textAlignment="textStart" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginBottom="8dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/planificacion_turistica_especifique"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint=" Especifique" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2dp"
+                        android:padding="8dp"
+                        android:textSize="17dp"
+                        android:background="#EAEDF2"
+                        android:text=" ¿Existen normativas que se apliquen para el desarrollo de la actividad turística en el atractivo?">
+
+                    </TextView>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/partSup" />
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+                        <CheckBox
+                            android:id="@+id/cb_normativas_si"
+                            android:theme="@style/CheckboxOpciones"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" SI "
+                            android:textAlignment="textStart" />
+                        <CheckBox
+                            android:id="@+id/cb_normativas_no"
+                            android:theme="@style/CheckboxOpciones"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" NO "
+                            android:visibility="visible"
+                            android:textAlignment="textStart" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginBottom="8dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/normativas_especifique"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint=" Especifique" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2dp"
+                        android:text="¿Existen ordenanzas que se apliquen para el desarrollo de la actividad turística en el atractivo?"
+                        android:padding="8dp"
+                        android:textSize="17dp"
+                        android:background="#EAEDF2"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/partSup" />
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="horizontal">
+                        <CheckBox
+                            android:id="@+id/cb_ordenanzas_si"
+                            android:theme="@style/CheckboxOpciones"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" SI "
+                            android:textAlignment="textStart" />
+                        <CheckBox
+                            android:id="@+id/cb_ordenanzas_no"
+                            android:theme="@style/CheckboxOpciones"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" NO "
+                            android:visibility="visible"
+                            android:textAlignment="textStart" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginBottom="8dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/ordenanzas_especifique"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:hint=" Especifique" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -3568,104 +3700,15 @@
                         android:layout_marginBottom="8dp">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/planificacion_turistica_especifique"
+                            android:id="@+id/observaciones_politicas"
                             android:layout_width="match_parent"
-                            android:layout_height="60dp"
-                            android:hint=" Especifique" />
+                            android:layout_height="wrap_content"
+                            android:hint=" Observaciones" />
                     </com.google.android.material.textfield.TextInputLayout>
                 </androidx.appcompat.widget.LinearLayoutCompat>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text=" ¿Existen normativas que se apliquen para el desarrollo de la actividad turística en el atractivo?">
 
-                </TextView>
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-                    <CheckBox
-                        android:id="@+id/cb_normativas_si"
-                        android:theme="@style/CheckboxOpciones"
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:elevation="8dp"
-                        android:text=" SI "
-                        android:textAlignment="textStart" />
-                    <CheckBox
-                        android:id="@+id/cb_normativas_no"
-                        android:theme="@style/CheckboxOpciones"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:elevation="8dp"
-                        android:text=" NO "
-                        android:visibility="visible"
-                        android:textAlignment="textStart" />
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:layout_marginBottom="8dp">
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/normativas_especifique"
-                            android:layout_width="match_parent"
-                            android:layout_height="60dp"
-                            android:hint=" Especifique" />
-                    </com.google.android.material.textfield.TextInputLayout>
-                </androidx.appcompat.widget.LinearLayoutCompat>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="¿Existen ordenanzas que se apliquen para el desarrollo de la actividad turística en el atractivo?">
 
-                </TextView>
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-                    <CheckBox
-                        android:id="@+id/cb_ordenanzas_si"
-                        android:theme="@style/CheckboxOpciones"
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:elevation="8dp"
-                        android:text=" SI "
-                        android:textAlignment="textStart" />
-                    <CheckBox
-                        android:id="@+id/cb_ordenanzas_no"
-                        android:theme="@style/CheckboxOpciones"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:elevation="8dp"
-                        android:text=" NO "
-                        android:visibility="visible"
-                        android:textAlignment="textStart" />
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:layout_marginBottom="8dp">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/ordenanzas_especifique"
-                            android:layout_width="match_parent"
-                            android:layout_height="60dp"
-                            android:hint=" Especifique" />
-                    </com.google.android.material.textfield.TextInputLayout>
-                </androidx.appcompat.widget.LinearLayoutCompat>
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_marginBottom="8dp">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/observaciones_politicas"
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:hint=" Observaciones" />
-                </com.google.android.material.textfield.TextInputLayout>
             </androidx.appcompat.widget.LinearLayoutCompat>
         </ScrollView>
 
@@ -3676,13 +3719,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1">
-
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#EAEDF2"
                 android:orientation="vertical">
-
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/linearH1p8"
                     android:layout_width="400dp"
@@ -3703,19 +3744,13 @@
                 </androidx.appcompat.widget.LinearLayoutCompat>
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="wrap_content"
                     android:background="#EAEDF2"
-                    android:paddingTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="15dp"
+                    android:textSize="18dp"
                     android:text="Atractivos Naturales">
                 </TextView>
-
-                <CheckBox
-                    android:id="@+id/cb_actividades_atract_agua"
-                    android:theme="@style/Checkbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#EAEDF2"
-                    android:text="En el Agua"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
@@ -3723,492 +3758,511 @@
                     android:layout_marginBottom="2dp"
                     android:background="@color/partSup" />
                 <androidx.appcompat.widget.LinearLayoutCompat
-                    android:id="@+id/linearV1p8"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:orientation="vertical"
                     android:layout_marginLeft="10dp"
-                    android:background="#FFFF"
                     android:layout_marginRight="10dp"
-                    android:padding="8dp"
-                    android:visibility="gone"
-                    android:orientation="vertical">
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:textAlignment="center">
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_kayak_mar"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Kayak de Mar " />
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_kayak_rio"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Kayak de Río " />
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_kayak_lacustre"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Kayak lacustre  " />
-
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:baselineAligned="false"
-                        android:orientation="horizontal">
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/_atr_nat_agua_tubing"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Tubing" />
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_rafting"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Rafting" />
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_paseo_moto_acuatica"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Paseo moto acuatica  " />
-
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:baselineAligned="true"
-                        android:orientation="horizontal">
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/_atr_nat_kite_surf"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Kite surf" />
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_pesca"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Pesca Deportiva" />
-
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_paseo_lancha"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Paseo en lancha" />
-
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/_atr_nat_kayak_mar"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Kayak de mar" />
-
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_banana_flotante"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Banana Flotante" />
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_parasailing"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Parasailing" />
-
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/_atr_nat_surf"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Surf" />
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/_atr_nat_agua_buseo"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Buseo" />
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_paseo_bote"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Paseo en bote" />
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_paseo_panga"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Paseo en panga" />
-
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/_atr_nat_esqui_acuatico"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Esquí acuático" />
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_regata"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Regata" />
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_snorkel"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Snorkel" />
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_otro"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Otro" />
-
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-
-                    <com.google.android.material.textfield.TextInputLayout
+                    android:padding="8dp">
+                    <CheckBox
+                        android:id="@+id/cb_actividades_atract_agua"
+                        android:theme="@style/Checkbox"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginBottom="8dp">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/ip_observaciones_atr_en_agua"
-                            android:layout_width="match_parent"
-                            android:layout_height="60dp"
-                            android:hint=" Observaciones" />
-                    </com.google.android.material.textfield.TextInputLayout>
-                </androidx.appcompat.widget.LinearLayoutCompat>
-
-                <CheckBox
-                    android:id="@+id/cb_actividades_atract_aire"
-                    android:theme="@style/Checkbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#EAEDF2"
-                    android:text="En el Aire"/>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginBottom="2dp"
-                    android:background="@color/partSup" />
-
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:id="@+id/linearV2p8"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:background="#FFFF"
-                    android:layout_marginRight="10dp"
-                    android:padding="8dp"
-                    android:visibility="gone"
-                    android:orientation="vertical">
-
-                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:background="#EAEDF2"
+                        android:text="En el Agua"/>
+                    <View
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:textAlignment="center">
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_aire_alas_delta"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Alas Delta" />
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_aire_canopy"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Canopy " />
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_aire_parapente"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Parapente" />
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_aire_otro"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Otro " />
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_height="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/partSup" />
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/linearV1p8"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginBottom="8dp">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/ip_observaciones_atr_en_aire"
+                        android:background="#FFFF"
+                        android:padding="8dp"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+                        <androidx.appcompat.widget.LinearLayoutCompat
                             android:layout_width="match_parent"
-                            android:layout_height="60dp"
-                            android:hint=" Observaciones" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                </androidx.appcompat.widget.LinearLayoutCompat>
-                <CheckBox
-                    android:id="@+id/cb_actividades_atract_superf"
-                    android:theme="@style/Checkbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#EAEDF2"
-                    android:text="En Superficie Terrestre"/>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginBottom="2dp"
-                    android:background="@color/partSup" />
-
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:id="@+id/linearV3p8"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:visibility="gone"
-                    android:layout_marginLeft="10dp"
-                    android:background="#FFFF"
-                    android:layout_marginRight="10dp"
-                    android:padding="8dp"
-                    android:orientation="vertical">
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_superf_cabalgata"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Cabalgata" />
+                            android:orientation="horizontal"
+                            android:textAlignment="center">
 
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_superf_caminata"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_kayak_mar"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginBottom="2dp"
+                                android:hint=" Kayak de Mar " />
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_kayak_rio"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint=" Kayak de Río " />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Caminata " />
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_superf_picnic"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
+                            android:baselineAligned="false"
+                            android:orientation="horizontal">
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_kayak_lacustre"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginBottom="2dp"
+                                android:hint=" Kayak lacustre  " />
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/_atr_nat_kayak_mar"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint=" Kayak de mar" />
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Picnic " />
+                            android:baselineAligned="true"
+                            android:orientation="horizontal">
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_pesca"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint=" Pesca Deportiva" />
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_paseo_bote"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint=" Paseo en bote " />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_banana_flotante"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint=" Banana Flotante" />
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_paseo_panga"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint=" Paseo en panga" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_paseo_lancha"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint=" Paseo en lancha" />
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/_atr_nat_esqui_acuatico"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint=" Esquí acuático" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_paseo_moto_acuatica"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint="Paseo moto acuatica  " />
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_parasailing"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint="Parasailing" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/_atr_nat_kite_surf"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint=" Kite surf" />
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_snorkel"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint=" Snorkel" />
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/_atr_nat_agua_buseo"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint=" Buseo" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_rafting"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginBottom="2dp"
+                                android:hint=" Rafting" />
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/_atr_nat_surf"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint=" Surf" />
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_otro"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint=" Otro" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="8dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/ip_observaciones_atr_en_agua"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:hint=" Observaciones" />
+                        </com.google.android.material.textfield.TextInputLayout>
                     </androidx.appcompat.widget.LinearLayoutCompat>
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:textAlignment="center">
 
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_superf_cicloturismo"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Cicloturismo" />
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_superf_cayoning"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Cayoning " />
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_superf_camping"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Camping " />
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:textAlignment="center">
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_superf_montanismo"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Montañismo " />
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_superf_escalada"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Escalada " />
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_superf_senderismo"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Senderismo " />
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_superf_cueva"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Exploración de cuevas" />
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_superf_recre2"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint="  Actividades Recreativas " />
-
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_superf_fauna"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Observación de flora y fauna" />
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_superf_astros"
-                            android:theme="@style/CheckboxOpciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint="  Observación de astros  " />
-
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-
-                    <com.google.android.material.textfield.TextInputLayout
+                    <CheckBox
+                        android:id="@+id/cb_actividades_atract_aire"
+                        android:theme="@style/Checkbox"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginBottom="8dp">
+                        android:background="#EAEDF2"
+                        android:text="En el Aire"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/partSup" />
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/ip_observaciones_superficie"
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/linearV2p8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#FFFF"
+                        android:padding="8dp"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
                             android:layout_width="match_parent"
-                            android:layout_height="60dp"
-                            android:hint=" Observaciones" />
-                    </com.google.android.material.textfield.TextInputLayout>
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:textAlignment="center">
 
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_aire_alas_delta"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:hint="Alas Delta" />
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_aire_canopy"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:hint="Canopy " />
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_aire_parapente"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:hint="Parapente" />
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_aire_otro"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:hint="Otro " />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="8dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/ip_observaciones_atr_en_aire"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:hint=" Observaciones" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                    <CheckBox
+                        android:id="@+id/cb_actividades_atract_superf"
+                        android:theme="@style/Checkbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#EAEDF2"
+                        android:text="En Superficie Terrestre"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/partSup" />
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/linearV3p8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:background="#FFFF"
+                        android:padding="8dp"
+                        android:orientation="vertical">
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:textAlignment="center">
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_superf_montanismo"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint=" Montañismo " />
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_superf_escalada"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint=" Escalada " />
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_superf_senderismo"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint=" Senderismo " />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:textAlignment="center">
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_superf_cicloturismo"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint=" Cicloturismo" />
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_superf_cayoning"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint=" Cayoning " />
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_superf_camping"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint=" Camping " />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_superf_cabalgata"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint=" Cabalgata" />
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_superf_caminata"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint=" Caminata " />
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_superf_picnic"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint=" Picnic " />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_superf_fauna"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint=" Observación de flora y fauna" />
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_superf_astros"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint="  Observación de astros  " />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_superf_cueva"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint=" Exploración de cuevas" />
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_superf_recre2"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint="  Actividades Recreativas " />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="8dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/ip_observaciones_superficie"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:hint=" Observaciones" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
                 </androidx.appcompat.widget.LinearLayoutCompat>
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:paddingTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:padding="15dp"
+                    android:textSize="18dp"
                     android:text="Atractivos Culturales">
                 </TextView>
-                <CheckBox
-                    android:id="@+id/cb_atr_cult_tang_intag"
-                    android:theme="@style/Checkbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#EAEDF2"
-                    android:text="Tanginbles e intangibles"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
@@ -4216,155 +4270,175 @@
                     android:layout_marginBottom="2dp"
                     android:background="@color/partSup" />
                 <androidx.appcompat.widget.LinearLayoutCompat
-                    android:id="@+id/linearV4p8"
                     android:layout_width="match_parent"
-                    android:visibility="gone"
-                    android:layout_marginLeft="10dp"
-                    android:background="#FFFF"
+                    android:layout_height="match_parent"
                     android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
                     android:padding="8dp"
-                    android:orientation="vertical"
-                    android:layout_height="match_parent">
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                    android:orientation="vertical">
 
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_cult_recorridos_guiados"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Recorridos guiados" />
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_cult_recorridos_autog"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Recorridos Autoguiados " />
-
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_cult_fotografia"
-                            android:layout_marginRight="10dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Fotografía" />
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_part_talleres"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Participación en talleres artísticos" />
-
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_cult_visita_talleres"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Visita a talleres artesanales" />
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_part_talleres2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Participación en talleres artesanales" />
-
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_cult_exposicion_tematicas"
-                            android:layout_width="210dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint="Exposiciones temáticas permanentes, temporales y eventuales" />
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_cult_act_vivenciales"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Muestras audiovisuales" />
-
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_cult_compra_art"
-                            android:layout_marginRight="40dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Compra de artesanías" />
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_cult_medicina"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint=" Medicina ancestral" />
-
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_cult_recorridos"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint="Degustación de platos tradicionales " />
-
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/atr_nat_superf_recre"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="2dp"
-                            android:hint="  Actividades Recreativas " />
-
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-                    <com.google.android.material.textfield.TextInputLayout
+                    <CheckBox
+                        android:id="@+id/cb_atr_cult_tang_intag"
+                        android:theme="@style/Checkbox"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginBottom="8dp">
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/ip_observaciones_act_pract"
+                        android:background="#EAEDF2"
+                        android:text="Tanginbles e intangibles"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/partSup" />
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/linearV4p8"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:background="#FFFF"
+                        android:padding="8dp"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+                        <androidx.appcompat.widget.LinearLayoutCompat
                             android:layout_width="match_parent"
-                            android:layout_height="60dp"
-                            android:hint=" Observaciones" />
-                    </com.google.android.material.textfield.TextInputLayout>
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_cult_recorridos_guiados"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint=" Recorridos guiados " />
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_cult_recorridos_autog"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint=" Recorridos Autoguiados " />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_cult_act_vivenciales"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint=" Muestras audiovisuales" />
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_cult_compra_art"
+                                android:layout_marginRight="40dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint=" Compra de artesanías" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_superf_recre"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint="  Actividades Recreativas " />
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_cult_visita_talleres"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginBottom="2dp"
+                                android:hint=" Visita a talleres artesanales" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_cult_recorridos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginBottom="2dp"
+                                android:hint="Degustación de platos tradicionales " />
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_nat_part_talleres2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginBottom="2dp"
+                                android:hint=" Participación en talleres artesanales" />
+
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_cult_fotografia"
+                                android:layout_marginRight="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint=" Fotografía" />
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_cult_medicina"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginBottom="2dp"
+                                android:hint=" Medicina ancestral" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/atr_cult_exposicion_tematicas"
+                                android:layout_width="210dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:hint="Exposiciones temáticas permanentes, temporales y eventuales" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="8dp">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/ip_observaciones_act_pract"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:hint=" Observaciones" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
-
         </ScrollView>
         <!-- Parte 9 apartado 10-->
+
+
 
         <ScrollView
             android:id="@+id/scrollparte9"
@@ -4376,6 +4450,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/linearH1p9"
                     android:layout_width="match_parent"
@@ -4396,113 +4471,162 @@
 
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="14dp"
-                    android:textSize="14dp"
-                    android:text="¿Existe un plan de promoción turística cantonal?">
 
-                </TextView>
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:orientation="horizontal">
-                    <CheckBox
-                        android:id="@+id/cb_promocion_si"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=" SI "
-                        android:textAlignment="textStart" />
-                    <CheckBox
-                        android:id="@+id/cb_promocion_no"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=" NO "
-                        android:visibility="visible"
-                        android:textAlignment="textStart" />
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:layout_width="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_height="wrap_content">
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/ip_observaciones_promocion"
-                            android:layout_width="248dp"
-                            android:layout_height="wrap_content"
-                            android:hint=" Observaciones" />
-                    </com.google.android.material.textfield.TextInputLayout>
-                </androidx.appcompat.widget.LinearLayoutCompat>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="14dp"
-                    android:textSize="14dp"
-                    android:text=" ¿El Atractivo se encuentra incluido en el plan de promoción turístico cantonal?">
-
-                </TextView>
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
+                    android:background="#EAEDF2"
                     android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:text="¿Existe un plan de promoción turística cantonal?"
+                        android:textSize="17dp">
+
+                    </TextView>
+
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
-                        android:orientation="horizontal">
-                        <CheckBox
-                            android:id="@+id/cb_plan_promocion_si"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=" SI "
-                            android:textAlignment="textStart" />
-                        <CheckBox
-                            android:id="@+id/cb_plan_promocion_no"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=" NO "
-                            android:visibility="visible"
-                            android:textAlignment="textStart" />
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#FFFF"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="7dp"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/cb_promocion_si"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" SI "
+                                android:textAlignment="textStart" />
+
+                            <CheckBox
+                                android:id="@+id/cb_promocion_no"
+                                android:theme="@style/CheckboxOpciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" NO "
+                                android:textAlignment="textStart"
+                                android:visibility="visible" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginLeft="5dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/ip_observaciones_promocion"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint=" Observaciones" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:text=" ¿El Atractivo se encuentra incluido en el plan de promoción turístico cantonal?"
+                        android:textSize="17dp"></TextView>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#FFFF"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="3dp"
+                                android:orientation="horizontal">
+
+                                <CheckBox
+                                    android:id="@+id/cb_plan_promocion_si"
+                                    android:theme="@style/CheckboxOpciones"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=" SI "
+                                    android:layout_marginRight="6dp"
+                                    android:textAlignment="textStart" />
+
+                                <CheckBox
+                                    android:id="@+id/cb_plan_promocion_no"
+                                    android:theme="@style/CheckboxOpciones"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=" NO "
+                                    android:textAlignment="textStart"
+                                    android:visibility="visible" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="9dp"
+                                android:paddingTop="1dp">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/ip_medio_promocional"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Medio Promocional"
+                                    android:inputType="none" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ip_direccion_nombre"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:hint="Ingrese el Nombre"
+                                android:theme="@style/CampoTexto" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ip_periodicidad_promocion"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:hint=" Periodicidad de la promoción "
+                                android:theme="@style/CampoTexto" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
-                    <com.google.android.material.textfield.TextInputLayout
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="1dp"
-                        android:layout_marginBottom="9dp">
-
-                        <AutoCompleteTextView
-                            android:id="@+id/ip_medio_promocional"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="Medio Promocional"
-                            android:inputType="none" />
-
-                    </com.google.android.material.textfield.TextInputLayout>
-                    <androidx.appcompat.widget.AppCompatEditText
-                        android:id="@+id/ip_direccion_nombre"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:hint="Ingrese el Nombre"
-                        android:theme="@style/CampoTexto" />
-                    <androidx.appcompat.widget.AppCompatEditText
-                        android:id="@+id/ip_periodicidad_promocion"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:hint=" Periodicidad de la promoción "
-                        android:theme="@style/CampoTexto" />
                 </androidx.appcompat.widget.LinearLayoutCompat>
             </androidx.appcompat.widget.LinearLayoutCompat>
+
         </ScrollView>
-
         <!-- Parte 10 apartado 11-->
-
         <ScrollView
             android:id="@+id/scrollparte10"
             android:layout_width="match_parent"
@@ -4532,121 +4656,144 @@
                         android:textStyle="bold" />
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
-                <CheckBox
-                    android:id="@+id/cb_frecuencia_visitas"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:theme="@style/Checkbox"
-                    android:text="Frecuencia de visita según datos estadísticos"
-                    android:textAlignment="textStart" />
                 <androidx.appcompat.widget.LinearLayoutCompat
-                    android:id="@+id/linearV1p9"
-                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:background="#EAEDF2"
                     android:orientation="vertical">
-
-                    <TextView
-                        android:layout_marginTop="6dp"
+                    <CheckBox
+                        android:id="@+id/cb_frecuencia_visitas"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginBottom="6dp"
-                        android:text="¿Posee un sistema de registro de visitantes?">
-
-                    </TextView>
+                        android:layout_height="wrap_content"
+                        android:theme="@style/Checkbox"
+                        android:text="Frecuencia de visita según datos estadísticos"
+                        android:textAlignment="textStart" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/partSup" />
                     <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/linearV1p9"
+                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal">
-                        <com.google.android.material.textfield.TextInputLayout
-                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
-                            android:layout_width="120dp"
-                            android:layout_height="50dp"
-                            android:layout_marginLeft="8dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:padding="8dp"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_marginTop="6dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="6dp"
+                            android:text="¿Posee un sistema de registro de visitantes?">
+
+                        </TextView>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_marginRight="6dp"
-                            android:paddingTop="2dp"
-                            android:layout_marginBottom="9dp">
-                            <AutoCompleteTextView
-                                android:id="@+id/select_si_no_2p11"
-                                android:layout_width="match_parent"
+                            android:layout_marginLeft="7dp"
+                            android:padding="8dp"
+                            android:orientation="horizontal">
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:hint="Opción"
-                                android:inputType="none" />
+                                android:paddingTop="2dp"
+                                android:layout_marginRight="4dp"
+                                android:layout_weight="1"
+                                android:layout_marginBottom="9dp">
+                                <AutoCompleteTextView
+                                    android:id="@+id/select_si_no_2p11"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Si"
+                                    android:inputType="none" />
 
-                        </com.google.android.material.textfield.TextInputLayout>
-                        <com.google.android.material.textfield.TextInputLayout
-                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
-                            android:layout_width="120dp"
-                            android:layout_height="50dp"
-                            android:paddingTop="2dp"
-                            android:layout_marginBottom="9dp">
-
-                            <AutoCompleteTextView
-                                android:id="@+id/select_tipo_p11"
-                                android:layout_width="match_parent"
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:hint="Opción"
-                                android:inputType="none" />
+                                android:paddingTop="2dp"
+                                android:layout_weight="1"
+                                android:layout_marginBottom="9dp">
 
-                        </com.google.android.material.textfield.TextInputLayout>
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/ip_anios_registro_viistante"
-                            android:layout_width="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="9dp"
-                            android:hint=" Años Registro"
-                            android:theme="@style/CampoTexto" />
+                                <AutoCompleteTextView
+                                    android:id="@+id/select_tipo_p11"
+                                    android:layout_width="82dp"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Opción"
+                                    android:inputType="none" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ip_anios_registro_viistante"
+                                android:layout_width="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="9dp"
+                                android:hint=" Años Registro"
+                                android:theme="@style/CampoTexto" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <TextView
+                            android:layout_marginTop="6dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="6dp"
+                            android:text=" ¿Se genera reporte de estadísticas de visita al atractivo?">
+
+                        </TextView>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:padding="8dp"
+                            android:orientation="horizontal">
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="2dp"
+                                android:layout_weight="1"
+                                android:layout_marginBottom="9dp">
+                                <AutoCompleteTextView
+                                    android:id="@+id/select_si_no_p11"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Opción"
+                                    android:inputType="none" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ip_frecuencia_reportes"
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint=" Frecuencia reportes"
+                                android:theme="@style/CampoTexto" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
                     </androidx.appcompat.widget.LinearLayoutCompat>
-
                     <TextView
                         android:layout_marginTop="6dp"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="6dp"
-                        android:text=" ¿Se genera reporte de estadísticas de visita al atractivo?">
-
+                        android:padding="8dp"
+                        android:textSize="17dp"
+                        android:text=" Temporalidad de visita al atractivo">
                     </TextView>
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-                        <com.google.android.material.textfield.TextInputLayout
-                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
-                            android:layout_width="120dp"
-                            android:layout_height="50dp"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginRight="10dp"
-                            android:paddingTop="2dp"
-                            android:layout_marginBottom="9dp">
-                            <AutoCompleteTextView
-                                android:id="@+id/select_si_no_p11"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="Opción"
-                                android:inputType="none" />
-
-                        </com.google.android.material.textfield.TextInputLayout>
-
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/ip_frecuencia_reportes"
-                            android:layout_width="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="9dp"
-                            android:hint=" Frecuencia reportes"
-                            android:theme="@style/CampoTexto" />
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-                </androidx.appcompat.widget.LinearLayoutCompat>
-                <TextView
-                    android:layout_marginTop="6dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="6dp"
-                    android:text=" Temporalidad de visita al atractivo">
-                </TextView>
 
                     <CheckBox
                         android:id="@+id/cb_temporalidad_visitas_alta"
@@ -4654,12 +4801,22 @@
                         android:layout_height="wrap_content"
                         android:text=" Alta(meses)"
                         android:textAlignment="textStart" />
-                        <androidx.appcompat.widget.LinearLayoutCompat
-                            android:id="@+id/linearV11p9"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:visibility="gone"
-                            android:orientation="vertical">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/partSup" />
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/linearV11p9"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="8dp"
+                        android:background="@color/white"
+                        android:visibility="gone"
+                        android:orientation="vertical">
                         <androidx.appcompat.widget.AppCompatEditText
                             android:id="@+id/ip_temp_visitas_espe"
                             android:layout_width="match_parent"
@@ -4679,119 +4836,150 @@
                             android:hint=" Número visitantes"
                             android:theme="@style/CampoTexto" />
                     </androidx.appcompat.widget.LinearLayoutCompat>
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-                    <CheckBox
-                        android:id="@+id/cb_temp_visitas_bajas"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text=" Bajas(meses)"
-                        android:textAlignment="textStart" />
                     <androidx.appcompat.widget.LinearLayoutCompat
-                        android:id="@+id/linearV2p9"
-                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical">
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/ip_temp_visitas_b_espe"
+                        <CheckBox
+                            android:id="@+id/cb_temp_visitas_bajas"
                             android:layout_width="match_parent"
-                            android:layout_marginLeft="5dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="9dp"
-                            android:hint=" Especifique"
-                            android:theme="@style/CampoTexto" />
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/ip_temp_visitas_b_num"
+                            android:text=" Bajas(meses)"
+                            android:textAlignment="textStart" />
+                        <View
                             android:layout_width="match_parent"
-                            android:layout_marginLeft="5dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="9dp"
-                            android:hint="  Número visitantes"
-                            android:theme="@style/CampoTexto" />
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-                </androidx.appcompat.widget.LinearLayoutCompat>
-
-                <TextView
-                    android:layout_marginTop="6dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text=" Llegada de turistas">
-                </TextView>
-
-                <CheckBox
-                    android:id="@+id/cb_turista_nacional"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text=" Turista Nacional"
-                    android:textAlignment="textStart" />
-                <androidx.appcompat.widget.LinearLayoutCompat
-                            android:id="@+id/linearV4p9"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="@color/partSup" />
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/linearV2p9"
                             android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:padding="8dp"
+                            android:background="@color/white"
                             android:orientation="vertical">
-                    <androidx.appcompat.widget.AppCompatEditText
-                        android:id="@+id/ip_ciudad_origen"
-                        android:layout_width="match_parent"
-                        android:layout_marginLeft="5dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="9dp"
-                        android:hint=" Ciudad de Origen"
-                        android:theme="@style/CampoTexto" />
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/ip_llegada_mensual"
-                            android:layout_width="200dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginBottom="9dp"
-                            android:hint="Llegadas mensuales"
-                            android:theme="@style/CampoTexto" />
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/ip_total_anual"
-                            android:layout_width="match_parent"
-                            android:layout_marginLeft="5dp"
-                            android:layout_height="match_parent"
-                            android:hint="Total anual"
-                            android:theme="@style/CampoTexto" />
-
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ip_temp_visitas_b_espe"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="9dp"
+                                android:hint=" Especifique"
+                                android:theme="@style/CampoTexto" />
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ip_temp_visitas_b_num"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="9dp"
+                                android:hint="  Número visitantes"
+                                android:theme="@style/CampoTexto" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
                     </androidx.appcompat.widget.LinearLayoutCompat>
-                    <com.google.android.material.textfield.TextInputLayout
+
+                    <TextView
+                        android:layout_marginTop="6dp"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginBottom="8dp">
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/ip_observaciones_llegada_turist"
-                            android:layout_width="match_parent"
-                            android:layout_height="60dp"
-                            android:hint=" Observaciones" />
-                    </com.google.android.material.textfield.TextInputLayout>
-                </androidx.appcompat.widget.LinearLayoutCompat>
+                        android:textSize="17dp"
+                        android:padding="10dp"
+                        android:text=" Llegada de turistas">
+                    </TextView>
 
-                <CheckBox
-                    android:id="@+id/cb_turista_extranjero"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text=" Turista extranjero"
-                    android:textAlignment="textStart" />
-                <androidx.appcompat.widget.LinearLayoutCompat
+                    <CheckBox
+                        android:id="@+id/cb_turista_nacional"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text=" Turista Nacional"
+                        android:textAlignment="textStart" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/partSup" />
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/linearV4p9"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:padding="8dp"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/ip_ciudad_origen"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="9dp"
+                            android:hint=" Ciudad de Origen"
+                            android:theme="@style/CampoTexto" />
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ip_llegada_mensual"
+                                android:layout_width="200dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="9dp"
+                                android:hint="Llegadas mensuales"
+                                android:theme="@style/CampoTexto" />
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ip_total_anual"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="match_parent"
+                                android:hint="Total anual"
+                                android:theme="@style/CampoTexto" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="8dp">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/ip_observaciones_llegada_turist"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:hint=" Observaciones" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <CheckBox
+                        android:id="@+id/cb_turista_extranjero"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=" Turista extranjero"
+                        android:textAlignment="textStart" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/partSup" />
+                    <androidx.appcompat.widget.LinearLayoutCompat
                         android:id="@+id/linearV5p9"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:visibility="gone"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/white"
+                        android:padding="8dp"
                         android:orientation="vertical">
                         <androidx.appcompat.widget.AppCompatEditText
                             android:id="@+id/ip_ciudad_origen_extr"
                             android:layout_width="match_parent"
-                            android:layout_marginLeft="5dp"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="9dp"
@@ -4803,20 +4991,20 @@
                             android:orientation="horizontal">
                             <androidx.appcompat.widget.AppCompatEditText
                                 android:id="@+id/ip_llegada_mensual_ex"
-                                android:layout_width="200dp"
-                                android:layout_marginLeft="5dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="5dp"
                                 android:layout_marginBottom="9dp"
+                                android:layout_weight="1"
                                 android:hint="Llegadas mensuales"
                                 android:theme="@style/CampoTexto" />
                             <androidx.appcompat.widget.AppCompatEditText
                                 android:id="@+id/ip_total_anual_ex"
-                                android:layout_width="match_parent"
-                                android:layout_marginLeft="5dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="5dp"
                                 android:layout_marginBottom="9dp"
+                                android:layout_weight="1"
                                 android:hint="Total anual"
                                 android:theme="@style/CampoTexto" />
 
@@ -4833,46 +5021,67 @@
                         </com.google.android.material.textfield.TextInputLayout>
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-                    <TextView
+                    <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Frecuencia de visita según informantes clave"/>
-                    <androidx.appcompat.widget.AppCompatEditText
-                        android:id="@+id/ip_nombre_informate"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:hint="Ingrese el Nombre"
-                        android:theme="@style/CampoTexto" />
-                    <androidx.appcompat.widget.AppCompatEditText
-                        android:id="@+id/ip_contactos"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:hint="Ingrese el contacto"
-                        android:theme="@style/CampoTexto" />
-                    <CheckBox
-                        android:id="@+id/cb_demanda_dias_visita"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text=" Demanda segun dia de visita "
-                        android:textAlignment="textStart" />
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="17dp"
+                            android:padding="10dp"
+                            android:text="Frecuencia de visita según informantes clave"/>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:padding="8dp"
+                            android:background="@color/white"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical">
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ip_nombre_informate"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:hint="Ingrese el Nombre"
+                                android:theme="@style/CampoTexto" />
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ip_contactos"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:hint="Ingrese el contacto"
+                                android:theme="@style/CampoTexto" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <CheckBox
+                            android:id="@+id/cb_demanda_dias_visita"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=" Demanda segun dia de visita "
+                            android:textAlignment="textStart" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="@color/partSup" />
                         <androidx.appcompat.widget.LinearLayoutCompat
                             android:id="@+id/ip_demandas_dias_visita"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:padding="8dp"
+                            android:background="@color/white"
                             android:visibility="gone"
                             android:orientation="vertical">
                             <androidx.appcompat.widget.AppCompatEditText
                                 android:id="@+id/ip_demanda_dias_l_v"
                                 android:layout_width="match_parent"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
                                 android:layout_marginBottom="8dp"
                                 android:hint="Lunes a viernes"
@@ -4880,7 +5089,7 @@
                             <androidx.appcompat.widget.AppCompatEditText
                                 android:id="@+id/ip_demanda_dias_f_s"
                                 android:layout_width="match_parent"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
                                 android:layout_marginBottom="8dp"
                                 android:hint="Fines de Semana"
@@ -4888,7 +5097,7 @@
                             <androidx.appcompat.widget.AppCompatEditText
                                 android:id="@+id/ip_demanda_dias_fer"
                                 android:layout_width="match_parent"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
                                 android:layout_marginBottom="8dp"
                                 android:hint="Días feriados"
@@ -4900,10 +5109,20 @@
                             android:layout_height="wrap_content"
                             android:text=" Demanda segun dia de visita "
                             android:textAlignment="textStart" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="@color/partSup" />
                         <androidx.appcompat.widget.LinearLayoutCompat
                             android:id="@+id/demanda_frecuencia_visita"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:padding="8dp"
+                            android:background="@color/white"
                             android:visibility="gone"
                             android:orientation="vertical">
                             <com.google.android.material.textfield.TextInputLayout
@@ -4934,6 +5153,7 @@
                             </com.google.android.material.textfield.TextInputLayout>
                         </androidx.appcompat.widget.LinearLayoutCompat>
 
+                    </androidx.appcompat.widget.LinearLayoutCompat>
                 </androidx.appcompat.widget.LinearLayoutCompat>
             </androidx.appcompat.widget.LinearLayoutCompat>
         </ScrollView>
@@ -4969,220 +5189,254 @@
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp"
+                    android:background="#EAEDF2"
                     android:orientation="vertical">
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:textSize="16dp"
+                        android:padding="10dp"
                         android:text="Número de personas a cargo de la administración y operación del atractivo"/>
 
-                    <androidx.appcompat.widget.AppCompatEditText
-                        android:id="@+id/ip_num_personas"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:hint="Ingresee el número de personas "
-                        android:theme="@style/CampoTexto" />
-                    <CheckBox
-                        android:id="@+id/cb_nivel_instruccion"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Número de personas por nivel de instrucción"/>
-
                     <androidx.appcompat.widget.LinearLayoutCompat
-                        android:id="@+id/linearV2p10"
-                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#FFFF"
+                        android:padding="10dp"
                         android:orientation="vertical">
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/ip_num_personas_nivel_primaria"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="8dp"
-                            android:hint="Número de personas primaria"
-                            android:theme="@style/CampoTexto" />
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/ip_num_personas_nivel_secundaria"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="8dp"
-                            android:hint="Número de personas secundaria "
-                            android:theme="@style/CampoTexto" />
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/ip_num_personas_nivel_tercern"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="8dp"
-                            android:hint="Número de personas tercer nivel "
-                            android:theme="@style/CampoTexto" />
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/ip_num_personas_nivel_cuarton"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="8dp"
-                            android:hint="Número de personas cuarto nivel "
-                            android:theme="@style/CampoTexto" />
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/ip_num_personas_nivel_otro"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="8dp"
-                            android:hint="Número de personas otro nivel "
-                            android:theme="@style/CampoTexto" />
-                    </androidx.appcompat.widget.LinearLayoutCompat>
 
-                    <CheckBox
-                        android:id="@+id/cb_personas_capacitadas"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Número de personas capcitadas por temática"/>
-
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:id="@+id/linearV3p10"
-                        android:visibility="gone"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
                         <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/ip_num_personas_primeroa_aux"
+                            android:id="@+id/ip_num_personas"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
                             android:layout_marginTop="8dp"
                             android:layout_marginBottom="8dp"
-                            android:hint="Número de personas primeros auxilios "
+                            android:hint="Ingrese el número total de personas "
                             android:theme="@style/CampoTexto" />
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/ip_num_personas_atención_cliente"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="8dp"
-                            android:hint="Número de personas atención cliente"
-                            android:theme="@style/CampoTexto" />
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/ip_num_personas_hospitalidad"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="8dp"
-                            android:hint="Número de personas hospitalidad"
-                            android:theme="@style/CampoTexto" />
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/ip_num_personas_guianza"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="8dp"
-                            android:hint="Número de personas Guinza"
-                            android:theme="@style/CampoTexto" />
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/ip_num_personas_sensibilizacion"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="8dp"
-                            android:hint="Número de personas Sensibilización de discapacidades"
-                            android:theme="@style/CampoTexto" />
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/ip_num_personas_otro"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="8dp"
-                            android:hint="Número de personas otro"
-                            android:theme="@style/CampoTexto" />
-                        <com.google.android.material.textfield.TextInputLayout
+                        <CheckBox
+                            android:id="@+id/cb_nivel_instruccion"
+                            android:theme="@style/Checkbox"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_marginBottom="8dp">
-                            <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/ip_observaciones_recurso_humano"
+                            android:background="#EAEDF2"
+                            android:text="Número de personas por nivel de instrucción"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="@color/partSup" />
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/linearV2p10"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ip_num_personas_nivel_primaria"
                                 android:layout_width="match_parent"
-                                android:layout_height="60dp"
-                                android:hint=" Observaciones" />
-                        </com.google.android.material.textfield.TextInputLayout>
-                    </androidx.appcompat.widget.LinearLayoutCompat>
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:hint="Número de personas primaria"
+                                android:theme="@style/CampoTexto" />
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ip_num_personas_nivel_secundaria"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:hint="Número de personas secundaria "
+                                android:theme="@style/CampoTexto" />
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ip_num_personas_nivel_tercern"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:hint="Número de personas tercer nivel "
+                                android:theme="@style/CampoTexto" />
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ip_num_personas_nivel_cuarton"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:hint="Número de personas cuarto nivel "
+                                android:theme="@style/CampoTexto" />
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ip_num_personas_nivel_otro"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:hint="Número de personas otro nivel "
+                                android:theme="@style/CampoTexto" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
 
-                    <CheckBox
-                        android:id="@+id/cb_personas_idiomas"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        <CheckBox
+                            android:id="@+id/cb_personas_capacitadas"
+                            android:theme="@style/Checkbox"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#EAEDF2"
+                            android:text=" Número de personas capacitadas por temática"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="@color/partSup" />
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/linearV3p10"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ip_num_personas_primeroa_aux"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:hint="Número de personas primeros auxilios "
+                                android:theme="@style/CampoTexto" />
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ip_num_personas_atención_cliente"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:hint="Número de personas atención cliente"
+                                android:theme="@style/CampoTexto" />
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ip_num_personas_hospitalidad"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:hint="Número de personas hospitalidad"
+                                android:theme="@style/CampoTexto" />
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ip_num_personas_guianza"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:hint="Número de personas Guinza"
+                                android:theme="@style/CampoTexto" />
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ip_num_personas_sensibilizacion"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:hint="Número de personas Sensibilización de discapacidades"
+                                android:theme="@style/CampoTexto" />
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ip_num_personas_otro"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:hint="Número de personas otro"
+                                android:theme="@style/CampoTexto" />
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="8dp">
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/ip_observaciones_recurso_humano"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:hint=" Observaciones" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <CheckBox
+                            android:id="@+id/cb_personas_idiomas"
+                            android:theme="@style/Checkbox"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#EAEDF2"
                             android:text="Número de personas que manejan algún idioma"/>
-
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:id="@+id/linearV4p10"
-                        android:visibility="gone"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/ip_num_personas_aleman"
+                        <View
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="8dp"
-                            android:hint="Número de personas que manejan Alemán"
-                            android:theme="@style/CampoTexto" />
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/ip_num_personas_ingles"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="8dp"
-                            android:hint="Número de personas que manejan Inglés"
-                            android:theme="@style/CampoTexto" />
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/ip_num_personas_frances"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="8dp"
-                            android:hint="Número de personas que manejan Frances"
-                            android:theme="@style/CampoTexto" />
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/ip_num_personas_italiano"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="8dp"
-                            android:hint="Número de personas que manejan Italiano"
-                            android:theme="@style/CampoTexto" />
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/ip_num_personas_chino"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="8dp"
-                            android:hint="Número de personas que manejan Chino"
-                            android:theme="@style/CampoTexto" />
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/ip_num_personas_otro_idioma"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="8dp"
-                            android:hint="Número de personas otro idioma"
-                            android:theme="@style/CampoTexto" />
-                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_height="2dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="@color/partSup" />
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/linearV4p10"
+                            android:visibility="gone"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_marginBottom="8dp">
-                            <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/ip_observaciones_idiomas"
+                            android:orientation="vertical">
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ip_num_personas_aleman"
                                 android:layout_width="match_parent"
-                                android:layout_height="60dp"
-                                android:hint=" Observaciones" />
-                        </com.google.android.material.textfield.TextInputLayout>
-                    </androidx.appcompat.widget.LinearLayoutCompat>
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:hint="Número de personas que manejan Alemán"
+                                android:theme="@style/CampoTexto" />
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ip_num_personas_ingles"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:hint="Número de personas que manejan Inglés"
+                                android:theme="@style/CampoTexto" />
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ip_num_personas_frances"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:hint="Número de personas que manejan Frances"
+                                android:theme="@style/CampoTexto" />
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ip_num_personas_italiano"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:hint="Número de personas que manejan Italiano"
+                                android:theme="@style/CampoTexto" />
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ip_num_personas_chino"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:hint="Número de personas que manejan Chino"
+                                android:theme="@style/CampoTexto" />
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ip_num_personas_otro_idioma"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:hint="Número de personas otro idioma"
+                                android:theme="@style/CampoTexto" />
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="8dp">
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/ip_observaciones_idiomas"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:hint=" Observaciones" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
 
+                    </androidx.appcompat.widget.LinearLayoutCompat>
                 </androidx.appcompat.widget.LinearLayoutCompat>
+
             </androidx.appcompat.widget.LinearLayoutCompat>
         </ScrollView>
 

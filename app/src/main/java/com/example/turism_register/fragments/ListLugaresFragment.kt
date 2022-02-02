@@ -200,6 +200,8 @@ class ListLugaresFragment : Fragment(), AdapterLugar.OnLugarClickListener,
     }
 
     fun cargaDatosDeFirebase(value: QuerySnapshot?, error: FirebaseFirestoreException?) {
+        lugarArrayList.clear()
+        tempLugarArrayList.clear()
         if (error != null) {
             Log.e("Firestore Error", error.message.toString())
             return

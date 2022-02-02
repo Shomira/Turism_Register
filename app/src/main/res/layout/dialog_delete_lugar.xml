@@ -70,20 +70,20 @@
         app:layout_constraintEnd_toStartOf="@+id/dialog_button_si_delete_lugar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/dialog_delete_lugar" />
+
     <Button
         android:id="@+id/dialog_button_si_delete_lugar"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="40dp"
-        android:backgroundTint="@color/yellow"
-        app:cornerRadius="100dp"
+        android:backgroundTint="@color/red"
+        android:text="Aceptar"
         android:textColor="@color/white"
         android:textSize="14sp"
-        android:text="Aceptar"
+        app:cornerRadius="100dp"
         app:layout_constraintBottom_toBottomOf="@id/dialog_delete_lugar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/dialog_button_no_delete_lugar"
-        app:layout_constraintTop_toBottomOf="@id/dialog_delete_lugar"
-        />
+        app:layout_constraintTop_toBottomOf="@id/dialog_delete_lugar" />
 </androidx.constraintlayout.widget.ConstraintLayout>
