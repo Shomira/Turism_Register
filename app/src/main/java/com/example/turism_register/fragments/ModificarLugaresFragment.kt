@@ -138,6 +138,8 @@ class ModificarLugaresFragment : Fragment(), AdapterModificarLugar.OnLugarModifi
     }
 
     fun cargaDatosDeFirebase(value: QuerySnapshot?, error: FirebaseFirestoreException?) {
+        lugarModificarArrayList.clear()
+        tempLugarModificarArrayList.clear()
         if (error != null) {
             Log.e("Firestore Error", error.message.toString())
             return

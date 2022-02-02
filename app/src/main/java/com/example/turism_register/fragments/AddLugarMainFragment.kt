@@ -212,7 +212,6 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener {
                             R.color.yellow
                         )
                     )
-
                 }
                 dialog.setView(dialogView)
                 dialog.setCancelable(false)
@@ -220,11 +219,98 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener {
                 dialog.window?.setLayout(750, 500)
 
                 arrayContar = arrayOf(
-                    ip_nombre_atr.text.toString(), ip_descripcion_atr.text.toString(),
-                    ip_categoria.text.toString(), ip_tipo.text.toString(),
-                    ip_subtipo.text.toString(), ip_provincia.text.toString(),
-                    ip_canton.text.toString(), ip_parroquias.text.toString(),
-                    ip_calle_principal.text.toString(),
+                    ip_nombre_atr.text.toString(),ip_descripcion_atr.text.toString(),
+                    ip_categoria.text.toString(),ip_tipo.text.toString(),
+                    ip_subtipo.text.toString(),ip_provincia.text.toString(),
+                    ip_canton.text.toString(),ip_parroquias.text.toString(),
+                    ip_calle_principal.text.toString(),ip_calle_principal_numero.text.toString(),
+                    ip_calle_transversal.text.toString(),ip_barrio_sector.text.toString(),
+                    ip_sitio_poblado.text.toString(),ip_latitud.text.toString(),ip_longitug.text.toString(),
+                    ip_altura_msnm.text.toString(),ip_tipo_admin.text.toString(),ip_nombre_inst.text.toString(),
+                    ip_nombre_admin.text.toString(),ip_cargo_ocupa.text.toString(),ip_telefono.text.toString(),
+                    ip_correo.text.toString(),ip_observaciones_admin.text.toString(),clima.text.toString(),
+                    temperatura.text.toString(),precipitacion.text.toString(),
+                    ip_linea_producto_p2.text.toString(),ip_escenario_localiza_p2.text.toString(),
+                    ip_tipo_ingreso_p2.text.toString(),horario_ingreso_p2.text.toString(),
+                    horario_salida_p2.text.toString(),ip_atencion_p2.text.toString(),
+                    formaPago_p2.toString(),precio_desde.text.toString(),precio_hasta.text.toString(),
+                    meses_recomendables_visita.text.toString(),atencion_observaciones.text.toString(),
+                    nombre_ciudad_cercana.text.toString(),distancia_desde_hasta.text.toString(),
+                    tiempo_desplazamiento.text.toString(),ip_latitud.text.toString(),
+                    ip_longitug.text.toString(),accesibilidad_observaciones.text.toString(),
+                    ip_coordenada_inicio.text.toString(),ip_coordenada_fin.text.toString(),
+                    ip_distanciakm.text.toString(),ip_tipo_material.text.toString(),
+                    ip_estado_acceso.text.toString(),ip_observaciones_acceso.text.toString(),
+                    ip_tipo_via_p3.text.toString(),ip_tipo_acuatico_p3.text.toString(),
+                    ip_muelle_partida.text.toString(),ip_estado_muelle_partida.text.toString(),
+                    ip_muelle_llegada.text.toString(),ip_estado_muelle_llegada.text.toString(),
+                    ip_tipo_aereo_p3.text.toString(),transporte_p3.toString(),ip_observaciones_transporte.text.toString(),
+                    ip_nombre_cooperativa.text.toString(), ip_estacion_terminal.text.toString(),
+                    ip_frecuencia_transporte_p3.text.toString(),ip_transporte_detalle_traslado.text.toString(),
+                    accesibilidad_discapacidad.toString(),ip_observaciones_accesibilidad.text.toString(),
+                    ip_senializacion_estado_p3.text.toString(),ip_observaciones_senializacion.text.toString(),
+                    ip_planta_atr_p4.text.toString(), establecimientos_registrados.text.toString(),
+                    numero_habitaciones.text.toString(),numero_plazas.text.toString(),
+                    planta_turistica_observaciones.text.toString(),ip_planta_poblado_p4.text.toString(),
+                    est_registrados_poblado.text.toString(),numero_habitaciones_poblado.text.toString(),
+                    numero_plazas_poblado.text.toString(),planta_turistica_observaciones2.text.toString(),
+                    ip_alimentos_bebidas_p4.text.toString(),est_registrados_alimentos.text.toString(),
+                    numero_mesas_alimentos.text.toString(),numero_plazas_alimentos.text.toString(),
+                    alimentos_bebidas_p4.text.toString(),ip_agencia_viajes_p4.text.toString(),
+                    establecimientos_registrados_agencia.text.toString(),observaciones_agencias_viajes_p4.text.toString(),
+                    ip_categoria_facilidad_entorno.text.toString(),ip_tipo_facilidad_entorno.text.toString(),
+                    ip_estado_facilidad_entorno.text.toString(),facilidad_entorno_cantidad.text.toString(),
+                    facilidad_entorno_coordenadas.text.toString(),facilidad_entorno_administrador.text.toString(),
+                    complementos_atr.toString(),complementos_pbl.toString(),
+                    observaciones_complement_p4.text.toString(),observaciones_complement_pobl_p4.text.toString(),
+                    ip_conservacion_atr.text.toString(),observaciones_conservacion_atr_p5.text.toString(),
+                    ip_factores_naturales_atr.text.toString(),ip_factores_antropi_atr.text.toString(),
+                    factores_atr_p5.text.toString(),ip_conservacion_entorno.text.toString(),
+                    observaciones_entorno_p5.text.toString(),ip_factores_naturales_entorno.text.toString(),
+                    ip_factores_antropi_entorno.text.toString(),factores_entorno_p5.text.toString(),
+                    declaratoria_declarante.text.toString(),declaratoria_denominacion.text.toString(),
+                    declaratoria_fecha_creacion.text.toString(),declaratoria_alcance.text.toString(),
+                    observaciones_declaratoria_p5.text.toString(),servicios_basicos.toString(),
+                    observaciones_servicios_p6.text.toString(),observaciones_servicios_p6_2.text.toString(),
+                    ip_higiene_senialetica_ambientes.text.toString(),ip_higiene_senialetica_tipo.text.toString(),
+                    ip_higiene_materialidad.text.toString(),ip_higiene_estado.text.toString(),
+                    ip_higiene_salud_atr.text.toString(),ip_observaciones_salud_atr.text.toString(),
+                    ip_higiene_salud_pbl.text.toString(),ip_observaciones_higiene.text.toString(),
+                    ip_seguridad.text.toString(),ip_observaciones_seguridad.text.toString(),
+                    ip_comunic_telefonia_atr.text.toString(),ip_comunic_internet_atr.text.toString(),
+                    ip_comunic_radio_atr.text.toString(),ip_observaciones_comunic_atr.text.toString(),
+                    ip_comunic_telefonia_pbl.text.toString(),ip_comunic_internet_pbl.text.toString(),
+                    ip_comunic_radio_pbl.text.toString(),ip_observaciones_comunic_pbl.text.toString(),
+                    ip_multiamenazas.text.toString(),plan_contigencias,
+                    ip_institucion_elaboro_doc.text.toString(),ip_nom_documento.text.toString(),
+                    ip_anio_elaboracion_doc.text.toString(),ip_observaciones_multiamenazas.text.toString(),
+                    plan_desarrollo,doc_planificacion,aplicac_normativa,aplic_ordenanzas,observaciones_politicas.text.toString(),
+                    promocion_cantonal_turistica,promocion_atractivo,ip_observaciones_promocion.text.toString(),
+                    ip_medio_promocional.text.toString(),ip_direccion_nombre.text.toString(),ip_periodicidad_promocion.text.toString(),
+                    select_si_no_2p11.text.toString(),select_tipo_p11.text.toString(),
+                    ip_anios_registro_viistante.text.toString(),select_si_no_p11.text.toString(),
+                    ip_frecuencia_reportes.text.toString(),ip_temp_visitas_espe.text.toString(),
+                    ip_temp_visitas_num.text.toString(),ip_temp_visitas_b_espe.text.toString(),
+                    ip_temp_visitas_b_num.text.toString(),ip_ciudad_origen.text.toString(),
+                    ip_llegada_mensual.text.toString(),ip_total_anual.text.toString(),
+                    ip_observaciones_llegada_turist.text.toString(),ip_ciudad_origen_extr.text.toString(),
+                    ip_llegada_mensual_ex.text.toString(),ip_total_anual_ex.text.toString(),
+                    ip_observaciones_llegda_turist.text.toString(),ip_nombre_informate.text.toString(),
+                    ip_contactos.text.toString(),ip_demanda_dias_l_v.text.toString(),ip_demanda_dias_f_s.text.toString(),
+                    ip_demanda_dias_fer.text.toString(),ip_frecuencia_visitas.text.toString(),
+                    ip_observaciones_registro.text.toString(),ip_num_personas.text.toString(),
+                    ip_num_personas_nivel_primaria.text.toString(),ip_num_personas_nivel_secundaria.text.toString(),
+                    ip_num_personas_nivel_tercern.text.toString(),ip_num_personas_nivel_cuarton.text.toString(),
+                    ip_num_personas_nivel_otro.text.toString(),ip_num_personas_primeroa_aux.text.toString(),
+                    ip_num_personas_atención_cliente.text.toString(),ip_num_personas_hospitalidad.text.toString(),
+                    ip_num_personas_guianza.text.toString(),ip_num_personas_sensibilizacion.text.toString(),
+                    ip_num_personas_otro.text.toString(),ip_observaciones_recurso_humano.text.toString(),
+                    ip_num_personas_aleman.text.toString(),ip_num_personas_ingles.text.toString(),
+                    ip_num_personas_frances.text.toString(),ip_num_personas_italiano.text.toString(),
+                    ip_num_personas_chino.text.toString(),ip_num_personas_otro_idioma.text.toString(),
+                    ip_observaciones_idiomas.text.toString()
+
+
                 )
                 realizandoConteoEncuesta()
 
@@ -341,7 +427,7 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener {
                 "nombre_administrador" to ip_nombre_admin.text.toString(),
                 "cargo_ocupa" to ip_cargo_ocupa.text.toString(),
                 "telefono_celular" to ip_telefono.text.toString(),
-                "correo_electrónico" to ip_correo.text.toString(),
+                "correo_electronico" to ip_correo.text.toString(),
                 "observaciones_admin" to ip_observaciones_admin.text.toString(),
                 // Segunda pantalla
                 "clima" to clima.text.toString(),
@@ -378,7 +464,7 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener {
                 //============================
                 // - Vias Accesso Acuatico
 
-                "acuatico_tipo_via " to ip_tipo_via_p3.text.toString(),
+                "acuatico_tipo_via" to ip_tipo_via_p3.text.toString(),
                 "acuatico_tipo_acceso" to ip_tipo_acuatico_p3.text.toString(),
                 "muelle_partida" to ip_muelle_partida.text.toString(),
                 "estado_muelle_partida" to ip_estado_muelle_partida.text.toString(),
@@ -544,7 +630,13 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener {
             )
         )
 
-        Toast.makeText(context, "LUGAR AGREGADO", Toast.LENGTH_SHORT).show()
+        if (is_editar == "false") {
+            Toast.makeText(context, "LUGAR AGREGADO", Toast.LENGTH_SHORT).show()
+
+        } else if (is_editar == "true") {
+            Toast.makeText(context, "LUGAR EDITADO", Toast.LENGTH_SHORT).show()
+        }
+
         dialog.dismiss()
         // funcionalidades de actividad
         (activity as AppCompatActivity).onBackPressed()
@@ -731,7 +823,7 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener {
                 onItemClickListener = this@AddLugarMainFragment
             }
 
-            ip_tipo_acuatico_p3.setText(it.get("acuatico_tipo_acceso ") as String?)
+            ip_tipo_acuatico_p3.setText(it.get("acuatico_tipo_acceso") as String?)
             with(ip_tipo_acuatico_p3) {
                 setAdapter(adapterTipoAceso)
                 onItemClickListener = this@AddLugarMainFragment
@@ -2417,7 +2509,7 @@ class AddLugarMainFragment : Fragment(), AdapterView.OnItemClickListener {
                 setAdapter(adapter)
                 onItemClickListener = this@AddLugarMainFragment
             }
-        } else if (item == "Loja.") {
+        } else if (item == "Loja") {
             val adapter = activity?.let {
                 ArrayAdapter<String>(
                     it,
